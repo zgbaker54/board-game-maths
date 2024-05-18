@@ -1,6 +1,28 @@
 <h2>Cards</h2>
 
 <p>
+  Deck:
+  <p-dropdown
+    *ngIf="game.decks.length > 1"
+    [options]="decks"
+    [(ngModel)]="selectedDeck"
+    [showClear]="false"
+    [filter]="false"
+    (onChange)="handleChanges()"
+  />
+
+  Players: 
+  <p-dropdown
+    *ngIf="variesByPlayerCount"
+    [options]="playerCounts"
+    [(ngModel)]="playerCount"
+    [showClear]="false"
+    [filter]="false"
+    (onChange)="handleChanges()"
+  />
+</p>
+
+<p>
   The probability of getting a card that is
   <p-multiSelect
     [options]="tagGroups"
@@ -33,5 +55,5 @@
 
 <p-card>
   <h1>{{ percentage }}%</h1>
-  <h4>{{ totalValidCards }}/{{ totalCardsInSelectedDeck }}</h4>
+  <h4>{{ totalValidCards }}/{{ totalPossibleCards }}</h4>
 </p-card>

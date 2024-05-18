@@ -7,8 +7,10 @@ import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { SliderModule } from 'primeng/slider';
 import { InputTextModule } from 'primeng/inputtext';
-import { SelectItemGroup } from 'primeng/api';
+import { SelectItem, SelectItemGroup } from 'primeng/api';
 import { ChipModule } from 'primeng/chip';
+import { Game } from '../../models/game.model';
+import { combinations } from 'mathjs';
 
 @Component({
   selector: 'app-deck',
@@ -27,32 +29,45 @@ import { ChipModule } from 'primeng/chip';
   styleUrl: './deck.component.scss',
 })
 export class DeckComponent implements OnInit {
-  @Input() decks: Deck[] = [];
+  @Input() game!: Game;
+
+  variesByPlayerCount = false;
+  playerCounts: number[] = [];
+  playerCount = 0;
 
   tagGroups: SelectItemGroup[] = [];
 
+  decks: SelectItem[] = [];
   selectedDeck!: Deck;
   selectedTags: string[] = [];
 
-  drawCounts = [1, 2];
+  drawCounts = [1, 2, 7];
   selectedDrawCount = 1;
 
-  totalCardsInSelectedDeck = 0;
   totalValidCards = 0;
+  totalPossibleCards = 0;
 
   percentage = '100';
 
   ngOnInit(): void {
-    this.selectedDeck = this.decks[0];
+    for (let i = this.game.minPlayers; i <= this.game.maxPlayers; i++) {
+      this.playerCounts.push(i);
+    }
+    this.playerCount = this.game.maxPlayers;
+
+    this.decks = this.game.decks.map((d) => ({ value: d, label: d.name }));
+    this.selectedDeck = this.game.decks[0];
     this.selectDeck();
     this.handleChanges();
   }
 
   selectDeck() {
-    this.totalCardsInSelectedDeck = 0;
     const tempTags = new Set<string>();
     const tempGroups = new Set<string>();
     this.selectedDeck.cards.forEach((card) => {
+      this.variesByPlayerCount = card.minPlayers
+        ? true
+        : this.variesByPlayerCount;
       card.tags.forEach((t) => {
         const [_, group] = t.split(';');
         tempTags.add(t);
@@ -60,7 +75,6 @@ export class DeckComponent implements OnInit {
           tempGroups.add(group);
         }
       });
-      this.totalCardsInSelectedDeck += card.count ?? 1;
     });
     const tags = Array.from(tempTags.values());
 
@@ -85,6 +99,10 @@ export class DeckComponent implements OnInit {
 
   handleChanges(): void {
     const validCards = this.selectedDeck.cards.filter((card) => {
+      if ((card.minPlayers ?? 1) > this.playerCount) {
+        return false;
+      }
+
       for (const tag of this.selectedTags) {
         const tagsSimple = card.tags.map((x) => x.split(';')[0]);
         if (tagsSimple.includes(tag) === false) {
@@ -101,19 +119,25 @@ export class DeckComponent implements OnInit {
       0
     );
 
-    const notValid = this.totalCardsInSelectedDeck - this.totalValidCards;
+    this.totalPossibleCards = this.selectedDeck.cards
+      .filter((card) => {
+        if ((card.minPlayers ?? 1) > this.playerCount) {
+          return false;
+        }
+        return true;
+      })
+      .reduce((prev, value) => prev + (value.count ?? 1), 0);
 
-    let drawX = 1;
-    for (let i = 0; i < this.selectedDrawCount; i++) {
-      drawX *= this.totalCardsInSelectedDeck - i;
-    }
-    drawX /= this.selectedDrawCount;
+    const notValid = this.totalPossibleCards - this.totalValidCards;
 
-    let invalidX = 1;
-    for (let i = 0; i < this.selectedDrawCount; i++) {
-      invalidX *= notValid - i;
+    const drawX = combinations(this.totalPossibleCards, this.selectedDrawCount);
+
+    let invalidX: number;
+    if (notValid === 0) {
+      invalidX = 0;
+    } else {
+      invalidX = combinations(notValid, this.selectedDrawCount);
     }
-    invalidX /= this.selectedDrawCount;
 
     this.percentage = ((1 - invalidX / drawX) * 100).toFixed(4);
   }
