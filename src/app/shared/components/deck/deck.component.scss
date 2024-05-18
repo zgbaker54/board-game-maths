@@ -1,0 +1,32 @@
+:host ::ng-deep {
+  .p-card {
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    h1,h4 {
+      margin: 0;
+    }
+  }
+
+  .p-multiselect {
+    width: 100%;
+    max-width: 500px;
+    .p-multiselect-label {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+  }
+
+  .percentage {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    input {
+      max-width: 100px;
+    }
+    .p-slider {
+      max-width: 100px;
+    }
+  }
+}

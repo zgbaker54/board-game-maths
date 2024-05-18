@@ -1,0 +1,37 @@
+<h2>Cards</h2>
+
+<p>
+  The probability of getting a card that is
+  <p-multiSelect
+    [options]="tagGroups"
+    [group]="true"
+    [filter]="false"
+    [showToggleAll]="false"
+    [showHeader]="false"
+    [(ngModel)]="selectedTags"
+    placeholder="Select Tags"
+    (onChange)="handleChanges()"
+    display="chip"
+    [maxSelectedLabels]="100"
+  >
+    <ng-template let-group pTemplate="group">
+      <div class="flex align-items-center">
+        <span>{{ group.label }}</span>
+      </div>
+    </ng-template></p-multiSelect
+  >
+  within the next
+  <p-dropdown
+    [options]="drawCounts"
+    [(ngModel)]="selectedDrawCount"
+    [showClear]="false"
+    [filter]="false"
+    (onChange)="handleChanges()"
+  />
+  draw(s)
+</p>
+
+<p-card>
+  <h1>{{ percentage }}%</h1>
+  <h4>{{ totalValidCards }}/{{ totalCardsInSelectedDeck }}</h4>
+</p-card>
