@@ -1,7 +1,15 @@
-<h2>Dice</h2>
+<h2>Dice{{rollCount}}</h2>
 
-<ng-container *ngIf="useSimpleDice else complexDice">
-  <app-dice-simple></app-dice-simple>
+<p-selectButton
+  [options]="tableViewOptions"
+  [(ngModel)]="tableView"
+  [unselectable]="true"
+  optionLabel="label"
+  optionValue="value"
+/>
+
+<ng-container *ngIf="useSimpleDice; else complexDice">
+  <app-dice-simple [diceSet]="diceSet" [tableView]="tableView"></app-dice-simple>
 </ng-container>
 
 <ng-template #complexDice>

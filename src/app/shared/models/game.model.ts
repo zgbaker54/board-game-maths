@@ -15,6 +15,8 @@ export type DiceSet = {
 };
 
 export type Dice = {
-  type: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20' | 'fancy';
+  type: DiceType;
   sides?: string[];
 };
+
+export type DiceType = 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20' | 'fancy';
