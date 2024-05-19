@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Deck } from '../../models/deck.model';
+import { Card, Deck } from '../../models/deck.model';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -38,8 +38,11 @@ export class DeckComponent implements OnInit {
   tagGroups: SelectItemGroup[] = [];
 
   decks: SelectItem[] = [];
-  selectedDeck!: Deck;
+  selectedDeckId!: number;
+  selectedDecks: Deck[] = [];
   selectedTags: string[] = [];
+
+  allCards: Card[] = [];
 
   drawCounts = [1, 2, 7];
   selectedDrawCount = 1;
@@ -55,8 +58,23 @@ export class DeckComponent implements OnInit {
     }
     this.playerCount = this.game.maxPlayers;
 
-    this.decks = this.game.decks.map((d) => ({ value: d, label: d.name }));
-    this.selectedDeck = this.game.decks[0];
+    // Get deck ids filtering out expansions
+    const deckIds = [
+      ...new Set<number>(
+        this.game.decks
+          .filter((x) => x.expansionId === undefined)
+          .map((x) => x.id)
+      ),
+    ];
+
+    // Get list of decks for the dropdown
+    this.decks = deckIds.map((id) => {
+      const d = this.game.decks.find(
+        (x) => x.id === id && x.expansionId === undefined
+      );
+      return { value: d!.id, label: d!.name };
+    });
+    this.selectedDeckId = this.game.decks[0].id;
     this.selectDeck();
     this.handleChanges();
   }
@@ -64,7 +82,13 @@ export class DeckComponent implements OnInit {
   selectDeck() {
     const tempTags = new Set<string>();
     const tempGroups = new Set<string>();
-    this.selectedDeck.cards.forEach((card) => {
+
+    this.selectedDecks = this.game.decks.filter(
+      (x) => x.id === this.selectedDeckId && x.expansionId === undefined
+    );
+    this.allCards = this.selectedDecks.map((x) => x.cards).flat();
+
+    this.allCards.forEach((card) => {
       this.variesByPlayerCount = card.minPlayers
         ? true
         : this.variesByPlayerCount;
@@ -101,7 +125,7 @@ export class DeckComponent implements OnInit {
   }
 
   handleChanges(): void {
-    const validCards = this.selectedDeck.cards.filter((card) => {
+    const validCards = this.allCards.filter((card) => {
       if ((card.minPlayers ?? 1) > this.playerCount) {
         return false;
       }
@@ -121,7 +145,7 @@ export class DeckComponent implements OnInit {
       return prev + (value.count ?? 1);
     }, 0);
 
-    this.totalPossibleCards = this.selectedDeck.cards
+    this.totalPossibleCards = this.allCards
       .filter((card) => {
         if ((card.minPlayers ?? 1) > this.playerCount) {
           return false;
@@ -130,16 +154,22 @@ export class DeckComponent implements OnInit {
       })
       .reduce((prev, value) => prev + (value.count ?? 1), 0);
 
-    if (this.selectedDeck.totalCardsAdjust) {
-      this.totalPossibleCards += this.selectedDeck.totalCardsAdjust(
-        this.playerCount
-      );
-    }
-    if (this.selectedDeck.totalValidCards) {
-      totalValidCards = this.selectedDeck.totalValidCards(
-        this.playerCount,
-        validCards
-      )[1];
+    this.selectedDecks.forEach((deck) => {
+      if (deck.totalCardsAdjust) {
+        this.totalPossibleCards += deck.totalCardsAdjust(this.playerCount);
+      }
+    });
+
+    if (this.selectedDecks.some((deck) => deck.totalValidCards)) {
+      totalValidCards = 0;
+      this.selectedDecks.forEach((deck) => {
+        if (deck.totalValidCards) {
+          totalValidCards += deck.totalValidCards(
+            this.playerCount,
+            validCards
+          )[1];
+        }
+      });
     }
 
     const notValid = this.totalPossibleCards - totalValidCards;
@@ -155,22 +185,40 @@ export class DeckComponent implements OnInit {
 
     let percent = 1 - invalidX / drawX;
 
-    const minMaxCards = this.selectedDeck.totalValidCards?.(
-      this.playerCount,
-      validCards
-    ) ?? [totalValidCards, totalValidCards];
+    const minMaxCards = [0, 0];
+    this.selectedDecks.forEach((deck) => {
+      const validCardsFromDeck = validCards.filter((c) =>
+        deck.cards.includes(c)
+      );
+      const tempMinMax =
+        deck.totalValidCards?.(this.playerCount, validCardsFromDeck) ??
+        this.getTotalCards(validCardsFromDeck);
+
+      minMaxCards[0] += tempMinMax[0];
+      minMaxCards[1] += tempMinMax[1];
+
+      if (tempMinMax[0] !== tempMinMax[1]) {
+        validCards.forEach((c) => {
+          if (c.probabilityFunc) {
+            percent -=
+              c.probabilityFunc(this.playerCount) *
+              (1 / this.totalPossibleCards);
+          }
+        });
+      }
+    });
+
     if (minMaxCards[0] !== minMaxCards[1]) {
-      validCards.forEach((c) => {
-        if (c.probabilityFunc) {
-          percent -=
-            c.probabilityFunc(this.playerCount) * (1 / this.totalPossibleCards);
-        }
-      });
-      this.totalValidCardsString = `${minMaxCards[0]} - ${minMaxCards[1]}`;
+      this.totalValidCardsString = `${minMaxCards[0]}-${minMaxCards[1]}`;
     } else {
       this.totalValidCardsString = `${minMaxCards[0]}`;
     }
 
     this.percentage = (percent * 100).toFixed(4);
+  }
+
+  getTotalCards(cards: Card[]): number[] {
+    const total = cards.reduce((prev, value) => prev + (value.count ?? 1), 0);
+    return [total, total];
   }
 }
