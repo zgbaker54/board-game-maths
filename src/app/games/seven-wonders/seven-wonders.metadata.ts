@@ -11,6 +11,7 @@ export const game: Game = {
     {
       id: 1,
       name: 'Age I',
+      pick: 7,
       cards: [
         {
           tags: ['Brown;Color', 'Common Resource', 'Wood;Resource'],
@@ -198,6 +199,7 @@ export const game: Game = {
     {
       id: 2,
       name: 'Age II',
+      pick: 7,
       cards: [
         {
           tags: ['Brown;Color', 'Common Resource', 'Wood;Resource'],
@@ -360,6 +362,7 @@ export const game: Game = {
     {
       id: 3,
       name: 'Age III',
+      pick: 7,
       totalCardsAdjust: (playerCount: number) => {
         return playerCount + 2 - 10;
       },

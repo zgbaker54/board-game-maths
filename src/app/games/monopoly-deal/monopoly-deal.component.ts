@@ -17,6 +17,7 @@ export class MonopolyDealComponent {
     decks: [
       {
         id: 1,
+        pick: 2,
         cards: [
           // Property
           { tags: ['Property', 'Brown;Color', '1M;Money'], count: 2 },
@@ -31,13 +32,65 @@ export class MonopolyDealComponent {
           { tags: ['Property', 'Utilities;Color', '2M;Money'], count: 2 },
 
           // Property Wild
-          { tags: ['Property', 'Wild', 'Light Blue;Color', 'Brown;Color', '1M;Money'] },
-          { tags: ['Property', 'Wild', 'Light Blue;Color', 'Railroads;Color', '4M;Money'] },
-          { tags: ['Property', 'Wild', 'Pink;Color', 'Orange;Color', '2M;Money'], count: 2 },
-          { tags: ['Property', 'Wild', 'Red;Color', 'Yellow;Color', '3M;Money'], count: 2 },
-          { tags: ['Property', 'Wild', 'Dark Blue;Color', 'Green;Color', '4M;Money'] },
-          { tags: ['Property', 'Wild', 'Railroads;Color', 'Green;Color', '4M;Money'] },
-          { tags: ['Property', 'Wild', 'Railroads;Color', 'Utility;Color', '2M;Money'] },
+          {
+            tags: [
+              'Property',
+              'Wild',
+              'Light Blue;Color',
+              'Brown;Color',
+              '1M;Money',
+            ],
+          },
+          {
+            tags: [
+              'Property',
+              'Wild',
+              'Light Blue;Color',
+              'Railroads;Color',
+              '4M;Money',
+            ],
+          },
+          {
+            tags: [
+              'Property',
+              'Wild',
+              'Pink;Color',
+              'Orange;Color',
+              '2M;Money',
+            ],
+            count: 2,
+          },
+          {
+            tags: ['Property', 'Wild', 'Red;Color', 'Yellow;Color', '3M;Money'],
+            count: 2,
+          },
+          {
+            tags: [
+              'Property',
+              'Wild',
+              'Dark Blue;Color',
+              'Green;Color',
+              '4M;Money',
+            ],
+          },
+          {
+            tags: [
+              'Property',
+              'Wild',
+              'Railroads;Color',
+              'Green;Color',
+              '4M;Money',
+            ],
+          },
+          {
+            tags: [
+              'Property',
+              'Wild',
+              'Railroads;Color',
+              'Utility;Color',
+              '2M;Money',
+            ],
+          },
           {
             tags: [
               'Property',
@@ -69,11 +122,44 @@ export class MonopolyDealComponent {
           { tags: ['Action', 'Pass Go', '1M;Money'], count: 10 },
 
           // Rent
-          { tags: ['Action', 'Rent', 'Light Blue;Color', 'Brown;Color', '1M;Money'], count: 2 },
-          { tags: ['Action', 'Rent', 'Pink;Color', 'Orange;Color', '1M;Money'], count: 2 },
-          { tags: ['Action', 'Rent', 'Red;Color', 'Yellow;Color', '1M;Money'], count: 2 },
-          { tags: ['Action', 'Rent', 'Dark Blue;Color', 'Green;Color', '1M;Money'], count: 2 },
-          { tags: ['Action', 'Rent', 'Railroads;Color', 'Utilities;Color', '1M;Money'], count: 2 },
+          {
+            tags: [
+              'Action',
+              'Rent',
+              'Light Blue;Color',
+              'Brown;Color',
+              '1M;Money',
+            ],
+            count: 2,
+          },
+          {
+            tags: ['Action', 'Rent', 'Pink;Color', 'Orange;Color', '1M;Money'],
+            count: 2,
+          },
+          {
+            tags: ['Action', 'Rent', 'Red;Color', 'Yellow;Color', '1M;Money'],
+            count: 2,
+          },
+          {
+            tags: [
+              'Action',
+              'Rent',
+              'Dark Blue;Color',
+              'Green;Color',
+              '1M;Money',
+            ],
+            count: 2,
+          },
+          {
+            tags: [
+              'Action',
+              'Rent',
+              'Railroads;Color',
+              'Utilities;Color',
+              '1M;Money',
+            ],
+            count: 2,
+          },
           {
             tags: [
               'Action',
@@ -89,7 +175,7 @@ export class MonopolyDealComponent {
               'Dark Blue;Color',
               'Railroads;Color',
               'Utilities;Color',
-              '3M;Money'
+              '3M;Money',
             ],
             count: 3,
           },

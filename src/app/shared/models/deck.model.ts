@@ -2,7 +2,7 @@ export type Deck = {
   id: number;
   name?: string;
   expansionId?: number;
-  pick?: string; // How many cards to use from this deck
+  pick?: number; // How many cards can be drawn at once
   cards: Card[];
 
   /**

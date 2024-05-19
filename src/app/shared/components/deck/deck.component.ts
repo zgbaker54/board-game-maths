@@ -11,6 +11,7 @@ import { SelectItem, SelectItemGroup } from 'primeng/api';
 import { ChipModule } from 'primeng/chip';
 import { Game } from '../../models/game.model';
 import { combinations } from 'mathjs';
+import { max } from 'rxjs';
 
 @Component({
   selector: 'app-deck',
@@ -44,7 +45,7 @@ export class DeckComponent implements OnInit {
 
   allCards: Card[] = [];
 
-  drawCounts = [1, 2, 7];
+  drawCounts = [1, 2, 3, 4, 5, 6, 7, 8];
   selectedDrawCount = 1;
 
   totalValidCardsString = '';
@@ -75,6 +76,7 @@ export class DeckComponent implements OnInit {
       return { value: d!.id, label: d!.name };
     });
     this.selectedDeckId = this.game.decks[0].id;
+
     this.selectDeck();
     this.handleChanges();
   }
@@ -122,6 +124,18 @@ export class DeckComponent implements OnInit {
     this.tagGroups.forEach((x) =>
       x.items.sort((a, b) => a.value.localeCompare(b.value))
     );
+
+    if (this.selectedDecks.some((x) => x.pick)) {
+      const maxDraw = Math.max(...this.selectedDecks.map((x) => x.pick ?? 0));
+      this.drawCounts = [];
+      for(let i = 1; i <= maxDraw; i++) {
+        this.drawCounts.push(i);
+      }
+      this.selectedDrawCount = maxDraw;
+    } else {
+      this.drawCounts = [1, 2, 3, 4, 5, 6, 7, 8];
+      this.selectedDrawCount = 1;
+    }
   }
 
   handleChanges(): void {
