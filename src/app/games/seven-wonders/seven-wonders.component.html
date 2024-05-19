@@ -1,3 +1,52 @@
-<h1>{{ game.name }}</h1>
-
 <app-deck [game]="game"></app-deck>
+
+<app-section-title title="Science Cards"></app-section-title>
+<!-- <div *ngFor="let s of selectedScience; let i = index">
+  {{ 
+  }}<p-button
+    icon="pi pi-times"
+    [rounded]="true"
+    severity="danger"
+    [outlined]="true"
+    (click)="deleteScience(i)"
+  />
+</div> -->
+<p-table [value]="science">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>Count</th>
+      <th>Clear</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{ product.name }}</td>
+      <td>
+        <div class="count">
+          <p-button
+            icon="pi pi-minus"
+            [rounded]="true"
+            [outlined]="true"
+            (click)="adjustScience(product, -1)"
+          />
+          <div>{{ product.count }}</div>
+          <p-button
+            icon="pi pi-plus"
+            [rounded]="true"
+            [outlined]="true"
+            (click)="adjustScience(product, 1)"
+          />
+        </div>
+      </td>
+      <td>
+        <p-button
+          label="Clear"
+          [outlined]="true"
+          severity="danger"
+          (click)="setScience(product, 0)"
+        />
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

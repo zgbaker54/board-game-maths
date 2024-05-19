@@ -1,25 +1,27 @@
-<h2>Cards</h2>
+<app-section-title title="Cards"></app-section-title>
 
-<p>
-  Deck:
-  <p-dropdown
-    *ngIf="game.decks.length > 1"
-    [options]="decks"
-    [(ngModel)]="selectedDeckId"
-    [showClear]="false"
-    [filter]="false"
-    (onChange)="selectDeck(); handleChanges()"
-  />
+<p *ngIf="game.decks.length > 1 || variesByPlayerCount">
+  <span *ngIf="game.decks.length > 1">
+    Deck:
+    <p-dropdown
+      [options]="decks"
+      [(ngModel)]="selectedDeckId"
+      [showClear]="false"
+      [filter]="false"
+      (onChange)="selectDeck(); handleChanges()"
+    />
+  </span>
 
-  Players: 
-  <p-dropdown
-    *ngIf="variesByPlayerCount"
-    [options]="playerCounts"
-    [(ngModel)]="playerCount"
-    [showClear]="false"
-    [filter]="false"
-    (onChange)="handleChanges()"
-  />
+  <span *ngIf="variesByPlayerCount">
+    Players:
+    <p-dropdown
+      [options]="playerCounts"
+      [(ngModel)]="playerCount"
+      [showClear]="false"
+      [filter]="false"
+      (onChange)="handleChanges()"
+    />
+  </span>
 </p>
 
 <p>

@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<div class="game-title-wrapper">
+  <div class="game-title">
+    <p-dropdown
+      [options]="games"
+      [(ngModel)]="selectedGame"
+      (onChange)="gameClicked($event.value)"
+      [checkmark]="true"
+      optionLabel="label"
+      [showClear]="false"
+      placeholder="Select a Game"
+    >
+    </p-dropdown>
+  </div>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,28 @@
+:host ::ng-deep {
+  .game-title-wrapper {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+  }
+
+  .game-title {
+    margin: auto;
+    max-width: fit-content;
+    .p-dropdown {
+      background: none;
+      border: none;
+
+      .p-dropdown-label {
+        font-size: x-large;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .content {
+    margin: 8px;
+  }
+}

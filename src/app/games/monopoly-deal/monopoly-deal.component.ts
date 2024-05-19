@@ -11,7 +11,6 @@ import { DeckComponent } from '../../shared/components/deck/deck.component';
 })
 export class MonopolyDealComponent {
   game: Game = {
-    name: 'Monopoly Deal',
     minPlayers: 2,
     maxPlayers: 5,
     diceSets: [],

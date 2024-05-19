@@ -1,4 +1,4 @@
-<h2>Dice{{rollCount}}</h2>
+<app-section-title title="Dice{{ rollCount }}"></app-section-title>
 
 <p-selectButton
   [options]="tableViewOptions"
@@ -9,7 +9,10 @@
 />
 
 <ng-container *ngIf="useSimpleDice; else complexDice">
-  <app-dice-simple [diceSet]="diceSet" [tableView]="tableView"></app-dice-simple>
+  <app-dice-simple
+    [diceSet]="diceSet"
+    [tableView]="tableView"
+  ></app-dice-simple>
 </ng-container>
 
 <ng-template #complexDice>

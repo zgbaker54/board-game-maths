@@ -1,0 +1,20 @@
+:host ::ng-deep {
+  p-table {
+    td {
+      padding: 8px;
+      .count {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 8px
+      }
+    }
+    .p-button {
+      padding: 4px;
+      &.p-button-icon-only {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}

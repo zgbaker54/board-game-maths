@@ -11,7 +11,7 @@ import { SelectItem, SelectItemGroup } from 'primeng/api';
 import { ChipModule } from 'primeng/chip';
 import { Game } from '../../models/game.model';
 import { combinations } from 'mathjs';
-import { max } from 'rxjs';
+import { SectionTitleComponent } from '../section-title/section-title.component';
 
 @Component({
   selector: 'app-deck',
@@ -25,6 +25,7 @@ import { max } from 'rxjs';
     SliderModule,
     InputTextModule,
     ChipModule,
+    SectionTitleComponent,
   ],
   templateUrl: './deck.component.html',
   styleUrl: './deck.component.scss',
@@ -128,7 +129,7 @@ export class DeckComponent implements OnInit {
     if (this.selectedDecks.some((x) => x.pick)) {
       const maxDraw = Math.max(...this.selectedDecks.map((x) => x.pick ?? 0));
       this.drawCounts = [];
-      for(let i = 1; i <= maxDraw; i++) {
+      for (let i = 1; i <= maxDraw; i++) {
         this.drawCounts.push(i);
       }
       this.selectedDrawCount = maxDraw;
@@ -140,7 +141,7 @@ export class DeckComponent implements OnInit {
 
   handleChanges(): void {
     const validCards = this.allCards.filter((card) => {
-      if ((card.minPlayers ?? 1) > this.playerCount) {
+      if (this.playerCount > 0 && (card.minPlayers ?? 1) > this.playerCount) {
         return false;
       }
 
@@ -161,7 +162,7 @@ export class DeckComponent implements OnInit {
 
     this.totalPossibleCards = this.allCards
       .filter((card) => {
-        if ((card.minPlayers ?? 1) > this.playerCount) {
+        if (this.playerCount > 0 && (card.minPlayers ?? 1) > this.playerCount) {
           return false;
         }
         return true;

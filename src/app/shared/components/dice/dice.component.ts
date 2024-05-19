@@ -4,11 +4,18 @@ import { CommonModule } from '@angular/common';
 import { DiceSimpleComponent } from '../dice-simple/dice-simple.component';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
+import { SectionTitleComponent } from '../section-title/section-title.component';
 
 @Component({
   selector: 'app-dice',
   standalone: true,
-  imports: [CommonModule, FormsModule, SelectButtonModule, DiceSimpleComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    SelectButtonModule,
+    DiceSimpleComponent,
+    SectionTitleComponent,
+  ],
   templateUrl: './dice.component.html',
   styleUrl: './dice.component.scss',
 })
@@ -17,7 +24,10 @@ export class DiceComponent implements OnInit {
 
   rollCount = '';
 
-  tableViewOptions: any[] = [{ label: 'Percent %', value: 'percent' },{ label: 'Count #', value: 'count' }];
+  tableViewOptions: any[] = [
+    { label: 'Percent %', value: 'percent' },
+    { label: 'Count #', value: 'count' },
+  ];
   tableView: 'percent' | 'count' = 'percent';
 
   useSimpleDice = false;
@@ -30,7 +40,9 @@ export class DiceComponent implements OnInit {
       this.useSimpleDice = true;
     }
 
-    const types = [...new Set(this.diceSet.dice.map(x => x.type))];
-    this.rollCount = ` - ${this.diceSet.dice.length}${allSimple ? ' ' + types.join(' + ') : ''} roll${this.diceSet.dice.length>1?'s':''}`;
+    const types = [...new Set(this.diceSet.dice.map((x) => x.type))];
+    this.rollCount = ` - ${this.diceSet.dice.length}${
+      allSimple ? ' ' + types.join(' + ') : ''
+    } roll${this.diceSet.dice.length > 1 ? 's' : ''}`;
   }
 }
