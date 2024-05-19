@@ -44,7 +44,7 @@ export class DeckComponent implements OnInit {
   drawCounts = [1, 2, 7];
   selectedDrawCount = 1;
 
-  totalValidCards = 0;
+  totalValidCardsString = '';
   totalPossibleCards = 0;
 
   percentage = '100';
@@ -94,7 +94,10 @@ export class DeckComponent implements OnInit {
         .map((x) => ({ label: x, value: x })),
     });
 
-    console.log(tempGroups);
+    this.tagGroups.sort((a, b) => a.label.localeCompare(b.label));
+    this.tagGroups.forEach((x) =>
+      x.items.sort((a, b) => a.value.localeCompare(b.value))
+    );
   }
 
   handleChanges(): void {
@@ -114,10 +117,9 @@ export class DeckComponent implements OnInit {
       return true;
     });
 
-    this.totalValidCards = validCards.reduce(
-      (prev, value) => prev + (value.count ?? 1),
-      0
-    );
+    let totalValidCards = validCards.reduce((prev, value) => {
+      return prev + (value.count ?? 1);
+    }, 0);
 
     this.totalPossibleCards = this.selectedDeck.cards
       .filter((card) => {
@@ -128,17 +130,47 @@ export class DeckComponent implements OnInit {
       })
       .reduce((prev, value) => prev + (value.count ?? 1), 0);
 
-    const notValid = this.totalPossibleCards - this.totalValidCards;
+    if (this.selectedDeck.totalCardsAdjust) {
+      this.totalPossibleCards += this.selectedDeck.totalCardsAdjust(
+        this.playerCount
+      );
+    }
+    if (this.selectedDeck.totalValidCards) {
+      totalValidCards = this.selectedDeck.totalValidCards(
+        this.playerCount,
+        validCards
+      )[1];
+    }
+
+    const notValid = this.totalPossibleCards - totalValidCards;
 
     const drawX = combinations(this.totalPossibleCards, this.selectedDrawCount);
 
     let invalidX: number;
-    if (notValid === 0) {
+    if (notValid <= 0) {
       invalidX = 0;
     } else {
       invalidX = combinations(notValid, this.selectedDrawCount);
     }
 
-    this.percentage = ((1 - invalidX / drawX) * 100).toFixed(4);
+    let percent = 1 - invalidX / drawX;
+
+    const minMaxCards = this.selectedDeck.totalValidCards?.(
+      this.playerCount,
+      validCards
+    ) ?? [totalValidCards, totalValidCards];
+    if (minMaxCards[0] !== minMaxCards[1]) {
+      validCards.forEach((c) => {
+        if (c.probabilityFunc) {
+          percent -=
+            c.probabilityFunc(this.playerCount) * (1 / this.totalPossibleCards);
+        }
+      });
+      this.totalValidCardsString = `${minMaxCards[0]} - ${minMaxCards[1]}`;
+    } else {
+      this.totalValidCardsString = `${minMaxCards[0]}`;
+    }
+
+    this.percentage = (percent * 100).toFixed(4);
   }
 }

@@ -8,7 +8,7 @@
     [(ngModel)]="selectedDeck"
     [showClear]="false"
     [filter]="false"
-    (onChange)="handleChanges()"
+    (onChange)="selectDeck(); handleChanges()"
   />
 
   Players: 
@@ -55,5 +55,5 @@
 
 <p-card>
   <h1>{{ percentage }}%</h1>
-  <h4>{{ totalValidCards }}/{{ totalPossibleCards }}</h4>
+  <h4>{{ totalValidCardsString }}/{{ totalPossibleCards }}</h4>
 </p-card>
