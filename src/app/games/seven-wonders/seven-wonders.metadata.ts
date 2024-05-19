@@ -7,6 +7,7 @@ export const game: Game = {
   minPlayers: 3,
   maxPlayers: 7,
   expansions: [{ id: 1, name: 'Cities' }],
+  diceSets: [],
   decks: [
     {
       id: 1,
@@ -552,10 +553,7 @@ export const game: Game = {
         if (blackCount === 0) {
           return [totalCount, totalCount];
         } else if (blackCount > playerCount) {
-          return [
-            totalCount + playerCount - 14,
-            totalCount + playerCount - 14,
-          ];
+          return [totalCount + playerCount - 14, totalCount + playerCount - 14];
         } else {
           return [Math.max(0, totalCount + playerCount - 14), totalCount];
         }

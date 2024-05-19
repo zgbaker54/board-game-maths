@@ -14,6 +14,7 @@ export class MonopolyDealComponent {
     name: 'Monopoly Deal',
     minPlayers: 2,
     maxPlayers: 5,
+    diceSets: [],
     decks: [
       {
         id: 1,

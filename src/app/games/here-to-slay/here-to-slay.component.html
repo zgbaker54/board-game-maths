@@ -1,0 +1,5 @@
+<h1>{{ game.name }}</h1>
+
+<ng-container *ngFor="let diceSet of game.diceSets">
+  <app-dice [diceSet]="diceSet"></app-dice>
+</ng-container>
