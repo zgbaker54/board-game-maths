@@ -1,16 +1,6 @@
 <app-deck [game]="game"></app-deck>
 
-<app-section-title title="Science Cards"></app-section-title>
-<!-- <div *ngFor="let s of selectedScience; let i = index">
-  {{ 
-  }}<p-button
-    icon="pi pi-times"
-    [rounded]="true"
-    severity="danger"
-    [outlined]="true"
-    (click)="deleteScience(i)"
-  />
-</div> -->
+<app-section-title title="Science Score"></app-section-title>
 <p-table [value]="science">
   <ng-template pTemplate="header">
     <tr>
@@ -50,3 +40,8 @@
     </tr>
   </ng-template>
 </p-table>
+
+<p-card>
+  <h1>{{ maxScienceScore }} Points</h1>
+  <p>{{ scienceString(maxScienceCombo) }}</p>
+</p-card>

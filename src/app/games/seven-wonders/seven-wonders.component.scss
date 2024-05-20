@@ -1,5 +1,8 @@
 :host ::ng-deep {
   p-table {
+    .p-datatable {
+      margin-bottom: 8px;
+    }
     td {
       padding: 8px;
       .count {
@@ -15,6 +18,15 @@
         height: 2rem;
         width: 2rem;
       }
+    }
+  }
+
+  .p-card {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    h1,h4 {
+      margin: 0;
     }
   }
 }

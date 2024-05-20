@@ -23,6 +23,8 @@
   }
 
   .content {
-    margin: 8px;
+    margin: auto;
+    width: 500px;
+    max-width: calc(100vw - 16px);
   }
 }
