@@ -4,9 +4,14 @@ export type Game = {
   minPlayers: number;
   maxPlayers: number;
   decks: Deck[];
-  expansions: { id: number; name: string }[];
+  expansions: Expansion[];
   diceSets: DiceSet[];
   // image, url, ...
+};
+
+export type Expansion = {
+  id: number;
+  name: string;
 };
 
 export type DiceSet = {

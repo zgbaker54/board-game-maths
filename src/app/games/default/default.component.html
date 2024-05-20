@@ -1,0 +1,11 @@
+<ng-container *ngIf="game">
+  <app-expansions [expansions]="game.expansions"></app-expansions>
+
+  <app-deck [game]="game"></app-deck>
+
+  <ng-container *ngFor="let diceSet of game.diceSets">
+    <app-dice [diceSet]="diceSet"></app-dice>
+  </ng-container>
+
+  <router-outlet></router-outlet>
+</ng-container>

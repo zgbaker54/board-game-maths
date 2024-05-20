@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { DeckComponent } from '../../shared/components/deck/deck.component';
-import { game } from './seven-wonders.metadata';
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
-import { DropdownModule } from 'primeng/dropdown';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
-import { combinations } from 'mathjs';
 import { CardModule } from 'primeng/card';
+import { sevenWondersMetadata } from '../../metadata/seven-wonders.metadata';
+import { GameService } from '../../shared/services/game.service';
 
 type Science = { name: string; code: string; count: number };
 
@@ -17,9 +15,7 @@ type Science = { name: string; code: string; count: number };
   imports: [
     CommonModule,
     ButtonModule,
-    DeckComponent,
     SectionTitleComponent,
-    DropdownModule,
     TableModule,
     CardModule,
   ],
@@ -27,7 +23,7 @@ type Science = { name: string; code: string; count: number };
   styleUrl: './seven-wonders.component.scss',
 })
 export class SevenWondersComponent {
-  game = game;
+  game = sevenWondersMetadata;
 
   // Science Cards
   science: Science[] = [
@@ -42,6 +38,8 @@ export class SevenWondersComponent {
   scienceCombinations = new Set<string>();
   maxScienceScore = 0;
   maxScienceCombo = '';
+
+  constructor(private gameService: GameService) {}
 
   adjustScience(science: Science, adjust: number) {
     science.count += adjust;
@@ -124,7 +122,7 @@ export class SevenWondersComponent {
     const T = items.filter((x) => x === 'T').length;
     const C = items.filter((x) => x === 'C').length;
     const G = items.filter((x) => x === 'G').length;
-    
+
     return `Tablet x${T} / Compass x${C} / Gear x${G}`;
   }
 }

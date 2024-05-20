@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { Router, RouterOutlet } from '@angular/router';
+import { gameList } from './metadata/metadata';
+import { DefaultComponent } from './games/default/default.component';
 
 type GameItem = {
   label: string;
@@ -12,28 +14,14 @@ type GameItem = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, DropdownModule, RouterOutlet],
+  imports: [CommonModule, FormsModule, DropdownModule, DefaultComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements AfterViewInit {
-  title = 'board-game-maths';
-  games: GameItem[] = [
-    {
-      label: 'Monopoly Deal',
-      routerLink: '/monopoly-deal',
-    },
-    {
-      label: '7 Wonders',
-      routerLink: '/7-wonders',
-    },
-    {
-      label: 'Here to Slay',
-      routerLink: '/here-to-slay',
-    },
-  ];
-
+  games: GameItem[] = gameList;
   selectedGame: GameItem = this.games[0];
+  gameChanged = 0;
 
   constructor(private router: Router) {}
 
@@ -42,9 +30,11 @@ export class AppComponent implements AfterViewInit {
     this.selectedGame =
       this.games.find((x) => x.routerLink === window.location.pathname) ??
       this.games[0];
+    this.gameChanged++;
   }
 
   gameClicked(game: GameItem) {
     this.router.navigateByUrl(game.routerLink);
+    this.gameChanged++;
   }
 }
