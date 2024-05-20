@@ -75,6 +75,10 @@ export class DeckComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(): void {
+    if (this.game === undefined) {
+      return;
+    }
+
     this.playerCounts = [];
     for (let i = this.game.minPlayers; i <= this.game.maxPlayers; i++) {
       this.playerCounts.push(i);
@@ -102,6 +106,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
       );
       return { value: d!.id, label: d!.name };
     });
+    this.game.decks.sort((a, b) => a.id - b.id);
     this.selectedDeckId = this.game.decks[0].id;
 
     this.selectDeck();
@@ -141,8 +146,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
       value: x,
       items: tags
         .filter((t) => t.endsWith(`;${x}`))
-        .map((x) => x.split(';')[0])
-        .map((x) => ({ label: x, value: x })),
+        .map((x) => ({ label: x.split(';')[0], value: x })),
     }));
     this.tagGroups.push({
       label: 'Other',
@@ -204,8 +208,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
       }
 
       for (const tag of this.selectedTags) {
-        const tagsSimple = card.tags.map((x) => x.split(';')[0]);
-        if (tagsSimple.includes(tag) === false) {
+        if (card.tags.includes(tag) === false) {
           return false;
         } else {
           // continue
@@ -300,5 +303,16 @@ export class DeckComponent implements OnChanges, OnDestroy {
   getTotalCards(cards: Card[]): number[] {
     const total = CardsCount(cards);
     return [total, total];
+  }
+
+  getTagsFormatted(tags: string[] | undefined): string {
+    return (
+      tags
+        ?.map((x) => {
+          const [tag, group] = x.split(';');
+          return group ? `${group}: ${tag}` : tag;
+        })
+        ?.join('<small> AND </small>') ?? ''
+    );
   }
 }
