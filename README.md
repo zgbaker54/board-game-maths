@@ -14,4 +14,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Deployment
 
-Run `npm run deploy`
+Run `npm run ghpages`
