@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Card, Deck } from '../../models/deck.model';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CommonModule } from '@angular/common';
@@ -12,6 +12,9 @@ import { ChipModule } from 'primeng/chip';
 import { Game } from '../../models/game.model';
 import { combinations } from 'mathjs';
 import { SectionTitleComponent } from '../section-title/section-title.component';
+import { CardsCount, Unique } from '../../helper';
+import { GameService } from '../../services/game.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-deck',
@@ -30,8 +33,12 @@ import { SectionTitleComponent } from '../section-title/section-title.component'
   templateUrl: './deck.component.html',
   styleUrl: './deck.component.scss',
 })
-export class DeckComponent implements OnInit {
+export class DeckComponent implements OnChanges, OnDestroy {
   @Input() game!: Game;
+
+  subscriptions = new Subscription();
+
+  expansions: number[] = [];
 
   variesByPlayerCount = false;
   playerCounts: number[] = [];
@@ -46,7 +53,7 @@ export class DeckComponent implements OnInit {
 
   allCards: Card[] = [];
 
-  drawCounts = [1, 2, 3, 4, 5, 6, 7, 8];
+  drawCounts: number[] = [];
   selectedDrawCount = 1;
 
   totalValidCardsString = '';
@@ -54,40 +61,64 @@ export class DeckComponent implements OnInit {
 
   percentage = '100';
 
-  ngOnInit(): void {
+  constructor(gameService: GameService) {
+    this.subscriptions.add(
+      gameService.expansions$.subscribe((x) => {
+        this.expansions = x;
+        this.ngOnChanges();
+      })
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
+  }
+
+  ngOnChanges(): void {
+    this.playerCounts = [];
     for (let i = this.game.minPlayers; i <= this.game.maxPlayers; i++) {
       this.playerCounts.push(i);
     }
     this.playerCount = this.game.maxPlayers;
 
     // Get deck ids filtering out expansions
-    const deckIds = [
-      ...new Set<number>(
-        this.game.decks
-          .filter((x) => x.expansionId === undefined)
-          .map((x) => x.id)
-      ),
-    ];
+    const deckIds = Unique(
+      this.game.decks
+        .filter(
+          (x) =>
+            x.expansionId === undefined ||
+            this.expansions.includes(x.expansionId)
+        )
+        .map((x) => x.id)
+    );
 
     // Get list of decks for the dropdown
     this.decks = deckIds.map((id) => {
       const d = this.game.decks.find(
-        (x) => x.id === id && x.expansionId === undefined
+        (x) =>
+          x.id === id &&
+          (x.expansionId === undefined ||
+            this.expansions.includes(x.expansionId))
       );
       return { value: d!.id, label: d!.name };
     });
     this.selectedDeckId = this.game.decks[0].id;
 
     this.selectDeck();
+    this.fillDrawCounts();
     this.handleChanges();
   }
 
   selectDeck() {
+    this.selectedTags = [];
+
     const tempTags = new Set<string>();
     const tempGroups = new Set<string>();
 
     this.selectedDecks = this.game.decks.filter(
-      (x) => x.id === this.selectedDeckId && x.expansionId === undefined
+      (x) =>
+        x.id === this.selectedDeckId &&
+        (x.expansionId === undefined || this.expansions.includes(x.expansionId))
     );
     this.allCards = this.selectedDecks.map((x) => x.cards).flat();
 
@@ -125,21 +156,48 @@ export class DeckComponent implements OnInit {
     this.tagGroups.forEach((x) =>
       x.items.sort((a, b) => a.value.localeCompare(b.value))
     );
+  }
 
-    if (this.selectedDecks.some((x) => x.pick)) {
-      const maxDraw = Math.max(...this.selectedDecks.map((x) => x.pick ?? 0));
-      this.drawCounts = [];
-      for (let i = 1; i <= maxDraw; i++) {
-        this.drawCounts.push(i);
-      }
-      this.selectedDrawCount = maxDraw;
-    } else {
-      this.drawCounts = [1, 2, 3, 4, 5, 6, 7, 8];
-      this.selectedDrawCount = 1;
+  fillDrawCounts() {
+    this.selectedDrawCount =
+      this.selectedDecks.find((x) => x.expansionId === undefined)?.pick ?? 1;
+
+    let maxPick = Math.max(
+      1,
+      this.selectedDrawCount,
+      ...(this.selectedDecks
+        .map((x) => x.pickMax)
+        .filter((x) => x !== undefined) as number[])
+    );
+    let minPick = Math.min(
+      1,
+      this.selectedDrawCount,
+      ...(this.selectedDecks
+        .map((x) => x.pickMin)
+        .filter((x) => x !== undefined) as number[])
+    );
+    minPick = Math.max(1, minPick);
+
+    this.drawCounts = [];
+    for (let i = minPick; i <= maxPick; i++) {
+      this.drawCounts.push(i);
+    }
+
+    const expansionDecks = this.selectedDecks.filter(
+      (x) => x.expansionId !== undefined
+    );
+    if (expansionDecks.length > 0) {
+      this.selectedDrawCount = Math.max(
+        this.selectedDrawCount,
+        ...(expansionDecks
+          .filter((x) => x.pick !== undefined)
+          .map((x) => x.pick) as number[])
+      );
     }
   }
 
   handleChanges(): void {
+    // Get an array of all valid cards that match the current player count and selected tags
     const validCards = this.allCards.filter((card) => {
       if (this.playerCount > 0 && (card.minPlayers ?? 1) > this.playerCount) {
         return false;
@@ -156,25 +214,27 @@ export class DeckComponent implements OnInit {
       return true;
     });
 
-    let totalValidCards = validCards.reduce((prev, value) => {
-      return prev + (value.count ?? 1);
-    }, 0);
+    // Get card count from valid card array
+    let totalValidCards = CardsCount(validCards);
 
-    this.totalPossibleCards = this.allCards
-      .filter((card) => {
+    // Get card count from entire deck(s)
+    this.totalPossibleCards = CardsCount(
+      this.allCards.filter((card) => {
         if (this.playerCount > 0 && (card.minPlayers ?? 1) > this.playerCount) {
           return false;
         }
         return true;
       })
-      .reduce((prev, value) => prev + (value.count ?? 1), 0);
+    );
 
+    // Apply total card count adjustment for decks where some cards are optional
     this.selectedDecks.forEach((deck) => {
       if (deck.totalCardsAdjust) {
         this.totalPossibleCards += deck.totalCardsAdjust(this.playerCount);
       }
     });
 
+    // Apply valid card count adjustment for decks where some cards are optional
     if (this.selectedDecks.some((deck) => deck.totalValidCards)) {
       totalValidCards = 0;
       this.selectedDecks.forEach((deck) => {
@@ -187,10 +247,11 @@ export class DeckComponent implements OnInit {
       });
     }
 
+    // Get number of invalid cards
     const notValid = this.totalPossibleCards - totalValidCards;
 
+    // Calculate P(invalid for all draws)
     const drawX = combinations(this.totalPossibleCards, this.selectedDrawCount);
-
     let invalidX: number;
     if (notValid <= 0) {
       invalidX = 0;
@@ -198,8 +259,10 @@ export class DeckComponent implements OnInit {
       invalidX = combinations(notValid, this.selectedDrawCount);
     }
 
+    // P(valid) = 1 - P(invalid for all draws)
     let percent = 1 - invalidX / drawX;
 
+    // Calculate the min and max number of valid cards that can be included in deck
     const minMaxCards = [0, 0];
     this.selectedDecks.forEach((deck) => {
       const validCardsFromDeck = validCards.filter((c) =>
@@ -223,17 +286,19 @@ export class DeckComponent implements OnInit {
       }
     });
 
+    // Get string for valid card count, range is shown when some cards are optional
     if (minMaxCards[0] !== minMaxCards[1]) {
       this.totalValidCardsString = `${minMaxCards[0]}-${minMaxCards[1]}`;
     } else {
       this.totalValidCardsString = `${minMaxCards[0]}`;
     }
 
+    // Format probability percent
     this.percentage = (percent * 100).toFixed(4);
   }
 
   getTotalCards(cards: Card[]): number[] {
-    const total = cards.reduce((prev, value) => prev + (value.count ?? 1), 0);
+    const total = CardsCount(cards);
     return [total, total];
   }
 }

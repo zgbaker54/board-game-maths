@@ -2,6 +2,8 @@ export type Deck = {
   id: number;
   name?: string;
   expansionId?: number;
+  pickMin?: number;
+  pickMax?: number;
   pick?: number; // How many cards can be drawn at once
   cards: Card[];
 

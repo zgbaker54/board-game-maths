@@ -5,6 +5,7 @@ import { DiceSimpleComponent } from '../dice-simple/dice-simple.component';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
 import { SectionTitleComponent } from '../section-title/section-title.component';
+import { Unique } from '../../helper';
 
 @Component({
   selector: 'app-dice',
@@ -34,13 +35,12 @@ export class DiceComponent implements OnInit {
 
   ngOnInit(): void {
     const allSimple = this.diceSet.dice.every((x) => x.type !== 'fancy');
-    const someSimple = this.diceSet.dice.some((x) => x.type !== 'fancy');
 
     if (allSimple) {
       this.useSimpleDice = true;
     }
 
-    const types = [...new Set(this.diceSet.dice.map((x) => x.type))];
+    const types = Unique(this.diceSet.dice.map((x) => x.type));
     this.rollCount = ` - ${this.diceSet.dice.length}${
       allSimple ? ' ' + types.join(' + ') : ''
     } roll${this.diceSet.dice.length > 1 ? 's' : ''}`;
