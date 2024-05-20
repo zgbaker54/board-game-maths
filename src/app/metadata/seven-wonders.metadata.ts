@@ -1,8 +1,9 @@
 import { combinations } from 'mathjs';
-import { Game } from '../../shared/models/game.model';
-import { Card } from '../../shared/models/deck.model';
+import { Game } from '../shared/models/game.model';
+import { Card } from '../shared/models/deck.model';
+import { CardsCount } from '../shared/helper';
 
-export const game: Game = {
+export const sevenWondersMetadata: Game = {
   minPlayers: 3,
   maxPlayers: 7,
   expansions: [{ id: 1, name: 'Cities' }],
@@ -11,6 +12,8 @@ export const game: Game = {
     {
       id: 1,
       name: 'Age I',
+      pickMin: 1,
+      pickMax: 7,
       pick: 7,
       cards: [
         {
@@ -199,6 +202,8 @@ export const game: Game = {
     {
       id: 2,
       name: 'Age II',
+      pickMin: 1,
+      pickMax: 7,
       pick: 7,
       cards: [
         {
@@ -362,18 +367,17 @@ export const game: Game = {
     {
       id: 3,
       name: 'Age III',
+      pickMin: 1,
+      pickMax: 7,
       pick: 7,
       totalCardsAdjust: (playerCount: number) => {
         return playerCount + 2 - 10;
       },
       totalValidCards: (playerCount: number, validCards: Card[]) => {
-        const totalCount = validCards.reduce(
-          (prev, value) => prev + (value.count ?? 1),
-          0
+        const totalCount = CardsCount(validCards);
+        const purpleCount = CardsCount(
+          validCards.filter((x) => x.tags.includes('Purple;Color'))
         );
-        const purpleCount = validCards
-          .filter((x) => x.tags.includes('Purple;Color'))
-          .reduce((prev, value) => prev + (value.count ?? 1), 0);
         if (purpleCount === 0) {
           return [totalCount, totalCount];
         } else if (purpleCount > playerCount + 2) {
@@ -483,7 +487,12 @@ export const game: Game = {
         { tags: ['Green;Color', 'Tablet;Science'], minPlayers: 4 },
 
         {
-          tags: ['Purple;Color', 'Gear;Science', 'Compass;Science', 'Tablet;Science'],
+          tags: [
+            'Purple;Color',
+            'Gear;Science',
+            'Compass;Science',
+            'Tablet;Science',
+          ],
           minPlayers: 3,
           probabilityFunc: purpleCardProbability,
         },
@@ -538,17 +547,17 @@ export const game: Game = {
       id: 1,
       name: 'Age I',
       expansionId: 1,
+      pickMin: 1,
+      pickMax: 8,
+      pick: 8,
       totalCardsAdjust: (playerCount: number) => {
         return playerCount - 14;
       },
       totalValidCards: (playerCount: number, validCards: Card[]) => {
-        const totalCount = validCards.reduce(
-          (prev, value) => prev + (value.count ?? 1),
-          0
+        const totalCount = CardsCount(validCards);
+        const blackCount = CardsCount(
+          validCards.filter((x) => x.tags.includes('Black;Color'))
         );
-        const blackCount = validCards
-          .filter((x) => x.tags.includes('Black;Color'))
-          .reduce((prev, value) => prev + (value.count ?? 1), 0);
         if (blackCount === 0) {
           return [totalCount, totalCount];
         } else if (blackCount > playerCount) {
@@ -566,6 +575,70 @@ export const game: Game = {
         },
       ],
     },
+    {
+        id: 2,
+        name: 'Age II',
+        expansionId: 1,
+        pickMin: 1,
+        pickMax: 8,
+        pick: 8,
+        totalCardsAdjust: (playerCount: number) => {
+          return playerCount - 14;
+        },
+        totalValidCards: (playerCount: number, validCards: Card[]) => {
+          const totalCount = CardsCount(validCards);
+          const blackCount = CardsCount(
+            validCards.filter((x) => x.tags.includes('Black;Color'))
+          );
+          if (blackCount === 0) {
+            return [totalCount, totalCount];
+          } else if (blackCount > playerCount) {
+            return [totalCount + playerCount - 14, totalCount + playerCount - 14];
+          } else {
+            return [Math.max(0, totalCount + playerCount - 14), totalCount];
+          }
+        },
+        cards: [
+          {
+            tags: ['Black;Color'],
+            minPlayers: 3,
+            count: 14,
+            probabilityFunc: blackCardProbability,
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: 'Age III',
+        expansionId: 1,
+        pickMin: 1,
+        pickMax: 8,
+        pick: 8,
+        totalCardsAdjust: (playerCount: number) => {
+          return playerCount - 14;
+        },
+        totalValidCards: (playerCount: number, validCards: Card[]) => {
+          const totalCount = CardsCount(validCards);
+          const blackCount = CardsCount(
+            validCards.filter((x) => x.tags.includes('Black;Color'))
+          );
+          if (blackCount === 0) {
+            return [totalCount, totalCount];
+          } else if (blackCount > playerCount) {
+            return [totalCount + playerCount - 14, totalCount + playerCount - 14];
+          } else {
+            return [Math.max(0, totalCount + playerCount - 14), totalCount];
+          }
+        },
+        cards: [
+          {
+            tags: ['Black;Color'],
+            minPlayers: 3,
+            count: 14,
+            probabilityFunc: blackCardProbability,
+          },
+        ],
+      },
   ],
 };
 
