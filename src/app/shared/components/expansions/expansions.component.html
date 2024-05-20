@@ -1,0 +1,14 @@
+<p-multiSelect
+  *ngIf="expansions && expansions.length > 0"
+  [options]="expansions"
+  [filter]="false"
+  [showToggleAll]="false"
+  [showHeader]="false"
+  [(ngModel)]="selectedExpansions"
+  optionLabel="name"
+  optionValue="id"
+  placeholder="Select Expansions"
+  display="chip"
+  [maxSelectedLabels]="100"
+  (onChange)="handleChanges()"
+></p-multiSelect>
