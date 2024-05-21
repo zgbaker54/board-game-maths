@@ -2,6 +2,7 @@ import { castingShadowsMetadata } from './casting-shadows.metadata';
 import { hereToSlayMetadata } from './here-to-slay.metadata';
 import { monopolyDealMetadata } from './monopoly-deal.metadata';
 import { sevenWondersMetadata } from './seven-wonders.metadata';
+import { wingspanMetadata } from './wingspan.metadata';
 
 export const gameList = [
   {
@@ -23,5 +24,10 @@ export const gameList = [
     label: 'Casting Shadows',
     routerLink: '/casting-shadows',
     metadata: castingShadowsMetadata,
+  },
+  {
+    label: 'Wingspan',
+    routerLink: '/wingspan',
+    metadata: wingspanMetadata,
   },
 ];

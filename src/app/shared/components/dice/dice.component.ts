@@ -81,16 +81,22 @@ export class DiceComponent implements OnInit {
       totalDice: number;
     }[] = [];
 
-    const faces: string[] = Unique(dice.map((x) => x.sides).flat()).filter(
+    const faces: string[] = Unique(dice.map((x) => x.sides).flat(2)).filter(
       (x) => x !== undefined
     ) as string[];
     faces.forEach((face) => {
-      const die = dice.find((x) => x.sides?.includes(face))!;
-      const totalDice = dice.filter((x) => x.sides?.includes(face)).length;
+      const validDice = dice.filter((x) => x.sides?.flat().includes(face));
+      const die = validDice[0];
+      const totalDice = validDice.length;
+
+      if (!die) {
+        throw new Error('Dice does not have valid face!');
+      }
+
       tempData.push({
         face,
         probability:
-          (die.sides?.filter((x) => x === face).length ?? 1) /
+          (die.sides?.flat().filter((x) => x === face).length ?? 1) /
           (die.sides?.length ?? 1),
         totalDice,
       });
