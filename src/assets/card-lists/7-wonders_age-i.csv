@@ -1,0 +1,50 @@
+﻿name,count,minPlayers,color,resource,cost
+Lumber Yard,,3,Brown,Wood,
+Lumber Yard,,4,Brown,Wood,
+Stone Pit,,3,Brown,Stone,
+Stone Pit,,5,Brown,Stone,
+Clay Pool,,3,Brown,Clay,
+Clay Pool,,5,Brown,Clay,
+Ore Vein,,3,Brown,Ore,
+Ore Vein,,4,Brown,Ore,
+Tree Farm,,6,Brown,"Wood,Clay",Gold
+Excavation,,4,Brown,"Stone,Clay",Gold
+Clay Pit,,3,Brown,"Clay,Ore",Gold
+Timber Yard,,3,Brown,"Stone,Wood",Gold
+Forest Cave,,5,Brown,"Wood,Ore",Gold
+Mine,,6,Brown,"Ore,Stone",Gold
+Loom,,3,Gray,Loom,
+Loom,,6,Gray,Loom,
+Glassworks,,3,Gray,Glassworks,
+Glassworks,,6,Gray,Glassworks,
+Press,,3,Gray,Press,
+Press,,6,Gray,Press,
+Pawnshop,,4,Blue,Victory Points,
+Pawnshop,,7,Blue,Victory Points,
+Baths,,3,Blue,Victory Points,Stone
+Baths,,7,Blue,Victory Points,Stone
+Altar,,3,Blue,Victory Points,
+Altar,,5,Blue,Victory Points,
+Theater,,3,Blue,Victory Points,
+Theater,,6,Blue,Victory Points,
+Tavern,,4,Yellow,Gold,
+Tavern,,5,Yellow,Gold,
+Tavern,,7,Yellow,Gold,
+East Trading Post,,3,Yellow,Discount Clay/Stone/Wood/Ore,
+East Trading Post,,7,Yellow,Discount Clay/Stone/Wood/Ore,
+West Trading Post,,3,Yellow,Discount Clay/Stone/Wood/Ore,
+West Trading Post,,7,Yellow,Discount Clay/Stone/Wood/Ore,
+Marketplace,,3,Yellow,Discount Loom/Glassworks/Press,
+Marketplace,,6,Yellow,Discount Loom/Glassworks/Press,
+Stockade,,3,Red,Military,Wood
+Stockade,,7,Red,Military,Wood
+Barracks,,3,Red,Military,Ore
+Barracks,,5,Red,Military,Ore
+Guard Tower,,3,Red,Military,Clay
+Guard Tower,,4,Red,Military,Clay
+Apothecary,,3,Green,Compass,Loom
+Apothecary,,5,Green,Compass,Loom
+Workshop,,3,Green,Gear,Glassworks
+Workshop,,7,Green,Gear,Glassworks
+Scriptorium,,3,Green,Tablet,Press
+Scriptorium,,4,Green,Tablet,Press

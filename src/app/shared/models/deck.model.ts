@@ -27,9 +27,9 @@ export type Deck = {
 
 export type Card = {
   name?: string;
-  tags: string[];
   count?: number;
   minPlayers?: number;
+  properties: { [key: string]: string[] };
 
   // Probability that this card is in the deck
   probabilityFunc?: (playerCount: number) => number;

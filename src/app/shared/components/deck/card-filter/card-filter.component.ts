@@ -42,13 +42,13 @@ export class CardFilterComponent implements OnChanges {
     const tempGroups = new Set<string>();
 
     this.allCards.forEach((card) => {
-      card.tags.forEach((t) => {
-        const [_, group] = t.split(';');
-        tempTags.add(t);
-        if (group) {
-          tempGroups.add(group);
-        }
-      });
+      // card.tags.forEach((t) => {
+      //   const [_, group] = t.split(';');
+      //   tempTags.add(t);
+      //   if (group) {
+      //     tempGroups.add(group);
+      //   }
+      // });
     });
     const tags = Array.from(tempTags.values());
 
@@ -81,11 +81,11 @@ export class CardFilterComponent implements OnChanges {
       }
 
       for (const tag of this.selectedTags) {
-        if (card.tags.includes(tag) === false) {
-          return false;
-        } else {
-          // continue
-        }
+        // if (card.tags.includes(tag) === false) {
+        //   return false;
+        // } else {
+        //   // continue
+        // }
       }
       return true;
     });

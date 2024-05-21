@@ -1,14 +1,58 @@
 <p-card>
-  <p-dropdown
-  class="global-dropdown"
-    [options]="globalMatchOptions"
-    [(ngModel)]="globalMatch"
-    optionLabel="name"
-    optionValue="value"
-  ></p-dropdown>
-  <div class="rule-wrapper">
-    <p-dropdown [options]="['Color']" placeholder="Category"></p-dropdown>
-    <p-dropdown [options]="['All Of', 'Any Of', 'None Of']"></p-dropdown>
-    <p-multiSelect [options]="['Brown', 'Green', 'Yellow']"></p-multiSelect>
+  <div class="global-wrapper">
+    <p-dropdown
+      class="global-dropdown"
+      [options]="globalMatchOptions"
+      [(ngModel)]="globalMatch"
+      optionLabel="name"
+      optionValue="value"
+      (onChange)="filter()"
+    ></p-dropdown>
+    <p-button
+      icon="pi pi-plus"
+      [rounded]="true"
+      [text]="true"
+      (click)="addRule()"
+    />
   </div>
+  <table class="rule-table">
+    <tr *ngFor="let rule of rules; let i = index">
+      <td class="category">
+        <p-dropdown
+          [options]="categories"
+          [(ngModel)]="rule.category"
+          placeholder="Category"
+          optionLabel="name"
+          optionValue="value"
+          (onChange)="rule.values = []; filter()"
+        ></p-dropdown>
+      </td>
+      <td class="operator">
+        <p-dropdown
+          [options]="matchOptions"
+          [(ngModel)]="rule.matchType"
+          optionLabel="name"
+          optionValue="value"
+          (onChange)="filter()"
+        ></p-dropdown>
+      </td>
+      <td class="values">
+        <p-multiSelect
+          [options]="rule.category ? categoryValues[rule.category] : []"
+          [(ngModel)]="rule.values"
+          [filter]="false"
+          placeholder="Values"
+          (onChange)="filter()"
+        ></p-multiSelect>
+      </td>
+      <td>
+        <p-button
+          icon="pi pi-minus"
+          [rounded]="true"
+          [text]="true"
+          (click)="deleteRule(i)"
+        />
+      </td>
+    </tr>
+  </table>
 </p-card>
