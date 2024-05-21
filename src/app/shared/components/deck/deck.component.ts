@@ -11,6 +11,7 @@ import { CardsCount, Unique, nChooseK } from '../../helper';
 import { GameService } from '../../services/game.service';
 import { Subscription } from 'rxjs';
 import { CardFilterComponent } from './card-filter/card-filter.component';
+import { CardFilterV2Component } from './card-filter-v2/card-filter-v2.component';
 
 @Component({
   selector: 'app-deck',
@@ -22,6 +23,7 @@ import { CardFilterComponent } from './card-filter/card-filter.component';
     DropdownModule,
     SectionTitleComponent,
     CardFilterComponent,
+    CardFilterV2Component
   ],
   templateUrl: './deck.component.html',
   styleUrl: './deck.component.scss',

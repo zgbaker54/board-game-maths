@@ -1,0 +1,14 @@
+<p-card>
+  <p-dropdown
+  class="global-dropdown"
+    [options]="globalMatchOptions"
+    [(ngModel)]="globalMatch"
+    optionLabel="name"
+    optionValue="value"
+  ></p-dropdown>
+  <div class="rule-wrapper">
+    <p-dropdown [options]="['Color']" placeholder="Category"></p-dropdown>
+    <p-dropdown [options]="['All Of', 'Any Of', 'None Of']"></p-dropdown>
+    <p-multiSelect [options]="['Brown', 'Green', 'Yellow']"></p-multiSelect>
+  </div>
+</p-card>
