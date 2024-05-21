@@ -74,7 +74,12 @@ export const castingShadowsMetadata: Game = {
         },
         {
           name: 'Personal Space',
-          tags: ['Attack Spell;Type', '2;Level', 'Hex;Attack', 'Current Tile;Range'],
+          tags: [
+            'Attack Spell;Type',
+            '2;Level',
+            'Hex;Attack',
+            'Current Tile;Range',
+          ],
         },
         {
           name: 'Deadly Shroud',
@@ -104,7 +109,12 @@ export const castingShadowsMetadata: Game = {
         // Level 1
         {
           name: 'Fatal Fronds',
-          tags: ['Attack Spell;Type', '1;Level', 'Hex;Attack', 'Current Tile;Range'],
+          tags: [
+            'Attack Spell;Type',
+            '1;Level',
+            'Hex;Attack',
+            'Current Tile;Range',
+          ],
           count: 4,
         },
         {
@@ -182,7 +192,13 @@ export const castingShadowsMetadata: Game = {
         },
         {
           name: 'Energy Bloom',
-          tags: ['Conversion Spell;Type', '1;Level', 'Red Gem', 'Blue Gem', 'Gem'],
+          tags: [
+            'Conversion Spell;Type',
+            '1;Level',
+            'Red Gem',
+            'Blue Gem',
+            'Gem',
+          ],
         },
         {
           name: 'Crystallization',
@@ -199,7 +215,13 @@ export const castingShadowsMetadata: Game = {
         },
         {
           name: 'Metamorphosis',
-          tags: ['Conversion Spell;Type', '1;Level', 'Orb', 'Red Orb', 'Blue Orb'],
+          tags: [
+            'Conversion Spell;Type',
+            '1;Level',
+            'Orb',
+            'Red Orb',
+            'Blue Orb',
+          ],
         },
         {
           name: 'Curse Void',
@@ -217,5 +239,65 @@ export const castingShadowsMetadata: Game = {
     },
   ],
   expansions: [],
-  diceSets: [],
+  diceSets: [
+    {
+      dice: [
+        {
+          type: 'fancy',
+          sides: [
+            'Blue Gem',
+            'Blue Gem',
+            'Blue Orb',
+            'Blue Orb',
+            'Cursed Crystal',
+            'Shadow Fragment',
+          ],
+        },
+        {
+          type: 'fancy',
+          sides: [
+            'Blue Gem',
+            'Blue Gem',
+            'Blue Orb',
+            'Blue Orb',
+            'Cursed Crystal',
+            'Shadow Fragment',
+          ],
+        },
+        {
+          type: 'fancy',
+          sides: [
+            'Red Gem',
+            'Red Gem',
+            'Red Orb',
+            'Red Orb',
+            'Cursed Crystal',
+            'Shadow Fragment',
+          ],
+        },
+        {
+          type: 'fancy',
+          sides: [
+            'Red Gem',
+            'Red Gem',
+            'Red Orb',
+            'Red Orb',
+            'Cursed Crystal',
+            'Shadow Fragment',
+          ],
+        },
+        {
+          type: 'fancy',
+          sides: [
+            'Purple Gem',
+            'Purple Gem',
+            'Purple Orb',
+            'Purple Orb',
+            'Cursed Crystal',
+            'Shadow Fragment',
+          ],
+        },
+      ],
+    },
+  ],
 };
