@@ -1,26 +1,24 @@
 <p-table [value]="tableData" styleClass="p-datatable-sm p-datatable-striped">
   <ng-template pTemplate="header">
     <tr>
-      <th pSortableColumn="roll" style="width: 20%">
-        Roll <p-sortIcon field="roll" />
-      </th>
-      <th pSortableColumn="less" style="width: 20%">
-        Less <p-sortIcon field="less" />
-      </th>
-      <th pSortableColumn="value" style="width: 20%">
-        Sum <p-sortIcon field="value" />
-      </th>
-      <th pSortableColumn="more" style="width: 20%">
-        More <p-sortIcon field="more" />
-      </th>
+      <th style="width: 20%">Roll</th>
+      <th style="width: 20%">Less</th>
+      <th style="width: 20%">Sum</th>
+      <th style="width: 20%">More</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-roll>
     <tr>
-      <td>{{ roll.roll | number:'1.0-0' }}</td>
-      <td>{{ roll.less | number:tableNumberFormat }}{{tableNumberSuffix}}</td>
-      <td>{{ roll.value | number:tableNumberFormat }}{{tableNumberSuffix}}</td>
-      <td>{{ roll.more | number:tableNumberFormat }}{{tableNumberSuffix}}</td>
+      <td>{{ roll.roll | number : "1.0-0" }}</td>
+      <td>
+        {{ roll.less | number : tableNumberFormat }}{{ tableNumberSuffix }}
+      </td>
+      <td>
+        {{ roll.value | number : tableNumberFormat }}{{ tableNumberSuffix }}
+      </td>
+      <td>
+        {{ roll.more | number : tableNumberFormat }}{{ tableNumberSuffix }}
+      </td>
     </tr>
   </ng-template>
 </p-table>

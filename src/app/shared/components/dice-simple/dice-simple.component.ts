@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Dice, DiceSet } from '../../models/game.model';
+import { Dice, DiceSet } from '../../models/dice.model';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 

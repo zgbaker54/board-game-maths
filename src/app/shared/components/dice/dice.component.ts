@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Dice, DiceSet } from '../../models/game.model';
+import { Dice, DiceSet } from '../../models/dice.model';
 import { CommonModule } from '@angular/common';
 import { DiceSimpleComponent } from '../dice-simple/dice-simple.component';
 import { SelectButtonModule } from 'primeng/selectbutton';
