@@ -1,7 +1,6 @@
-import { combinations } from 'mathjs';
 import { Game } from '../shared/models/game.model';
 import { Card } from '../shared/models/deck.model';
-import { CardsCount } from '../shared/helper';
+import { CardsCount, nChooseK } from '../shared/helper';
 
 export const sevenWondersMetadata: Game = {
   minPlayers: 3,
@@ -643,9 +642,9 @@ export const sevenWondersMetadata: Game = {
 };
 
 function purpleCardProbability(playerCount: number): number {
-  return combinations(9, playerCount + 2) / combinations(10, playerCount + 2);
+  return nChooseK(9, playerCount + 2) / nChooseK(10, playerCount + 2);
 }
 
 function blackCardProbability(playerCount: number): number {
-  return combinations(13, playerCount) / combinations(14, playerCount);
+  return nChooseK(13, playerCount) / nChooseK(14, playerCount);
 }

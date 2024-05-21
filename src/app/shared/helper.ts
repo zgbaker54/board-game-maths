@@ -8,6 +8,10 @@ export function Unique<T>(array: T[]): T[] {
   return [...new Set<T>(array)];
 }
 
+export function nChooseK(n: number, k: number): number {
+  return nCk(n, k);
+}
+
 /**
  * n choose k
  * @param n
@@ -21,7 +25,7 @@ export function nCk(n: number, k: number): number {
     throw new Error('k must be less than or equal to n');
   }
 
-  return factorial(n) / (factorial(k) * factorial(n - k));
+  return Math.round(factorial(n) / (factorial(k) * factorial(n - k)));
 }
 
 export function factorial(n: number): number {

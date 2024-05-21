@@ -10,9 +10,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SelectItem, SelectItemGroup } from 'primeng/api';
 import { ChipModule } from 'primeng/chip';
 import { Game } from '../../models/game.model';
-import { combinations } from 'mathjs';
 import { SectionTitleComponent } from '../section-title/section-title.component';
-import { CardsCount, Unique } from '../../helper';
+import { CardsCount, Unique, nChooseK } from '../../helper';
 import { GameService } from '../../services/game.service';
 import { Subscription } from 'rxjs';
 
@@ -254,12 +253,12 @@ export class DeckComponent implements OnChanges, OnDestroy {
     const notValid = this.totalPossibleCards - totalValidCards;
 
     // Calculate P(invalid for all draws)
-    const drawX = combinations(this.totalPossibleCards, this.selectedDrawCount);
+    const drawX = nChooseK(this.totalPossibleCards, this.selectedDrawCount);
     let invalidX: number;
     if (notValid <= 0) {
       invalidX = 0;
     } else {
-      invalidX = combinations(notValid, this.selectedDrawCount);
+      invalidX = nChooseK(notValid, this.selectedDrawCount);
     }
 
     // P(valid) = 1 - P(invalid for all draws)
