@@ -1,19 +1,19 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
 import { Card, Deck } from '../../models/deck.model';
-import { MultiSelectModule } from 'primeng/multiselect';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { SliderModule } from 'primeng/slider';
 import { InputTextModule } from 'primeng/inputtext';
-import { SelectItem, SelectItemGroup } from 'primeng/api';
+import { SelectItem } from 'primeng/api';
 import { ChipModule } from 'primeng/chip';
 import { Game } from '../../models/game.model';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { CardsCount, Unique, nChooseK } from '../../helper';
 import { GameService } from '../../services/game.service';
 import { Subscription } from 'rxjs';
+import { CardFilterComponent } from './card-filter/card-filter.component';
 
 @Component({
   selector: 'app-deck',
@@ -21,13 +21,10 @@ import { Subscription } from 'rxjs';
   imports: [
     CommonModule,
     FormsModule,
-    MultiSelectModule,
     CardModule,
     DropdownModule,
-    SliderModule,
-    InputTextModule,
-    ChipModule,
     SectionTitleComponent,
+    CardFilterComponent,
   ],
   templateUrl: './deck.component.html',
   styleUrl: './deck.component.scss',
@@ -43,14 +40,12 @@ export class DeckComponent implements OnChanges, OnDestroy {
   playerCounts: number[] = [];
   playerCount = 0;
 
-  tagGroups: SelectItemGroup[] = [];
-
   decks: SelectItem[] = [];
   selectedDeckId!: number;
   selectedDecks: Deck[] = [];
-  selectedTags: string[] = [];
 
   allCards: Card[] = [];
+  validCards: Card[] = [];
 
   drawCounts: number[] = [];
   selectedDrawCount = 1;
@@ -114,11 +109,6 @@ export class DeckComponent implements OnChanges, OnDestroy {
   }
 
   selectDeck() {
-    this.selectedTags = [];
-
-    const tempTags = new Set<string>();
-    const tempGroups = new Set<string>();
-
     this.selectedDecks = this.game.decks.filter(
       (x) =>
         x.id === this.selectedDeckId &&
@@ -130,35 +120,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
       this.variesByPlayerCount = card.minPlayers
         ? true
         : this.variesByPlayerCount;
-      card.tags.forEach((t) => {
-        const [_, group] = t.split(';');
-        tempTags.add(t);
-        if (group) {
-          tempGroups.add(group);
-        }
-      });
     });
-    const tags = Array.from(tempTags.values());
-
-    this.tagGroups = Array.from(tempGroups.values()).map((x) => ({
-      label: x,
-      value: x,
-      items: tags
-        .filter((t) => t.endsWith(`;${x}`))
-        .map((x) => ({ label: x.split(';')[0], value: x })),
-    }));
-    this.tagGroups.push({
-      label: 'Other',
-      value: 'Other',
-      items: tags
-        .filter((t) => t.includes(';') === false)
-        .map((x) => ({ label: x, value: x })),
-    });
-
-    this.tagGroups.sort((a, b) => a.label.localeCompare(b.label));
-    this.tagGroups.forEach((x) =>
-      x.items.sort((a, b) => a.value.localeCompare(b.value))
-    );
   }
 
   fillDrawCounts() {
@@ -199,25 +161,15 @@ export class DeckComponent implements OnChanges, OnDestroy {
     }
   }
 
-  handleChanges(): void {
-    // Get an array of all valid cards that match the current player count and selected tags
-    const validCards = this.allCards.filter((card) => {
-      if (this.playerCount > 0 && (card.minPlayers ?? 1) > this.playerCount) {
-        return false;
-      }
+  onValidCardsChange(validCards: Card[]) {
+    this.validCards = validCards;
+    this.handleChanges();
+  }
 
-      for (const tag of this.selectedTags) {
-        if (card.tags.includes(tag) === false) {
-          return false;
-        } else {
-          // continue
-        }
-      }
-      return true;
-    });
+  handleChanges(): void {
 
     // Get card count from valid card array
-    let totalValidCards = CardsCount(validCards);
+    let totalValidCards = CardsCount(this.validCards);
 
     // Get card count from entire deck(s)
     this.totalPossibleCards = CardsCount(
@@ -243,7 +195,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
         if (deck.totalValidCards) {
           totalValidCards += deck.totalValidCards(
             this.playerCount,
-            validCards
+            this.validCards
           )[1];
         }
       });
@@ -267,7 +219,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
     // Calculate the min and max number of valid cards that can be included in deck
     const minMaxCards = [0, 0];
     this.selectedDecks.forEach((deck) => {
-      const validCardsFromDeck = validCards.filter((c) =>
+      const validCardsFromDeck = this.validCards.filter((c) =>
         deck.cards.includes(c)
       );
       const tempMinMax =
@@ -278,7 +230,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
       minMaxCards[1] += tempMinMax[1];
 
       if (tempMinMax[0] !== tempMinMax[1]) {
-        validCards.forEach((c) => {
+        this.validCards.forEach((c) => {
           if (c.probabilityFunc) {
             percent -=
               c.probabilityFunc(this.playerCount) *
@@ -302,16 +254,5 @@ export class DeckComponent implements OnChanges, OnDestroy {
   getTotalCards(cards: Card[]): number[] {
     const total = CardsCount(cards);
     return [total, total];
-  }
-
-  getTagsFormatted(tags: string[] | undefined): string {
-    return (
-      tags
-        ?.map((x) => {
-          const [tag, group] = x.split(';');
-          return group ? `${group}: ${tag}` : tag;
-        })
-        ?.join('<small> AND </small>') ?? ''
-    );
   }
 }

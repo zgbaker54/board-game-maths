@@ -1,0 +1,25 @@
+<p-multiSelect
+  [options]="tagGroups"
+  [group]="true"
+  [filter]="false"
+  [showToggleAll]="false"
+  [showHeader]="false"
+  [showClear]="true"
+  [(ngModel)]="selectedTags"
+  placeholder="Select Tags"
+  (onChange)="filterCards()"
+  display="chip"
+  [maxSelectedLabels]="100"
+>
+  <ng-template let-group pTemplate="group">
+    <div class="flex align-items-center">
+      <span>{{ group.label }}</span>
+    </div>
+  </ng-template>
+  <ng-template let-value pTemplate="selectedItems">
+    <div class="inline-flex align-items-center gap-2 px-1">
+      <div [innerHTML]="getTagsFormatted(value)"></div>
+    </div>
+    <div *ngIf="!value || value.length === 0">Select Tags</div>
+  </ng-template>
+</p-multiSelect>
