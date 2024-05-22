@@ -1,96 +1,97 @@
 <app-section-title title="Cards"></app-section-title>
 
-<div
-  class="flex gap-8 space-between"
-  *ngIf="game.decks.length > 1 || variesByPlayerCount"
->
-  <span *ngIf="game.decks.length > 1">
-    <p-floatLabel>
-      <p-dropdown
-        [options]="decks"
-        [(ngModel)]="selectedDeckId"
-        [showClear]="false"
-        [filter]="false"
-        (onChange)="selectDeck(); handleChanges()"
-      />
-      <label>Deck</label>
-    </p-floatLabel>
-  </span>
+<div class="flex flex-column gap-8">
+  <div
+    class="flex gap-8 space-around"
+    *ngIf="game.decks.length > 1 || variesByPlayerCount"
+  >
+    <span *ngIf="game.decks.length > 1">
+      <p-floatLabel>
+        <p-dropdown
+          [options]="decks"
+          [(ngModel)]="selectedDeckId"
+          [showClear]="false"
+          [filter]="false"
+          (onChange)="selectDeck(); handleChanges()"
+        />
+        <label>Deck</label>
+      </p-floatLabel>
+    </span>
 
-  <span>
-    <p-floatLabel>
-      <p-dropdown
-        [options]="drawCounts"
-        [(ngModel)]="selectedDrawCount"
-        [showClear]="false"
-        [filter]="false"
-        (onChange)="handleChanges()"
-      />
-      <label>Draws</label>
-    </p-floatLabel>
-  </span>
+    <span>
+      <p-floatLabel>
+        <p-dropdown
+          [options]="drawCounts"
+          [(ngModel)]="selectedDrawCount"
+          [showClear]="false"
+          [filter]="false"
+          (onChange)="handleChanges()"
+        />
+        <label>Draws</label>
+      </p-floatLabel>
+    </span>
 
-  <span *ngIf="variesByPlayerCount">
-    <p-floatLabel>
-      <p-dropdown
-        [options]="playerCounts"
-        [(ngModel)]="playerCount"
-        [showClear]="false"
-        [filter]="false"
-        (onChange)="handleChanges()"
-      />
-      <label>Players</label>
-    </p-floatLabel>
-  </span>
-</div>
+    <span *ngIf="variesByPlayerCount">
+      <p-floatLabel>
+        <p-dropdown
+          [options]="playerCounts"
+          [(ngModel)]="playerCount"
+          [showClear]="false"
+          [filter]="false"
+          (onChange)="handleChanges()"
+        />
+        <label>Players</label>
+      </p-floatLabel>
+    </span>
+  </div>
 
-<p>
-  The probability of getting a card that is
-  <!-- <app-card-filter
-    [allCards]="allCards"
-    [playerCount]="playerCount"
-    (onChanges)="onValidCardsChange($event)"
-  ></app-card-filter> -->
   <app-card-filter-v2
     [allCards]="allCards"
     [playerCount]="playerCount"
     (onChanges)="onValidCardsChange($event)"
   ></app-card-filter-v2>
-  within the next {{ selectedDrawCount }} draw(s)
-</p>
 
-<p-card>
-  <div class="result flex flex-column">
-    <h1>{{ percentage }}%</h1>
-    <h4>{{ totalValidCardsString }}/{{ totalPossibleCards }}</h4>
-  </div>
-  <p-accordion>
-    <p-accordionTab header="Card List">
-      <p-table
-        [value]="validCards"
-        styleClass="p-datatable-sm p-datatable-striped"
-      >
-        <ng-template pTemplate="header">
-          <tr>
-            <th pSortableColumn="name">Name <p-sortIcon field="name" /></th>
-            <th pSortableColumn="minPlayers" *ngIf="variesByPlayerCount">
-              Player Count <p-sortIcon field="minPlayers" />
-            </th>
-            <th pSortableColumn="properties.{{prop.value}}" *ngFor="let prop of categories">
-              {{ prop.name }} <p-sortIcon field="properties.{{ prop.value }}" />
-            </th>
-          </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-card>
-          <tr>
-            <td>{{ card.name }}</td>
-            <td *ngIf="variesByPlayerCount">{{ card.minPlayers ?? 1 }}+</td>
-            <td *ngFor="let prop of categories">
-              {{ card.properties[prop.value] }}
-            </td>
-          </tr>
-        </ng-template>
-      </p-table>
-    </p-accordionTab>
-  </p-accordion>
-</p-card>
+  <p-card>
+    <div class="result flex flex-column">
+      <p>
+        The probability of getting a card that is ___ within the next
+        {{ selectedDrawCount }} draws
+      </p>
+      <h1>{{ percentage }}%</h1>
+      <h4>{{ totalValidCardsString }}/{{ totalPossibleCards }}</h4>
+    </div>
+    <p-accordion>
+      <p-accordionTab header="Card List">
+        <p-table
+          [value]="validCards"
+          styleClass="p-datatable-sm p-datatable-striped"
+        >
+          <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="name">Name <p-sortIcon field="name" /></th>
+              <th pSortableColumn="minPlayers" *ngIf="variesByPlayerCount">
+                Player Count <p-sortIcon field="minPlayers" />
+              </th>
+              <th
+                pSortableColumn="properties.{{ prop.value }}"
+                *ngFor="let prop of categories"
+              >
+                {{ prop.name }}
+                <p-sortIcon field="properties.{{ prop.value }}" />
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-card>
+            <tr>
+              <td>{{ card.name }}</td>
+              <td *ngIf="variesByPlayerCount">{{ card.minPlayers ?? 1 }}+</td>
+              <td *ngFor="let prop of categories">
+                {{ card.properties[prop.value] }}
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-accordionTab>
+    </p-accordion>
+  </p-card>
+</div>
