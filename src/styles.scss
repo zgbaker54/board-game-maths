@@ -22,7 +22,8 @@ h4 {
 
 .p-multiselect-items-wrapper,
 .p-dropdown-items-wrapper {
-  max-height: calc(100vh - 45px - 53px) !important;
+  max-height: calc(100dvh - 16px) !important;
+  // max-height: -webkit-fill-available !important;
 }
 
 .p-datatable-wrapper {

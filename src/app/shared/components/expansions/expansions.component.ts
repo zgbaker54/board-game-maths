@@ -27,4 +27,10 @@ export class ExpansionsComponent {
   handleChanges() {
     this.gameService.expansions = this.selectedExpansions;
   }
+
+  onMultiselectFocus() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }
 }

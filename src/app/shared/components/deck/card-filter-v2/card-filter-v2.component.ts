@@ -162,4 +162,10 @@ export class CardFilterV2Component implements OnChanges {
   formatValueList(values: string[] | undefined): string {
     return values?.join(', ') ?? '';
   }
+
+  onMultiselectFocus() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }
 }

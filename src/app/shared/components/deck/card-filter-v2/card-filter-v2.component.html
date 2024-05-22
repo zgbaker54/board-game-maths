@@ -46,6 +46,7 @@
           [autofocusFilter]="false"
           emptyMessage="Pick Category First"
           (onChange)="filter()"
+          (onFocus)="onMultiselectFocus()"
         >
           <ng-template let-value pTemplate="selectedItems">
             <div class="values-template">
