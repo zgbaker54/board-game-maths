@@ -23,6 +23,8 @@ export type Deck = {
    * @returns [min possible valid cards, max possible valid cards]
    */
   totalValidCards?: (playerCount: number, validCards: Card[]) => number[];
+
+  cardProbabilityFunc?: (playerCount: number, card: Card) => number;
 };
 
 export type Card = {
@@ -30,7 +32,4 @@ export type Card = {
   count?: number;
   minPlayers?: number;
   properties: { [key: string]: string[] };
-
-  // Probability that this card is in the deck
-  probabilityFunc?: (playerCount: number) => number;
 };

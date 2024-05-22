@@ -23,7 +23,7 @@ import { CardFilterV2Component } from './card-filter-v2/card-filter-v2.component
     DropdownModule,
     SectionTitleComponent,
     CardFilterComponent,
-    CardFilterV2Component
+    CardFilterV2Component,
   ],
   templateUrl: './deck.component.html',
   styleUrl: './deck.component.scss',
@@ -166,7 +166,6 @@ export class DeckComponent implements OnChanges, OnDestroy {
   }
 
   handleChanges(): void {
-
     // Get card count from valid card array
     let totalValidCards = CardsCount(this.validCards);
 
@@ -230,9 +229,9 @@ export class DeckComponent implements OnChanges, OnDestroy {
 
       if (tempMinMax[0] !== tempMinMax[1]) {
         this.validCards.forEach((c) => {
-          if (c.probabilityFunc) {
+          if (deck.cardProbabilityFunc) {
             percent -=
-              c.probabilityFunc(this.playerCount) *
+              deck.cardProbabilityFunc(this.playerCount, c) *
               (1 / this.totalPossibleCards);
           }
         });

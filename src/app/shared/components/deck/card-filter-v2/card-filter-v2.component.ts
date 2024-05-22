@@ -87,7 +87,7 @@ export class CardFilterV2Component implements OnChanges {
     });
 
     this.categories = Object.keys(this.categoryValues).map((x) => ({
-      name: x,
+      name: this.formatText(x),
       value: x,
     }));
 
@@ -118,18 +118,12 @@ export class CardFilterV2Component implements OnChanges {
 
         switch (rule.matchType) {
           case 'all':
-            return rule.values?.every(
-              (v) => property?.includes(v) ?? false
-            );
+            return rule.values?.every((v) => property?.includes(v) ?? false);
           case 'any':
-            return rule.values?.some(
-              (v) => property?.includes(v) ?? false
-            );
+            return rule.values?.some((v) => property?.includes(v) ?? false);
           case 'none':
             return (
-              rule.values?.some(
-                (v) => property?.includes(v) ?? false
-              ) === false
+              rule.values?.some((v) => property?.includes(v) ?? false) === false
             );
         }
       });
@@ -153,5 +147,15 @@ export class CardFilterV2Component implements OnChanges {
   deleteRule(index: number) {
     this.rules.splice(index, 1);
     this.filter();
+  }
+
+  formatText(text: string): string {
+    const words = text.split(' ');
+
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+
+    return words.join(' ');
   }
 }
