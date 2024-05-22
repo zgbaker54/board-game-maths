@@ -115,6 +115,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
     );
     this.allCards = this.selectedDecks.map((x) => x.cards).flat();
 
+    this.variesByPlayerCount = false;
     this.allCards.forEach((card) => {
       this.variesByPlayerCount = card.minPlayers
         ? true
