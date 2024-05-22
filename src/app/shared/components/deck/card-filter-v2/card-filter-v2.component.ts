@@ -49,7 +49,7 @@ export class CardFilterV2Component implements OnChanges {
     { name: 'Match any of the following', value: 'any' },
     { name: 'Match all of the following', value: 'all' },
   ];
-  globalMatch: GlobalMatchType = 'any';
+  globalMatch: GlobalMatchType = 'all';
 
   matchOptions: NameValue<MatchType>[] = [
     { name: 'All', value: 'all' },
@@ -57,7 +57,7 @@ export class CardFilterV2Component implements OnChanges {
     { name: 'None', value: 'none' },
   ];
 
-  rules: Rule[] = [{ matchType: 'any' }];
+  rules: Rule[] = [{ matchType: 'all' }];
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['allCards']) {
@@ -141,7 +141,7 @@ export class CardFilterV2Component implements OnChanges {
   }
 
   addRule() {
-    this.rules.push({ matchType: 'any' });
+    this.rules.push({ matchType: 'all' });
   }
 
   deleteRule(index: number) {

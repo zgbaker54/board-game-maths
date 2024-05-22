@@ -56,6 +56,7 @@
       </div>
       <div class="remove-button">
         <p-button
+          [disabled]="rules.length === 1"
           icon="pi pi-minus"
           [rounded]="true"
           [text]="true"
