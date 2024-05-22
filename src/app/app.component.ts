@@ -26,10 +26,10 @@ export class AppComponent implements AfterViewInit {
   constructor(private router: Router) {}
 
   ngAfterViewInit(): void {
-    this.games.sort((a, b) => a.label.localeCompare(b.label));
     this.selectedGame =
       this.games.find((x) => x.routerLink === window.location.pathname) ??
       this.games[0];
+    this.games.sort((a, b) => a.label.localeCompare(b.label));
     this.gameChanged++;
   }
 
