@@ -3,7 +3,7 @@
 
   <app-deck *ngIf="game.decks.length > 0" [game]="game"></app-deck>
 
-  <ng-container *ngFor="let diceSet of game.diceSets">
+  <ng-container *ngFor="let diceSet of diceSets">
     <app-dice [diceSet]="diceSet"></app-dice>
   </ng-container>
 

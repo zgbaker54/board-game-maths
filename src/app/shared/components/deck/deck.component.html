@@ -1,28 +1,45 @@
 <app-section-title title="Cards"></app-section-title>
 
-<p *ngIf="game.decks.length > 1 || variesByPlayerCount">
+<div class="flex gap-8 space-between" *ngIf="game.decks.length > 1 || variesByPlayerCount">
   <span *ngIf="game.decks.length > 1">
-    Deck:
-    <p-dropdown
-      [options]="decks"
-      [(ngModel)]="selectedDeckId"
-      [showClear]="false"
-      [filter]="false"
-      (onChange)="selectDeck(); handleChanges()"
-    />
+    <p-floatLabel>
+      <p-dropdown
+        [options]="decks"
+        [(ngModel)]="selectedDeckId"
+        [showClear]="false"
+        [filter]="false"
+        (onChange)="selectDeck(); handleChanges()"
+      />
+      <label>Deck</label>
+    </p-floatLabel>
+  </span>
+
+  <span>
+    <p-floatLabel>
+      <p-dropdown
+        [options]="drawCounts"
+        [(ngModel)]="selectedDrawCount"
+        [showClear]="false"
+        [filter]="false"
+        (onChange)="handleChanges()"
+      />
+      <label>Draws</label>
+    </p-floatLabel>
   </span>
 
   <span *ngIf="variesByPlayerCount">
-    Players:
-    <p-dropdown
-      [options]="playerCounts"
-      [(ngModel)]="playerCount"
-      [showClear]="false"
-      [filter]="false"
-      (onChange)="handleChanges()"
-    />
+    <p-floatLabel>
+      <p-dropdown
+        [options]="playerCounts"
+        [(ngModel)]="playerCount"
+        [showClear]="false"
+        [filter]="false"
+        (onChange)="handleChanges()"
+      />
+      <label>Players</label>
+    </p-floatLabel>
   </span>
-</p>
+</div>
 
 <p>
   The probability of getting a card that is
@@ -36,15 +53,7 @@
     [playerCount]="playerCount"
     (onChanges)="onValidCardsChange($event)"
   ></app-card-filter-v2>
-  within the next
-  <p-dropdown
-    [options]="drawCounts"
-    [(ngModel)]="selectedDrawCount"
-    [showClear]="false"
-    [filter]="false"
-    (onChange)="handleChanges()"
-  />
-  draw(s)
+  within the next {{ selectedDrawCount }} draw(s)
 </p>
 
 <p-card>

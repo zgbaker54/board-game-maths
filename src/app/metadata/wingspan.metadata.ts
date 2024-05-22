@@ -3,6 +3,7 @@ import { Game } from '../shared/models/game.model';
 export const wingspanMetadata: Game = {
   minPlayers: 2,
   maxPlayers: 5,
+  expansions: [],
   decks: [
     {
       id: 1,
@@ -183,7 +184,6 @@ export const wingspanMetadata: Game = {
       ]
     }
   ],
-  expansions: [],
   diceSets: [
     {
       dice: [

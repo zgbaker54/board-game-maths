@@ -20,16 +20,4 @@
       }
     }
   }
-
-  .percentage {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    input {
-      max-width: 100px;
-    }
-    .p-slider {
-      max-width: 100px;
-    }
-  }
 }

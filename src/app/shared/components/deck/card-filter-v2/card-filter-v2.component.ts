@@ -146,6 +146,13 @@ export class CardFilterV2Component implements OnChanges {
 
   deleteRule(index: number) {
     this.rules.splice(index, 1);
+
+    if (this.rules.length === 0) {
+      this.rules.push({ matchType: 'all' });
+    } else {
+      // continue
+    }
+
     this.filter();
   }
 

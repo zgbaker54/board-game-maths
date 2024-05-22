@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Dice, DiceSet } from '../../models/dice.model';
 import { CommonModule } from '@angular/common';
 import { DiceSimpleComponent } from '../dice-simple/dice-simple.component';
@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { Unique, nCk } from '../../helper';
 import { TableModule } from 'primeng/table';
+import { GameService } from '../../services/game.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-dice',
@@ -22,8 +24,11 @@ import { TableModule } from 'primeng/table';
   templateUrl: './dice.component.html',
   styleUrl: './dice.component.scss',
 })
-export class DiceComponent implements OnInit {
+export class DiceComponent implements OnInit, OnDestroy {
   @Input() diceSet!: DiceSet;
+
+  subscriptions = new Subscription();
+  filteredDice: Dice[] = [];
 
   rollCount = '';
 
@@ -44,15 +49,31 @@ export class DiceComponent implements OnInit {
     pAtLeast: number;
   }[] = [];
 
+  constructor(private gameService: GameService) {
+    this.subscriptions.add(
+      gameService.expansions$.subscribe(() => {
+        this.ngOnInit();
+      })
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
+  }
+
   ngOnInit(): void {
-    const allSimple = this.diceSet.dice.every((x) => x.type !== 'fancy');
+    this.diceRolls = [];
+    this.useSimpleDice = false;
+
+    this.filteredDice = this.gameService.expansionFilter(this.diceSet.dice);
+    const allSimple = this.filteredDice.every((x) => x.type !== 'fancy');
 
     if (allSimple) {
       this.useSimpleDice = true;
 
       // Convert the list of d4-20 into fancy dice objects
       const expandedDice: Dice[] = [];
-      this.diceSet.dice.forEach((d) => {
+      this.filteredDice.forEach((d) => {
         expandedDice.push({
           type: 'fancy',
           sides: Array.from(
@@ -64,13 +85,13 @@ export class DiceComponent implements OnInit {
 
       this.calculateDiceRolls(expandedDice);
     } else {
-      this.calculateDiceRolls(this.diceSet.dice);
+      this.calculateDiceRolls(this.filteredDice);
     }
 
-    const types = Unique(this.diceSet.dice.map((x) => x.type));
-    this.rollCount = ` - ${this.diceSet.dice.length}${
+    const types = Unique(this.filteredDice.map((x) => x.type));
+    this.rollCount = ` - ${this.filteredDice.length}${
       allSimple ? ' ' + types.join(' + ') : ''
-    } roll${this.diceSet.dice.length > 1 ? 's' : ''}`;
+    } roll${this.filteredDice.length > 1 ? 's' : ''}`;
   }
 
   // Assuming that a face has the same probability for all dice where it shows up

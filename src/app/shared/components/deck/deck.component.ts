@@ -12,6 +12,7 @@ import { GameService } from '../../services/game.service';
 import { Subscription } from 'rxjs';
 import { CardFilterComponent } from './card-filter/card-filter.component';
 import { CardFilterV2Component } from './card-filter-v2/card-filter-v2.component';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 @Component({
   selector: 'app-deck',
@@ -21,6 +22,7 @@ import { CardFilterV2Component } from './card-filter-v2/card-filter-v2.component
     FormsModule,
     CardModule,
     DropdownModule,
+    FloatLabelModule,
     SectionTitleComponent,
     CardFilterComponent,
     CardFilterV2Component,
@@ -32,8 +34,6 @@ export class DeckComponent implements OnChanges, OnDestroy {
   @Input() game!: Game;
 
   subscriptions = new Subscription();
-
-  expansions: number[] = [];
 
   variesByPlayerCount = false;
   playerCounts: number[] = [];
@@ -54,10 +54,9 @@ export class DeckComponent implements OnChanges, OnDestroy {
 
   percentage = '100';
 
-  constructor(gameService: GameService) {
+  constructor(private gameService: GameService) {
     this.subscriptions.add(
-      gameService.expansions$.subscribe((x) => {
-        this.expansions = x;
+      gameService.expansions$.subscribe(() => {
         this.ngOnChanges();
       })
     );
@@ -80,23 +79,14 @@ export class DeckComponent implements OnChanges, OnDestroy {
 
     // Get deck ids filtering out expansions
     const deckIds = Unique(
-      this.game.decks
-        .filter(
-          (x) =>
-            x.expansionId === undefined ||
-            this.expansions.includes(x.expansionId)
-        )
-        .map((x) => x.id)
+      this.gameService.expansionFilter(this.game.decks).map((x) => x.id)
     );
+
+    // Todo: make sure all decks with same ID have same properties and names
 
     // Get list of decks for the dropdown
     this.decks = deckIds.map((id) => {
-      const d = this.game.decks.find(
-        (x) =>
-          x.id === id &&
-          (x.expansionId === undefined ||
-            this.expansions.includes(x.expansionId))
-      );
+      const d = this.game.decks.find((x) => x.id === id);
       return { value: d!.id, label: d!.name };
     });
     this.game.decks.sort((a, b) => a.id - b.id);
@@ -108,24 +98,41 @@ export class DeckComponent implements OnChanges, OnDestroy {
   }
 
   selectDeck() {
-    this.selectedDecks = this.game.decks.filter(
-      (x) =>
-        x.id === this.selectedDeckId &&
-        (x.expansionId === undefined || this.expansions.includes(x.expansionId))
+    this.selectedDecks = this.gameService.expansionFilter(
+      this.game.decks.filter((x) => x.id === this.selectedDeckId)
     );
-    this.allCards = this.selectedDecks.map((x) => x.cards).flat();
+    const allCards = this.getAllCards(false);
 
     this.variesByPlayerCount = false;
-    this.allCards.forEach((card) => {
+    allCards.forEach((card) => {
       this.variesByPlayerCount = card.minPlayers
         ? true
         : this.variesByPlayerCount;
     });
   }
 
+  getAllCards(filterByPlayerCount: boolean) {
+    return this.gameService
+      .expansionFilter(this.selectedDecks.map((x) => x.cards).flat())
+      .filter((card) => {
+        if (
+          filterByPlayerCount &&
+          this.playerCount > 0 &&
+          (card.minPlayers ?? 1) > this.playerCount
+        ) {
+          return false;
+        }
+        return true;
+      });
+  }
+
   fillDrawCounts() {
-    this.selectedDrawCount =
-      this.selectedDecks.find((x) => x.expansionId === undefined)?.pick ?? 1;
+    this.selectedDrawCount = Math.max(
+      1,
+      ...(this.selectedDecks
+        .filter((x) => x.pick !== undefined)
+        .map((x) => x.pick) as number[])
+    );
 
     let maxPick = Math.max(
       1,
@@ -147,18 +154,6 @@ export class DeckComponent implements OnChanges, OnDestroy {
     for (let i = minPick; i <= maxPick; i++) {
       this.drawCounts.push(i);
     }
-
-    const expansionDecks = this.selectedDecks.filter(
-      (x) => x.expansionId !== undefined
-    );
-    if (expansionDecks.length > 0) {
-      this.selectedDrawCount = Math.max(
-        this.selectedDrawCount,
-        ...(expansionDecks
-          .filter((x) => x.pick !== undefined)
-          .map((x) => x.pick) as number[])
-      );
-    }
   }
 
   onValidCardsChange(validCards: Card[]) {
@@ -169,6 +164,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
   handleChanges(): void {
     // Get card count from valid card array
     let totalValidCards = CardsCount(this.validCards);
+    this.allCards = this.getAllCards(true);
 
     // Get card count from entire deck(s)
     this.totalPossibleCards = CardsCount(

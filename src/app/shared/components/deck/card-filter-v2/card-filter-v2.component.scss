@@ -29,8 +29,6 @@
 
   .global-wrapper {
     align-self: start;
-    display: flex;
-    gap: 8px;
     .global-dropdown {
       width: fit-content;
     }
@@ -42,9 +40,6 @@
 
   .rule-table {
     > div {
-      display: flex;
-      flex-direction: row;
-      gap: 4px;
       align-items: center;
       margin-bottom: 4px;
       > div {
@@ -76,8 +71,6 @@
       .p-multiselect {
         width: 100%;
         .values-template {
-          display: flex;
-          flex-wrap: wrap;
           min-height: 20px;
           div {
             white-space: wrap;

@@ -6,10 +6,8 @@
     td {
       padding: 8px;
       .count {
-        display: flex;
         align-items: center;
-        flex-direction: row;
-        gap: 8px
+        margin-right: 16px;
       }
     }
     .p-button {
@@ -25,7 +23,8 @@
     width: 300px;
     text-align: center;
     margin: auto;
-    h1,h4 {
+    h1,
+    h4 {
       margin: 0;
     }
   }
