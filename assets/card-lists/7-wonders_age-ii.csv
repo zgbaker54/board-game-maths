@@ -1,0 +1,50 @@
+﻿name,count,minPlayers,color,resource,cost,depends on
+Sawmill,,3,Brown,Wood,Gold
+Sawmill,,4,Brown,Wood,Gold
+Quarry,,3,Brown,Stone,Gold
+Quarry,,4,Brown,Stone,Gold
+Brickyard,,3,Brown,Clay,Gold
+Brickyard,,4,Brown,Clay,Gold
+Foundry,,3,Brown,Ore,Gold
+Foundry,,4,Brown,Ore,Gold
+Loom,,3,Gray,Loom,
+Loom,,5,Gray,Loom,
+Glassworks,,3,Gray,Glassworks,
+Glassworks,,5,Gray,Glassworks,
+Press,,3,Gray,Press,
+Press,,5,Gray,Press,
+Aqueduct,,3,Blue,Victory Points,Stone,
+Aqueduct,,7,Blue,Victory Points,Stone,
+Temple,,3,Blue,Victory Points,"Wood,Clay,Glassworks",
+Temple,,6,Blue,Victory Points,"Wood,Clay,Glassworks",
+Statue,,3,Blue,Victory Points,"Wood,Ore",
+Statue,,7,Blue,Victory Points,"Wood,Ore",
+Courthouse,,3,Blue,Victory Points,"Clay,Loom",
+Courthouse,,5,Blue,Victory Points,"Clay,Loom",
+Forum,,3,Yellow,"Loom,Glassworks,Press",Clay,
+Forum,,6,Yellow,"Loom,Glassworks,Press",Clay,
+Forum,,7,Yellow,"Loom,Glassworks,Press",Clay,
+Caravansery,,3,Yellow,"Clay,Stone,Wood,Ore",Wood,
+Caravansery,,5,Yellow,"Clay,Stone,Wood,Ore",Wood,
+Caravansery,,6,Yellow,"Clay,Stone,Wood,Ore",Wood,
+Vineyard,,3,Yellow,Gold,,"Brown Cards,Neighbors,Self"
+Vineyard,,6,Yellow",Gold,,"Brown Cards,Neighbors,Self"
+Bazar,,4,"Yellow",Gold,,"Gray Cards,Neighbors,Self"
+Bazar,,7,"Yellow",Gold,,"Gray Cards,Neighbors,Self"
+Walls,,3,Red,Military,Stone,
+Walls,,7,Red,Military,Stone,
+Training Ground,,4,Red,Military,"Ore,Wood",
+Training Ground,,6,Red,Military,"Ore,Wood",
+Training Ground,,7,Red,Military,"Ore,Wood",
+Stables,,3,Red,Military,"Ore,Clay,Wood",
+Stables,,5,Red,Military,"Ore,Clay,Wood",
+Archery Range,,3,Red,Military,"Ore,Wood",
+Archery Range,,6,Red,Military,"Ore,Wood",
+Dispensary,,3,Green,Compass,"Ore,Glassworks",
+Dispensary,,4,Green,Compass,"Ore,Glassworks",
+Laboratory,,3,Green,Gear,"Clay,Press",
+Laboratory,,5,Green,Gear,"Clay,Press",
+Library,,3,Green,Tablet,"Stone,Loom",
+Library,,6,Green,Tablet,"Stone,Loom",
+School,,3,Green,Tablet,"Wood,Press",
+School,,7,Green,Tablet,"Wood,Press",
