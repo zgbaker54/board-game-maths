@@ -1,4 +1,4 @@
-<app-section-title title="Science Score"></app-section-title>
+<app-section-title title="Science Score" imageUrl="/assets/images/games/7-wonders/compass.svg"></app-section-title>
 <p-table [value]="science">
   <ng-template pTemplate="header">
     <tr>
@@ -7,23 +7,23 @@
       <th>Clear</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-product>
+  <ng-template pTemplate="body" let-science>
     <tr>
-      <td>{{ product.name }}</td>
+      <td [innerHTML]="science.name"></td>
       <td>
         <div class="flex gap-8 space-between count">
           <p-button
             icon="pi pi-minus"
             [rounded]="true"
             [outlined]="true"
-            (click)="adjustScience(product, -1)"
+            (click)="adjustScience(science, -1)"
           />
-          <div>{{ product.count }}</div>
+          <div>{{ science.count }}</div>
           <p-button
             icon="pi pi-plus"
             [rounded]="true"
             [outlined]="true"
-            (click)="adjustScience(product, 1)"
+            (click)="adjustScience(science, 1)"
           />
         </div>
       </td>
@@ -32,7 +32,7 @@
           label="Clear"
           [outlined]="true"
           severity="danger"
-          (click)="setScience(product, 0)"
+          (click)="setScience(science, 0)"
         />
       </td>
     </tr>
@@ -41,5 +41,5 @@
 
 <p-card>
   <h1>{{ maxScienceScore }} Points</h1>
-  <p>{{ scienceString(maxScienceCombo) }}</p>
+  <p [innerHTML]="scienceString(maxScienceCombo)"></p>
 </p-card>

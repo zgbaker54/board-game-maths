@@ -17,6 +17,9 @@
         width: 2rem;
       }
     }
+    img {
+      height: 24px;
+    }
   }
 
   .p-card {
@@ -26,6 +29,9 @@
     h1,
     h4 {
       margin: 0;
+    }
+    img {
+      height: 24px;
     }
   }
 }

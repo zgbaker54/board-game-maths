@@ -7,6 +7,10 @@ import { CardModule } from 'primeng/card';
 import { sevenWondersMetadata } from '../../metadata/seven-wonders.metadata';
 import { GameService } from '../../shared/services/game.service';
 
+const tabletSvg = '/assets/images/games/7-wonders/tablet.svg';
+const compassSvg = '/assets/images/games/7-wonders/compass.svg';
+const gearSvg = '/assets/images/games/7-wonders/gear.svg';
+
 type Science = { name: string; code: string; count: number };
 
 @Component({
@@ -27,13 +31,13 @@ export class SevenWondersComponent {
 
   // Science Cards
   science: Science[] = [
-    { name: 'Tablet', code: 'T', count: 0 },
-    { name: 'Compass', code: 'C', count: 0 },
-    { name: 'Gear', code: 'G', count: 0 },
-    { name: 'Tablet / Compass / Gear', code: 'TCG', count: 0 },
-    { name: 'Tablet / Compass', code: 'TC', count: 0 },
-    { name: 'Tablet / Gear', code: 'TG', count: 0 },
-    { name: 'Compass / Gear', code: 'CG', count: 0 },
+    { name: `<img src="${tabletSvg}">`, code: 'T', count: 0 },
+    { name: `<img src="${compassSvg}">`, code: 'C', count: 0 },
+    { name: `<img src="${gearSvg}">`, code: 'G', count: 0 },
+    { name: `<img src="${tabletSvg}"> / <img src="${compassSvg}"> / <img src="${gearSvg}">`, code: 'TCG', count: 0 },
+    { name: `<img src="${tabletSvg}"> / <img src="${compassSvg}">`, code: 'TC', count: 0 },
+    { name: `<img src="${tabletSvg}"> / <img src="${gearSvg}">`, code: 'TG', count: 0 },
+    { name: `<img src="${compassSvg}"> / <img src="${gearSvg}">`, code: 'CG', count: 0 },
   ];
   scienceCombinations = new Set<string>();
   maxScienceScore = 0;
@@ -123,6 +127,6 @@ export class SevenWondersComponent {
     const C = items.filter((x) => x === 'C').length;
     const G = items.filter((x) => x === 'G').length;
 
-    return `Tablet x${T} / Compass x${C} / Gear x${G}`;
+    return `<img src="${tabletSvg}"> x${T} / <img src="${compassSvg}"> x${C} / <img src="${gearSvg}"> x${G}`;
   }
 }
