@@ -65,6 +65,7 @@ export class CardFilterV2Component implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['allCards']) {
       this.parseCards();
+      this.resetRules();
     }
     this.filter();
   }
@@ -72,7 +73,6 @@ export class CardFilterV2Component implements OnChanges {
   parseCards() {
     this.categoryValues = { name: [] };
     this.categories = [];
-    this.rules = [{ matchType: 'all' }];
 
     this.allCards.forEach((card) => {
       Object.keys(card.properties).forEach((prop) => {
@@ -96,6 +96,34 @@ export class CardFilterV2Component implements OnChanges {
     }));
 
     this.categories.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  resetRules() {
+    for (let i = this.rules.length - 1; i >= 0; i--) {
+      let toDelete = false;
+      const rule = this.rules[i];
+      if (
+        rule.category &&
+        this.categories.find((x) => x.value === rule.category) === undefined
+      ) {
+        toDelete = true;
+      }
+      // else if (
+      // rule.category && rule.values && this.categoryValues[rule.category].find(
+      //   (x) => x === rule.
+      // ) === undefined
+      // ) {
+      //   toDelete = true;
+      // }
+
+      if (toDelete) {
+        this.rules.splice(i, 1);
+      }
+    }
+
+    if (this.rules.length === 0) {
+      this.rules = [{ matchType: 'all' }];
+    }
   }
 
   filter() {
