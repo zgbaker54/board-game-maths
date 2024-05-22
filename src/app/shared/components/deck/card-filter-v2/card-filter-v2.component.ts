@@ -52,9 +52,9 @@ export class CardFilterV2Component implements OnChanges {
   globalMatch: GlobalMatchType = 'any';
 
   matchOptions: NameValue<MatchType>[] = [
-    { name: 'All Of', value: 'all' },
-    { name: 'Any Of', value: 'any' },
-    { name: 'None Of', value: 'none' },
+    { name: 'All', value: 'all' },
+    { name: 'Any', value: 'any' },
+    { name: 'None', value: 'none' },
   ];
 
   rules: Rule[] = [{ matchType: 'any' }];

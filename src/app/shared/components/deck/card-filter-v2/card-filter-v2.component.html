@@ -15,19 +15,18 @@
       (click)="addRule()"
     />
   </div>
-  <table class="rule-table">
-    <tr *ngFor="let rule of rules; let i = index">
-      <td class="category">
+  <div class="rule-table">
+    <div *ngFor="let rule of rules; let i = index">
+      <div class="category">
         <p-dropdown
           [options]="categories"
           [(ngModel)]="rule.category"
-          placeholder="Category"
           optionLabel="name"
           optionValue="value"
           (onChange)="rule.values = []; filter()"
         ></p-dropdown>
-      </td>
-      <td class="operator">
+      </div>
+      <div class="operator">
         <p-dropdown
           [options]="matchOptions"
           [(ngModel)]="rule.matchType"
@@ -35,24 +34,31 @@
           optionValue="value"
           (onChange)="filter()"
         ></p-dropdown>
-      </td>
-      <td class="values">
+      </div>
+      <div class="values">
         <p-multiSelect
           [options]="rule.category ? categoryValues[rule.category] : []"
           [(ngModel)]="rule.values"
           [filter]="false"
-          placeholder="Values"
           (onChange)="filter()"
-        ></p-multiSelect>
-      </td>
-      <td>
+        >
+          <ng-template let-value pTemplate="selectedItems">
+            <div class="values-template">
+              <div *ngFor="let option of value">
+                <div>{{ option }},</div>
+              </div>
+            </div>
+          </ng-template>
+        </p-multiSelect>
+      </div>
+      <div class="remove-button">
         <p-button
           icon="pi pi-minus"
           [rounded]="true"
           [text]="true"
           (click)="deleteRule(i)"
         />
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+  </div>
 </p-card>
