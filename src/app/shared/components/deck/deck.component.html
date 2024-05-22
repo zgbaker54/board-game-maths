@@ -1,6 +1,9 @@
 <app-section-title title="Cards"></app-section-title>
 
-<div class="flex gap-8 space-between" *ngIf="game.decks.length > 1 || variesByPlayerCount">
+<div
+  class="flex gap-8 space-between"
+  *ngIf="game.decks.length > 1 || variesByPlayerCount"
+>
   <span *ngIf="game.decks.length > 1">
     <p-floatLabel>
       <p-dropdown
@@ -57,6 +60,37 @@
 </p>
 
 <p-card>
-  <h1>{{ percentage }}%</h1>
-  <h4>{{ totalValidCardsString }}/{{ totalPossibleCards }}</h4>
+  <div class="result flex flex-column">
+    <h1>{{ percentage }}%</h1>
+    <h4>{{ totalValidCardsString }}/{{ totalPossibleCards }}</h4>
+  </div>
+  <p-accordion>
+    <p-accordionTab header="Card List">
+      <p-table
+        [value]="validCards"
+        styleClass="p-datatable-sm p-datatable-striped"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="name">Name <p-sortIcon field="name" /></th>
+            <th pSortableColumn="minPlayers" *ngIf="variesByPlayerCount">
+              Player Count <p-sortIcon field="minPlayers" />
+            </th>
+            <th pSortableColumn="properties.{{prop.value}}" *ngFor="let prop of categories">
+              {{ prop.name }} <p-sortIcon field="properties.{{ prop.value }}" />
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-card>
+          <tr>
+            <td>{{ card.name }}</td>
+            <td *ngIf="variesByPlayerCount">{{ card.minPlayers ?? 1 }}+</td>
+            <td *ngFor="let prop of categories">
+              {{ card.properties[prop.value] }}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-accordionTab>
+  </p-accordion>
 </p-card>

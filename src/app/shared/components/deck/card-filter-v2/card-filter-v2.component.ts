@@ -14,13 +14,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Unique } from '../../../helper';
 import { ButtonModule } from 'primeng/button';
+import { NameValue } from '../../../models/name-value.model';
 
 type GlobalMatchType = 'any' | 'all';
 type MatchType = 'all' | 'any' | 'none';
 
 type Rule = { category?: string; matchType: MatchType; values?: string[] };
-
-type NameValue<T = string> = { name: string; value: T };
 
 @Component({
   selector: 'app-card-filter-v2',
@@ -40,7 +39,10 @@ export class CardFilterV2Component implements OnChanges {
   @Input() allCards: Card[] = [];
   @Input() playerCount: number = 1;
 
-  @Output() onChanges = new EventEmitter<Card[]>();
+  @Output() onChanges = new EventEmitter<{
+    cards: Card[];
+    categories: NameValue[];
+  }>();
 
   categories: NameValue[] = [];
   categoryValues: { [category: string]: string[] } = {};
@@ -100,7 +102,10 @@ export class CardFilterV2Component implements OnChanges {
     );
 
     if (validRules.length === 0) {
-      this.onChanges.emit(this.allCards);
+      this.onChanges.emit({
+        cards: this.allCards,
+        categories: this.categories.filter((x) => x.value !== 'name'),
+      });
       return;
     } else {
       // Continue
@@ -137,7 +142,10 @@ export class CardFilterV2Component implements OnChanges {
       }
     });
 
-    this.onChanges.emit(validCards);
+    this.onChanges.emit({
+      cards: validCards,
+      categories: this.categories.filter((x) => x.value !== 'name'),
+    });
   }
 
   addRule() {

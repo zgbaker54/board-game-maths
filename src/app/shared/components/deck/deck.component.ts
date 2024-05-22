@@ -13,6 +13,9 @@ import { Subscription } from 'rxjs';
 import { CardFilterComponent } from './card-filter/card-filter.component';
 import { CardFilterV2Component } from './card-filter-v2/card-filter-v2.component';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { AccordionModule } from 'primeng/accordion';
+import { TableModule } from 'primeng/table';
+import { NameValue } from '../../models/name-value.model';
 
 @Component({
   selector: 'app-deck',
@@ -23,6 +26,8 @@ import { FloatLabelModule } from 'primeng/floatlabel';
     CardModule,
     DropdownModule,
     FloatLabelModule,
+    AccordionModule,
+    TableModule,
     SectionTitleComponent,
     CardFilterComponent,
     CardFilterV2Component,
@@ -45,6 +50,8 @@ export class DeckComponent implements OnChanges, OnDestroy {
 
   allCards: Card[] = [];
   validCards: Card[] = [];
+
+  categories: NameValue[] = [];
 
   drawCounts: number[] = [];
   selectedDrawCount = 1;
@@ -156,8 +163,9 @@ export class DeckComponent implements OnChanges, OnDestroy {
     }
   }
 
-  onValidCardsChange(validCards: Card[]) {
-    this.validCards = validCards;
+  onValidCardsChange(event: {cards: Card[], categories: NameValue[]}) {
+    this.validCards = event.cards;
+    this.categories = event.categories;
     this.handleChanges();
   }
 

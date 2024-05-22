@@ -28,7 +28,7 @@ export type Deck = {
 };
 
 export type Card = {
-  name?: string;
+  name: string;
   count?: number;
   minPlayers?: number;
   expansionId?: number;
