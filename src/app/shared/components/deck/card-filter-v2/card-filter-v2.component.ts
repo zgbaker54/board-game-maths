@@ -72,10 +72,7 @@ export class CardFilterV2Component implements OnChanges {
   parseCards() {
     this.categoryValues = { name: [] };
     this.categories = [];
-    console.log(this.rules);
-    debugger;
-    this.rules.splice(0);
-    this.rules.push({ matchType: 'all' });
+    this.rules = [{ matchType: 'all' }];
 
     this.allCards.forEach((card) => {
       Object.keys(card.properties).forEach((prop) => {

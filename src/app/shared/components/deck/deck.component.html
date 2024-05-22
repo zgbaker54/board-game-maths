@@ -1,9 +1,9 @@
-<app-section-title title="Cards"></app-section-title>
+<app-section-title title="Cards" imageUrl="/assets/images/card-draw.svg" [invertImage]="true"></app-section-title>
 
 <div class="flex flex-column gap-8">
   <div
     class="flex gap-8 space-around"
-    *ngIf="game.decks.length > 1 || variesByPlayerCount"
+    *ngIf="game.decks.length > 1 || variesByPlayerCount || drawCounts.length > 1"
   >
     <span *ngIf="game.decks.length > 1">
       <p-floatLabel>
@@ -58,7 +58,7 @@
       <h4>{{ totalValidCardsString }}/{{ totalPossibleCards }}</h4>
     </div>
     <p-accordion>
-      <p-accordionTab header="Card List">
+      <p-accordionTab header="Card List ({{totalValidCardsString}})">
         <p-table
           [value]="validCards"
           styleClass="p-datatable-sm p-datatable-striped"

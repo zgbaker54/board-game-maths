@@ -1,4 +1,8 @@
-<app-section-title title="Dice{{ rollCount }}"></app-section-title>
+<app-section-title
+  title="Dice{{ rollCount }}"
+  imageUrl="/assets/images/rolling-dices.svg"
+  [invertImage]="true"
+></app-section-title>
 
 <ng-container *ngIf="useSimpleDice; else complexDice">
   <p-selectButton

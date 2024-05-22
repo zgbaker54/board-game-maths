@@ -1,0 +1,14 @@
+div {
+  margin: auto;
+  width: fit-content;
+  align-items: end;
+}
+
+img {
+  margin-bottom: 4px;
+  height: 35px;
+}
+
+.img-invert {
+  filter: invert(1);
+}

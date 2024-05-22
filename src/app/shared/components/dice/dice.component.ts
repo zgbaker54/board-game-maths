@@ -49,19 +49,22 @@ export class DiceComponent implements OnInit, OnDestroy {
     pAtLeast: number;
   }[] = [];
 
-  constructor(private gameService: GameService) {
+  constructor(private gameService: GameService) {}
+
+  ngOnInit(): void {
     this.subscriptions.add(
-      gameService.expansions$.subscribe(() => {
-        this.ngOnInit();
+      this.gameService.expansions$.subscribe(() => {
+        this.setupDice();
       })
     );
+    this.setupDice();
   }
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
   }
 
-  ngOnInit(): void {
+  setupDice(): void {
     this.diceRolls = [];
     this.useSimpleDice = false;
 
