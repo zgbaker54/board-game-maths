@@ -108,13 +108,12 @@ export class CardFilterV2Component implements OnChanges {
       ) {
         toDelete = true;
       }
-      // else if (
-      // rule.category && rule.values && this.categoryValues[rule.category].find(
-      //   (x) => x === rule.
-      // ) === undefined
-      // ) {
-      //   toDelete = true;
-      // }
+
+      if(rule.category && rule.values) {
+        rule.values = rule.values.filter(v => {
+          return this.categoryValues[rule.category!].includes(v);
+        })
+      }
 
       if (toDelete) {
         this.rules.splice(i, 1);

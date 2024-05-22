@@ -98,7 +98,12 @@ export class DeckComponent implements OnChanges, OnDestroy {
       return { value: d!.id, label: d!.name };
     });
     this.game.decks.sort((a, b) => a.id - b.id);
-    this.selectedDeckId = this.game.decks[0].id;
+
+    if (deckIds.includes(this.selectedDeckId) === false) {
+      this.selectedDeckId = this.game.decks[0].id;
+    } else {
+      // continue
+    }
 
     this.selectDeck();
     this.fillDrawCounts();
