@@ -23,6 +23,7 @@
           [(ngModel)]="rule.category"
           optionLabel="name"
           optionValue="value"
+          placeholder="Category"
           (onChange)="rule.values = []; filter()"
         ></p-dropdown>
       </div>
@@ -40,6 +41,10 @@
           [options]="rule.category ? categoryValues[rule.category] : []"
           [(ngModel)]="rule.values"
           [filter]="false"
+          [showHeader]="false"
+          [showClear]="false"
+          [autofocusFilter]="false"
+          emptyMessage="Pick Category First"
           (onChange)="filter()"
         >
           <ng-template let-value pTemplate="selectedItems">
