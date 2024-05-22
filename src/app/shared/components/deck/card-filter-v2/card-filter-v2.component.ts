@@ -42,6 +42,7 @@ export class CardFilterV2Component implements OnChanges {
   @Output() onChanges = new EventEmitter<{
     cards: Card[];
     categories: NameValue[];
+    ruleText: string;
   }>();
 
   categories: NameValue[] = [];
@@ -71,6 +72,10 @@ export class CardFilterV2Component implements OnChanges {
   parseCards() {
     this.categoryValues = { name: [] };
     this.categories = [];
+    console.log(this.rules);
+    debugger;
+    this.rules.splice(0);
+    this.rules.push({ matchType: 'all' });
 
     this.allCards.forEach((card) => {
       Object.keys(card.properties).forEach((prop) => {
@@ -105,6 +110,7 @@ export class CardFilterV2Component implements OnChanges {
       this.onChanges.emit({
         cards: this.allCards,
         categories: this.categories.filter((x) => x.value !== 'name'),
+        ruleText: 'any card',
       });
       return;
     } else {
@@ -145,6 +151,7 @@ export class CardFilterV2Component implements OnChanges {
     this.onChanges.emit({
       cards: validCards,
       categories: this.categories.filter((x) => x.value !== 'name'),
+      ruleText: this.getRuleText(),
     });
   }
 
@@ -168,7 +175,7 @@ export class CardFilterV2Component implements OnChanges {
     const words = text.split(' ');
 
     for (let i = 0; i < words.length; i++) {
-      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+      words[i] = words[i][0].toUpperCase() + words[i].substring(1);
     }
 
     return words.join(' ');
@@ -182,5 +189,41 @@ export class CardFilterV2Component implements OnChanges {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
+  }
+
+  getCategoryName(categoryValue: string): string {
+    return this.categories.find((x) => x.value === categoryValue)?.name ?? '';
+  }
+
+  getRuleText(): string {
+    let rules: string[] = [];
+
+    this.rules.forEach((rule) => {
+      if (rule.category && rule.values) {
+        let ruleText = `<small>WHERE</small> ${this.getCategoryName(
+          rule.category
+        )} <small>IS</small> `;
+        if (rule.matchType === 'all') {
+          ruleText += rule.values.join(' <small>AND</small> ');
+        } else if (rule.matchType === 'any') {
+          ruleText += rule.values.join(' <small>OR</small> ');
+        } else {
+          ruleText +=
+            '<small>NOT</small> ' + rule.values.join(' <small>OR</small> ');
+        }
+        rules.push(ruleText);
+      } else {
+        // Skip rule
+      }
+    });
+
+    let ruleText = '';
+    if (this.globalMatch === 'all') {
+      ruleText = rules.join(' <small>AND</small> ');
+    } else {
+      ruleText = rules.join(' <small>OR</small> ');
+    }
+
+    return `a card ${ruleText}`;
   }
 }

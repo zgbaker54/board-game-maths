@@ -25,7 +25,7 @@
           [(ngModel)]="selectedDrawCount"
           [showClear]="false"
           [filter]="false"
-          (onChange)="handleChanges()"
+          (onChange)="calculate()"
         />
         <label>Draws</label>
       </p-floatLabel>
@@ -53,10 +53,7 @@
 
   <p-card>
     <div class="result flex flex-column">
-      <p>
-        The probability of getting a card that is ___ within the next
-        {{ selectedDrawCount }} draws
-      </p>
+      <p [innerHtml]="ruleText"></p>
       <h1>{{ percentage }}%</h1>
       <h4>{{ totalValidCardsString }}/{{ totalPossibleCards }}</h4>
     </div>

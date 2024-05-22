@@ -59,6 +59,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
   totalValidCardsString = '';
   totalPossibleCards = 0;
 
+  ruleText = '';
   percentage = '100';
 
   constructor(private gameService: GameService) {
@@ -163,16 +164,25 @@ export class DeckComponent implements OnChanges, OnDestroy {
     }
   }
 
-  onValidCardsChange(event: {cards: Card[], categories: NameValue[]}) {
+  onValidCardsChange(event: {
+    cards: Card[];
+    categories: NameValue[];
+    ruleText: string;
+  }) {
     this.validCards = event.cards;
     this.categories = event.categories;
-    this.handleChanges();
+    this.updateRuleText(event.ruleText);
+    this.calculate();
   }
 
   handleChanges(): void {
+    this.allCards = this.getAllCards(true);
+    this.calculate();
+  }
+
+  calculate(): void {
     // Get card count from valid card array
     let totalValidCards = CardsCount(this.validCards);
-    this.allCards = this.getAllCards(true);
 
     // Get card count from entire deck(s)
     this.totalPossibleCards = CardsCount(
@@ -257,5 +267,10 @@ export class DeckComponent implements OnChanges, OnDestroy {
   getTotalCards(cards: Card[]): number[] {
     const total = CardsCount(cards);
     return [total, total];
+  }
+
+  updateRuleText(ruleText: string) {
+    this.ruleText = `The probability of getting ${ruleText} within the next
+    ${this.selectedDrawCount} draw${this.selectedDrawCount > 1 ? 's' : ''}`;
   }
 }
