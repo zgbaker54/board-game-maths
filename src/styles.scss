@@ -16,6 +16,34 @@ h4 {
   margin-bottom: 0;
 }
 
+// FLEX
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+// End Flex
+
 .p-divider {
   margin-top: 0;
 }
@@ -28,4 +56,8 @@ h4 {
 
 .p-datatable-wrapper {
   border-radius: 4px;
+}
+
+.p-float-label .p-inputwrapper-filled ~ label {
+  top: -0.4rem;
 }

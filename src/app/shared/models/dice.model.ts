@@ -1,9 +1,11 @@
 export type DiceSet = {
+  expansionId?: number;
   dice: Dice[];
 };
 
 export type Dice = {
   type: DiceType;
+  expansionId?: number;
   sides?: (string | string[])[];
 };
 

@@ -31,5 +31,6 @@ export type Card = {
   name?: string;
   count?: number;
   minPlayers?: number;
+  expansionId?: number;
   properties: { [key: string]: string[] };
 };
