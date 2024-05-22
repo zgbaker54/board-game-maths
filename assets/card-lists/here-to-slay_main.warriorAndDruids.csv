@@ -1,31 +1,31 @@
-﻿name,count,minPlayers,type,hero,modifier,effect,Roll
-Druid Challenge,,,Challenge,Druid,+,MODIFIER,
-Warrior Challenge,,,Challenge,Warrior,+,MODIFIER,
-Modifier,,,Modifier,,+,"MODIFIER,DRAW",
-Modifier,,,Modifier,,-,MODIFIER,
-Modifier,2,,Modifier,,"+,-","MODIFIER,DRAW",
-Soul Tether,,,Cursed Item,,,SACRIFICE,
-Cursed Glove,,,Cursed Item,,,,
-Temproal Hourglass,,,Item,,,,
-Even Bigger Ring,,,Item,,+,MODIFIER,
-Bottomless Bag,,,Item,,,,
-Warrior Mask,,,Item,Warrior,,,
-Druid Mask,,,Item,Druid,,,
-Rapid Refresh,,,Magic,,,"DISCARD,DRAW",
-Beast Call,,,Magic,,,,
-Stagguard,,,Hero,Druid,,,8-
-Maegisty,,,Hero,Druid,,,7-
-Glowing Antler,,,Hero,Druid,,,7-
-Big Buckley,,,Hero,Druid,,ATTACK,8-
-Magus Moose,,,Hero,Druid,,,5-
-Majestelk,,,Hero,Druid,"+,-","SACRIFICE,MODIFIER",7-
-Doe Fallow,,,Hero,Druid,,"SACRIFICE,DRAW",7-
-Buck Omens,,,Hero,Druid,,,6-
-Silent Shield,,,Hero,Warrior,,"SACRIFICE,DESTROY",6+
-Tenacious Timber,,,Hero,Warrior,,STEAL,8+
-Wolfgang Pack,,,Hero,Warrior,+,MODIFIER,5+
-Hardened Hunter,,,Hero,Warrior,,DRAW,9+
-Blinding Blade,,,Hero,Warrior,,,8+
-Critical Fang,,,Hero,Warrior,+,"ATTACK,MODIFIER",6+
-Looting Lupo,,,Hero,Warrior,,DRAW,5+
-Agile Dagger,,,Hero,Warrior,,,7+
+﻿name,expansion,count,minPlayers,type,hero,modifier,effect,Roll
+Druid Challenge,,,,Challenge,Druid,+,MODIFIER,
+Warrior Challenge,,,,Challenge,Warrior,+,MODIFIER,
+Modifier,,,,Modifier,,+,"MODIFIER,DRAW",
+Modifier,,,,Modifier,,-,MODIFIER,
+Modifier,,2,,Modifier,,"+,-","MODIFIER,DRAW",
+Soul Tether,,,,Cursed Item,,,SACRIFICE,
+Cursed Glove,,,,Cursed Item,,,,
+Temproal Hourglass,,,,Item,,,,
+Even Bigger Ring,,,,Item,,+,MODIFIER,
+Bottomless Bag,,,,Item,,,,
+Warrior Mask,,,,Item,Warrior,,,
+Druid Mask,,,,Item,Druid,,,
+Rapid Refresh,,,,Magic,,,"DISCARD,DRAW",
+Beast Call,,,,Magic,,,,
+Stagguard,,,,Hero,Druid,,,8-
+Maegisty,,,,Hero,Druid,,,7-
+Glowing Antler,,,,Hero,Druid,,,7-
+Big Buckley,,,,Hero,Druid,,ATTACK,8-
+Magus Moose,,,,Hero,Druid,,,5-
+Majestelk,,,,Hero,Druid,"+,-","SACRIFICE,MODIFIER",7-
+Doe Fallow,,,,Hero,Druid,,"SACRIFICE,DRAW",7-
+Buck Omens,,,,Hero,Druid,,,6-
+Silent Shield,,,,Hero,Warrior,,"SACRIFICE,DESTROY",6+
+Tenacious Timber,,,,Hero,Warrior,,STEAL,8+
+Wolfgang Pack,,,,Hero,Warrior,+,MODIFIER,5+
+Hardened Hunter,,,,Hero,Warrior,,DRAW,9+
+Blinding Blade,,,,Hero,Warrior,,,8+
+Critical Fang,,,,Hero,Warrior,+,"ATTACK,MODIFIER",6+
+Looting Lupo,,,,Hero,Warrior,,DRAW,5+
+Agile Dagger,,,,Hero,Warrior,,,7+

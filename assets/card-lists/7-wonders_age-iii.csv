@@ -1,51 +1,51 @@
-﻿name,count,minPlayers,color,resource,cost,depends on
-Pantheon,,3,Blue,Victory Points,"Clay,Ore,Press,Loom,Glassworks"
-Pantheon,,6,Blue,Victory Points,"Clay,Ore,Press,Loom,Glassworks"
-Gardens,,3,Blue,Victory Points,"Clay,Wood"
-Gardens,,4,Blue,Victory Points,"Clay,Wood"
-Town Hall,,3,Blue,Victory Points,"Stone,Ore,Glassworks"
-Town Hall,,5,Blue,Victory Points,"Stone,Ore,Glassworks"
-Town Hall,,6,Blue,Victory Points,"Stone,Ore,Glassworks"
-Palace,,3,Blue,Victory Points,"Clay,Wood,Ore,Stone,Glassworks,Press,Loom"
-Palace,,7,Blue,Victory Points,"Clay,Wood,Ore,Stone,Glassworks,Press,Loom"
-Senate,,3,Blue,Victory Points,"Wood,Ore,Stone"
-Senate,,5,Blue,Victory Points,"Wood,Ore,Stone"
-Haven,,3,Yellow,"Gold,Victory Points","Ore,Wood,Loom","Brown Cards,Self"
-Haven,,4,Yellow,"Gold,Victory Points","Ore,Wood,Loom","Brown Cards,Self"
-Lighthouse,,3,Yellow,"Gold,Victory Points","Stone,Glassworks"
-Lighthouse,,6,Yellow,"Gold,Victory Points","Stone,Glassworks"
-Chamber of Commerce,,4,Yellow,"Gold,Victory Points","Clay,Press","Gray Cards,Self"
-Chamber of Commerce,,6,Yellow,"Gold,Victory Points","Clay,Press","Gray Cards,Self"
-Arena,,3,Yellow,"Gold,Victory Points","Stone,Ore","Wonder,Self"
-Arena,,5,Yellow,"Gold,Victory Points","Stone,Ore","Wonder,Self"
-Arena,,7,Yellow,"Gold,Victory Points","Stone,Ore","Wonder,Self"
-Fortifications,,3,Red,Military,"Stone,Ore"
-Fortifications,,7,Red,Military,"Stone,Ore"
-Circus,,4,Red,Military,"Stone,Ore"
-Circus,,5,Red,Military,"Stone,Ore"
-Circus,,6,Red,Military,"Stone,Ore"
-Arsenal,,3,Red,Military,"Ore,Wood,Loom"
-Arsenal,,4,Red,Military,"Ore,Wood,Loom"
-Arsenal,,7,Red,Military,"Ore,Wood,Loom"
-Siege Workshop,,3,Red,Military,"Wood,Clay"
-Siege Workshop,,5,Red,Military,"Wood,Clay"
-Lodge,,3,Green,Compass,"Clay,Loom,Press"
-Lodge,,6,Green,Compass,"Clay,Loom,Press"
-Observatory,,3,Green,Gear,"Ore,Glassworks,Loom"
-Observatory,,7,Green,Gear,"Ore,Glassworks,Loom"
-University,,3,Green,Tablet,"Wood,Press,Glassworks"
-University,,4,Green,Tablet,"Wood,Press,Glassworks"
-Academy,,3,Green,Compass,"Stone,Glassworks"
-Academy,,7,Green,Compass,"Stone,Glassworks"
-Study,,3,Green,Gear,"Wood,Press,Loom"
-Study,,5,Green,Gear,"Wood,Press,Loom"
-Workers Guild,,,Purple,Victory Points,"Ore,Clay,Stone,Wood","Brown Cards,Neighbors"
-Craftmens Guild,,,Purple,Victory Points,"Ore,Stone","Gray Cards,Neighbors"
-Traders Guild,,,Purple,Victory Points,"Loom,Glassworks,Press","Yellow Cards,Neighbors"
-Philosophers Guild,,,Purple,Victory Points,"Clay,Loom,Press","Green Cards,Neighbors"
-Spy Guild,,,Purple,Victory Points,"Clay,Glassworks","Red Cards,Neighbors"
-Strategy Guild,,,Purple,Victory Points,"Ore,Stone,Loom","Military Loss,Neighbors"
-Shipowners Guild,,,Purple,Victory Points,"Wood,Press,Glassworks","Brown Cards,Gray Cards,Purple Cards,Self"
-Scientists Guild,,,Purple,"Compass,Gear,Tablet","Wood,Ore,Press",
-Magistrates Guild,,,Purple,Victory Points,"Wood,Stone,Loom","Blue Cards,Neighbors"
-Builders Guild,,,Purple,Victory Points,"Stone,Clay,Glassworks","Wonder,Neighbors,Self"
+﻿name,expansion,count,minPlayers,color,resource,cost,depends on
+Pantheon,,,3,Blue,Victory Points,"Clay,Ore,Press,Loom,Glassworks",
+Pantheon,,,6,Blue,Victory Points,"Clay,Ore,Press,Loom,Glassworks",
+Gardens,,,3,Blue,Victory Points,"Clay,Wood",
+Gardens,,,4,Blue,Victory Points,"Clay,Wood",
+Town Hall,,,3,Blue,Victory Points,"Stone,Ore,Glassworks",
+Town Hall,,,5,Blue,Victory Points,"Stone,Ore,Glassworks",
+Town Hall,,,6,Blue,Victory Points,"Stone,Ore,Glassworks",
+Palace,,,3,Blue,Victory Points,"Clay,Wood,Ore,Stone,Glassworks,Press,Loom",
+Palace,,,7,Blue,Victory Points,"Clay,Wood,Ore,Stone,Glassworks,Press,Loom",
+Senate,,,3,Blue,Victory Points,"Wood,Ore,Stone",
+Senate,,,5,Blue,Victory Points,"Wood,Ore,Stone",
+Haven,,,3,Yellow,"Gold,Victory Points","Ore,Wood,Loom","Brown Cards,Self"
+Haven,,,4,Yellow,"Gold,Victory Points","Ore,Wood,Loom","Brown Cards,Self"
+Lighthouse,,,3,Yellow,"Gold,Victory Points","Stone,Glassworks",
+Lighthouse,,,6,Yellow,"Gold,Victory Points","Stone,Glassworks",
+Chamber of Commerce,,,4,Yellow,"Gold,Victory Points","Clay,Press","Gray Cards,Self"
+Chamber of Commerce,,,6,Yellow,"Gold,Victory Points","Clay,Press","Gray Cards,Self"
+Arena,,,3,Yellow,"Gold,Victory Points","Stone,Ore","Wonder,Self"
+Arena,,,5,Yellow,"Gold,Victory Points","Stone,Ore","Wonder,Self"
+Arena,,,7,Yellow,"Gold,Victory Points","Stone,Ore","Wonder,Self"
+Fortifications,,,3,Red,Military,"Stone,Ore",
+Fortifications,,,7,Red,Military,"Stone,Ore",
+Circus,,,4,Red,Military,"Stone,Ore",
+Circus,,,5,Red,Military,"Stone,Ore",
+Circus,,,6,Red,Military,"Stone,Ore",
+Arsenal,,,3,Red,Military,"Ore,Wood,Loom",
+Arsenal,,,4,Red,Military,"Ore,Wood,Loom",
+Arsenal,,,7,Red,Military,"Ore,Wood,Loom",
+Siege Workshop,,,3,Red,Military,"Wood,Clay",
+Siege Workshop,,,5,Red,Military,"Wood,Clay",
+Lodge,,,3,Green,Compass,"Clay,Loom,Press",
+Lodge,,,6,Green,Compass,"Clay,Loom,Press",
+Observatory,,,3,Green,Gear,"Ore,Glassworks,Loom",
+Observatory,,,7,Green,Gear,"Ore,Glassworks,Loom",
+University,,,3,Green,Tablet,"Wood,Press,Glassworks",
+University,,,4,Green,Tablet,"Wood,Press,Glassworks",
+Academy,,,3,Green,Compass,"Stone,Glassworks",
+Academy,,,7,Green,Compass,"Stone,Glassworks",
+Study,,,3,Green,Gear,"Wood,Press,Loom",
+Study,,,5,Green,Gear,"Wood,Press,Loom",
+Workers Guild,,,,Purple,Victory Points,"Ore,Clay,Stone,Wood","Brown Cards,Neighbors"
+Craftmens Guild,,,,Purple,Victory Points,"Ore,Stone","Gray Cards,Neighbors"
+Traders Guild,,,,Purple,Victory Points,"Loom,Glassworks,Press","Yellow Cards,Neighbors"
+Philosophers Guild,,,,Purple,Victory Points,"Clay,Loom,Press","Green Cards,Neighbors"
+Spy Guild,,,,Purple,Victory Points,"Clay,Glassworks","Red Cards,Neighbors"
+Strategy Guild,,,,Purple,Victory Points,"Ore,Stone,Loom","Military Loss,Neighbors"
+Shipowners Guild,,,,Purple,Victory Points,"Wood,Press,Glassworks","Brown Cards,Gray Cards,Purple Cards,Self"
+Scientists Guild,,,,Purple,"Compass,Gear,Tablet","Wood,Ore,Press",
+Magistrates Guild,,,,Purple,Victory Points,"Wood,Stone,Loom","Blue Cards,Neighbors"
+Builders Guild,,,,Purple,Victory Points,"Stone,Clay,Glassworks","Wonder,Neighbors,Self"
