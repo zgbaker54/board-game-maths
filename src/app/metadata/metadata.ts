@@ -2,9 +2,15 @@ import { castingShadowsMetadata } from './casting-shadows.metadata';
 import { hereToSlayMetadata } from './here-to-slay.metadata';
 import { monopolyDealMetadata } from './monopoly-deal.metadata';
 import { sevenWondersMetadata } from './seven-wonders.metadata';
+import { simpleMetadata } from './simple.metadata';
 import { wingspanMetadata } from './wingspan.metadata';
 
 export const gameList = [
+  {
+    label: 'Basic Cards & Dice',
+    routerLink: '/basic',
+    metadata: simpleMetadata,
+  },
   {
     label: 'Monopoly Deal',
     routerLink: '/monopoly-deal',
