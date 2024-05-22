@@ -158,4 +158,8 @@ export class CardFilterV2Component implements OnChanges {
 
     return words.join(' ');
   }
+
+  formatValueList(values: string[] | undefined): string {
+    return values?.join(', ') ?? '';
+  }
 }

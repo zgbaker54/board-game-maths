@@ -49,9 +49,7 @@
         >
           <ng-template let-value pTemplate="selectedItems">
             <div class="values-template">
-              <div *ngFor="let option of value">
-                <div>{{ option }},</div>
-              </div>
+              <div [innerHtml]="formatValueList(value)"></div>
             </div>
           </ng-template>
         </p-multiSelect>
