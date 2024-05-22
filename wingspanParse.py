@@ -6,13 +6,23 @@ with open(r'C:\Users\polka\Downloads\wingspan.json', 'r', encoding='utf-8') as f
   wingspan = json.loads(f.read())
 
 with open('./src/assets/card-lists/wingspan.csv', 'w', encoding='utf-8') as f:
-  f.write('name,count,minPlayers,color,nest,environment,eggs,food,victory points,wingspan,predator\n')
+  f.write('name,expansion,count,minPlayers,color,nest,environment,eggs,food,victory points,wingspan,predator\n')
 
   for bird in wingspan:
-    if bird['Expansion'] != 'originalcore':
-      continue
 
-    data = [bird['Common name'], '', '', bird['Color'], bird['Nest type']]
+    expansion = bird['Expansion']
+    if expansion == 'european':
+      expansion = '1'
+    elif expansion == 'oceania':
+      expansion = '2'
+    elif expansion == 'asia':
+      expansion = '3'
+    elif expansion == 'swiftstart':
+      expansion = '4'
+    else:
+      expansion = ''
+
+    data = [bird['Common name'], expansion, '', '', bird['Color'], bird['Nest type']]
 
     environment = []
     if bird['Forest'] == 'X':

@@ -9,16 +9,19 @@ def mapProperties(header):
 
 def print_card(card):
     line = '{ '
-    line += "name: '{0}'".format(card[0])
+    line += "name: '{0}'".format(card[0].replace("'", "\\'"))
 
     if card[1] != "":
-        line += ', count: {0}'.format(card[1])
+        line += ', expansionId: {0}'.format(card[1])
 
     if card[2] != "":
-        line += ', minPlayers: {0}'.format(card[2])
+        line += ', count: {0}'.format(card[2])
+
+    if card[3] != "":
+        line += ', minPlayers: {0}'.format(card[3])
 
     line += ', properties: {'
-    for i in range(3, len(card)):
+    for i in range(4, len(card)):
         if card[i] != "":
             data = card[i].replace(',', "','")
             line += "{0}: ['{1}'], ".format(propertyNames[i], data)
@@ -29,7 +32,7 @@ def print_card(card):
 
 def read_and_print_csv(file_path):
     try:
-        with open(file_path, mode='r', newline='') as csvfile:
+        with open(file_path, mode='r', newline='', encoding='utf-8') as csvfile:
             firstRow = True
             csvreader = csv.reader(csvfile)
             for row in csvreader:
