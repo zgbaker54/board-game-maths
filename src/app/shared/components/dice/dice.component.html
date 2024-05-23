@@ -4,53 +4,83 @@
   [invertImage]="true"
 ></app-section-title>
 
-<ng-container *ngIf="useSimpleDice; else complexDice">
-  <p-selectButton
-    [options]="tableViewOptions"
-    [(ngModel)]="tableView"
-    [unselectable]="true"
-    optionLabel="label"
-    optionValue="value"
-  />
-  <app-dice-simple
-    *ngIf="tableView !== 'expanded'; else complexDice"
-    [diceSet]="diceSet"
-    [tableView]="tableView"
-  ></app-dice-simple>
-</ng-container>
-
-<ng-template #complexDice>
-  <p-table
-    [value]="diceRolls"
-    rowGroupMode="rowspan"
-    groupRowsBy="face"
-    sortMode="single"
-    sortField="face"
-    styleClass="p-datatable-sm p-datatable-striped"
+<div class="flex-column gap-8">
+  <p-multiSelect
+    *ngIf="filteredDice.length > 1"
+    [options]="filteredDice"
+    [(ngModel)]="chosenDice"
+    [filter]="false"
+    [showHeader]="true"
+    [showClear]="false"
+    [autofocusFilter]="false"
+    placeholder="Select Dice to Roll"
+    optionLabel="name"
+    (onChange)="rollDice()"
+    (onFocus)="onMultiselectFocus()"
   >
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Side</th>
-        <th style="width: 3rem">#</th>
-        <th>P(Exactly #)</th>
-        <th>P(At Least #)</th>
-      </tr>
+    <ng-template let-value pTemplate="selectedItems">
+      <ng-container *ngIf="value && value.length === filteredDice.length">
+        <div>All Dice</div>
+      </ng-container>
+      <div
+        class="flex gap-4 flex-wrap"
+        *ngIf="value && value.length < filteredDice.length"
+      >
+        <div>{{ selectedDiceString() }}</div>
+        <!-- <div *ngFor="let option of value">{{ option.name }},</div> -->
+      </div>
+      <div *ngIf="!value || value.length === 0">Select Dice To Roll</div>
     </ng-template>
-    <ng-template
-      pTemplate="body"
-      let-roll
-      let-rowIndex="rowIndex"
-      let-rowgroup="rowgroup"
-      let-rowspan="rowspan"
+  </p-multiSelect>
+
+  <ng-container *ngIf="useSimpleDice; else complexDice">
+    <p-selectButton
+      [options]="tableViewOptions"
+      [(ngModel)]="tableView"
+      [unselectable]="true"
+      optionLabel="label"
+      optionValue="value"
+    />
+    <app-dice-simple
+      *ngIf="tableView !== 'expanded'; else complexDice"
+      [diceSet]="diceSet"
+      [tableView]="tableView"
+    ></app-dice-simple>
+  </ng-container>
+
+  <ng-template #complexDice>
+    <p-table
+      [value]="diceRolls"
+      rowGroupMode="rowspan"
+      groupRowsBy="face"
+      sortMode="single"
+      sortField="face"
+      styleClass="p-datatable-sm p-datatable-striped"
     >
-      <tr>
-        <td *ngIf="rowgroup" [attr.rowspan]="rowspan">
-          <span class="font-bold ml-2">{{ roll.face }}</span>
-        </td>
-        <td>{{ roll.count }}</td>
-        <td>{{ roll.pExact | number : "1.2-2" }}%</td>
-        <td>{{ roll.pAtLeast | number : "1.2-2" }}%</td>
-      </tr>
-    </ng-template>
-  </p-table>
-</ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Side</th>
+          <th style="width: 3rem">#</th>
+          <th>P(Exactly #)</th>
+          <th>P(At Least #)</th>
+        </tr>
+      </ng-template>
+      <ng-template
+        pTemplate="body"
+        let-roll
+        let-rowIndex="rowIndex"
+        let-rowgroup="rowgroup"
+        let-rowspan="rowspan"
+      >
+        <tr>
+          <td *ngIf="rowgroup" [attr.rowspan]="rowspan">
+            <span class="font-bold ml-2">{{ roll.face }}</span>
+          </td>
+          <td>{{ roll.count }}</td>
+          <td>{{ roll.pExact | number : "1.2-2" }}%</td>
+          <td>{{ roll.pAtLeast | number : "1.2-2" }}%</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </ng-template>
+</div>

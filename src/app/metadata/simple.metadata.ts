@@ -68,43 +68,55 @@ export const simpleMetadata: Game = {
   expansions: [],
   diceSets: [
     {
+      name: 'd4',
       dice: [
         {
+          name: 'd4',
           type: 'd4',
         },
       ],
     },
     {
+      name: 'd6',
       dice: [
         {
+          name: 'd6',
           type: 'd6',
         },
       ],
     },
     {
+      name: 'd8',
       dice: [
         {
+          name: 'd8',
           type: 'd8',
         },
       ],
     },
     {
+      name: 'd10',
       dice: [
         {
+          name: 'd10',
           type: 'd10',
         },
       ],
     },
     {
+      name: 'd12',
       dice: [
         {
+          name: 'd12',
           type: 'd12',
         },
       ],
     },
     {
+      name: 'd20',
       dice: [
         {
+          name: 'd20',
           type: 'd20',
         },
       ],

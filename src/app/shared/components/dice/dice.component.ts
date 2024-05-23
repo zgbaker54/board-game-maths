@@ -9,6 +9,8 @@ import { Unique, nCk } from '../../helper';
 import { TableModule } from 'primeng/table';
 import { GameService } from '../../services/game.service';
 import { Subscription } from 'rxjs';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-dice',
@@ -16,6 +18,7 @@ import { Subscription } from 'rxjs';
   imports: [
     CommonModule,
     FormsModule,
+    MultiSelectModule,
     SelectButtonModule,
     DiceSimpleComponent,
     SectionTitleComponent,
@@ -29,6 +32,7 @@ export class DiceComponent implements OnInit, OnDestroy {
 
   subscriptions = new Subscription();
   filteredDice: Dice[] = [];
+  chosenDice: Dice[] = [];
 
   rollCount = '';
 
@@ -54,30 +58,37 @@ export class DiceComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscriptions.add(
       this.gameService.expansions$.subscribe(() => {
-        this.setupDice();
+        this.resetDice();
       })
     );
-    this.setupDice();
+    this.resetDice();
   }
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
   }
 
-  setupDice(): void {
+  resetDice() {
+    this.filteredDice = this.gameService.expansionFilter(this.diceSet.dice);
+    this.filteredDice.forEach((x) => (x.uuid = uuidv4()));
+    this.chosenDice = [...this.filteredDice];
+    this.rollDice();
+  }
+
+  rollDice(): void {
     this.diceRolls = [];
     this.useSimpleDice = false;
 
-    this.filteredDice = this.gameService.expansionFilter(this.diceSet.dice);
-    const allSimple = this.filteredDice.every((x) => x.type !== 'fancy');
+    const allSimple = this.chosenDice.every((x) => x.type !== 'fancy');
 
     if (allSimple) {
       this.useSimpleDice = true;
 
       // Convert the list of d4-20 into fancy dice objects
       const expandedDice: Dice[] = [];
-      this.filteredDice.forEach((d) => {
+      this.chosenDice.forEach((d) => {
         expandedDice.push({
+          name: d.name,
           type: 'fancy',
           sides: Array.from(
             { length: +d.type.substring(1) },
@@ -88,13 +99,13 @@ export class DiceComponent implements OnInit, OnDestroy {
 
       this.calculateDiceRolls(expandedDice);
     } else {
-      this.calculateDiceRolls(this.filteredDice);
+      this.calculateDiceRolls(this.chosenDice);
     }
 
-    const types = Unique(this.filteredDice.map((x) => x.type));
-    this.rollCount = ` - ${this.filteredDice.length}${
+    const types = Unique(this.chosenDice.map((x) => x.type));
+    this.rollCount = ` - ${this.chosenDice.length}${
       allSimple ? ' ' + types.join(' + ') : ''
-    } roll${this.filteredDice.length > 1 ? 's' : ''}`;
+    } roll${this.chosenDice.length > 1 ? 's' : ''}`;
   }
 
   // Assuming that a face has the same probability for all dice where it shows up
@@ -165,5 +176,22 @@ export class DiceComponent implements OnInit, OnDestroy {
     const pNK = (1 - p) ** (n - k);
 
     return nChooseK * pK * pNK;
+  }
+
+  onMultiselectFocus() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }
+
+  selectedDiceString(): string {
+    const names = Object.fromEntries(this.chosenDice.map((d) => [d.name, 0]));
+    this.chosenDice.forEach((d) => {
+      names[d.name]++;
+    });
+
+    return Object.keys(names)
+      .map((key) => `${key} x${names[key]}`)
+      .join(', ');
   }
 }

@@ -54,8 +54,10 @@ export const castingShadowsMetadata: Game = {
   expansions: [],
   diceSets: [
     {
+      name: 'Resource Dice',
       dice: [
         {
+          name: 'Blue',
           type: 'fancy',
           sides: [
             'Blue Gem',
@@ -67,6 +69,7 @@ export const castingShadowsMetadata: Game = {
           ],
         },
         {
+          name: 'Blue',
           type: 'fancy',
           sides: [
             'Blue Gem',
@@ -78,6 +81,7 @@ export const castingShadowsMetadata: Game = {
           ],
         },
         {
+          name: 'Red',
           type: 'fancy',
           sides: [
             'Red Gem',
@@ -89,6 +93,7 @@ export const castingShadowsMetadata: Game = {
           ],
         },
         {
+          name: 'Red',
           type: 'fancy',
           sides: [
             'Red Gem',
@@ -100,6 +105,7 @@ export const castingShadowsMetadata: Game = {
           ],
         },
         {
+          name: 'Purple',
           type: 'fancy',
           sides: [
             'Purple Gem',

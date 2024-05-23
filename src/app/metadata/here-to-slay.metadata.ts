@@ -157,7 +157,8 @@ export const hereToSlayMetadata: Game = {
   ],
   diceSets: [
     {
-      dice: [{ type: 'd6' }, { type: 'd6' }],
+      name: 'Dice', 
+      dice: [{ name: 'd6', type: 'd6' }, { name: 'd6', type: 'd6' }],
     },
   ],
 };

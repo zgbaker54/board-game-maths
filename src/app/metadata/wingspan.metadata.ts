@@ -467,12 +467,13 @@ export const wingspanMetadata: Game = {
   ],
   diceSets: [
     {
+      name: 'Food',
       dice: [
-        { type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
-        { type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
-        { type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
-        { type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
-        { type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
+        { name: 'Food', type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
+        { name: 'Food', type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
+        { name: 'Food', type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
+        { name: 'Food', type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
+        { name: 'Food', type: 'fancy', sides: ['Invertebrate (Worm)', 'Fruit', 'Fish', 'Seed', 'Rodent', ['Invertebrate (Worm)', 'Seed']], },
       ],
     },
   ],
