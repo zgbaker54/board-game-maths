@@ -1,4 +1,5 @@
 import { castingShadowsMetadata } from './casting-shadows.metadata';
+import { doomlingsMetadata } from './doomlings.metadata';
 import { hereToSlayMetadata } from './here-to-slay.metadata';
 import { monopolyDealMetadata } from './monopoly-deal.metadata';
 import { sevenWondersMetadata } from './seven-wonders.metadata';
@@ -35,5 +36,10 @@ export const gameList = [
     label: 'Wingspan',
     routerLink: '/wingspan',
     metadata: wingspanMetadata,
+  },
+  {
+    label: 'Doomlings',
+    routerLink: '/doomlings',
+    metadata: doomlingsMetadata,
   },
 ];
