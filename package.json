@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "phone": "ng serve --host=0.0.0.0 --ssl",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build": "ng build --prod --base-href / --cname=boardgamemaths.polklabs.com",
@@ -24,6 +25,7 @@
     "primeicons": "^7.0.0",
     "primeng": "^17.17.0",
     "rxjs": "~7.8.0",
+    "tesseract.js": "^5.1.0",
     "tslib": "^2.3.0",
     "uuid": "^9.0.1",
     "zone.js": "~0.14.3"

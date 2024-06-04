@@ -1,0 +1,21 @@
+<div class="col-md-12">
+  <webcam
+    [trigger]="invokeObservable"
+    [width]="width"
+    [allowCameraSwitch]="false"
+    [captureImageData]="true"
+    (imageCapture)="captureImg($event)"
+  ></webcam>
+</div>
+<div class="col-md-12">
+  <p-button (click)="getSnapshot()">Capture Image</p-button>
+</div>
+<div class="col-12">
+  <canvas [width]="width" height="auto" id="screenshot" #screenshot></canvas>
+  <!-- <img id="template" src="{{templateSrc}}"/>
+  <canvas id="output"></canvas> -->
+</div>
+
+<h2>{{foundCard}}</h2>
+
+<p *ngFor="let t of text">'{{ t }}'</p>

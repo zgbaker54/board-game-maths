@@ -2,7 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { gameList } from './metadata/metadata';
 import { DefaultComponent } from './games/default/default.component';
 
@@ -14,7 +14,7 @@ type GameItem = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, DropdownModule, DefaultComponent],
+  imports: [CommonModule, FormsModule, DropdownModule, DefaultComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -22,6 +22,8 @@ export class AppComponent implements AfterViewInit {
   games: GameItem[] = gameList;
   selectedGame: GameItem = this.games[0];
   gameChanged = 0;
+
+  nonGame = false;
 
   constructor(private router: Router) {}
 
@@ -36,5 +38,11 @@ export class AppComponent implements AfterViewInit {
   gameClicked(game: GameItem) {
     this.router.navigateByUrl(game.routerLink);
     this.gameChanged++;
+    this.nonGame = false;
+  }
+
+  cameraClicked() {
+    this.router.navigateByUrl('/camera');
+    this.nonGame = true;
   }
 }

@@ -43,21 +43,3 @@
   <h1>{{ maxScienceScore }} Points</h1>
   <p [innerHTML]="scienceString(maxScienceCombo)"></p>
 </p-card>
-
-<div class="col-md-12">
-  <webcam
-    [trigger]="invokeObservable"
-    (imageCapture)="captureImg($event)"
-  ></webcam>
-</div>
-<div class="col-md-12">
-  <button class="btn btn-danger" (click)="getSnapshot()">
-    Capture Image
-  </button>
-</div>
-<div class="col-12">
-  <div id="results">Your taken image manifests here...</div>
-
-  <canvas width="auto" height="400" id="canvasAutoCrop"></canvas>
-  <!-- <img [src]="webcamImage?.imageAsDataUrl" height="400px" /> -->
-</div>
