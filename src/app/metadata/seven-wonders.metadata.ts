@@ -5,9 +5,12 @@ import { CardsCount, nChooseK } from '../shared/helper';
 export const sevenWondersMetadata: Game = {
   minPlayers: 3,
   maxPlayers: 7,
-  expansions: [{ id: 1, name: 'Cities' }, {id: 2, name: 'Leaders'}],
+  expansions: [{ id: 1, name: 'Cities' }, {id: 2, name: 'Leaders'}, {id: 3, name: 'Armada'}],
   diceSets: [],
   decks: [
+    // ************************************************************************************************************************************************
+    // Base Game 
+    // ************************************************************************************************************************************************
     {
       id: 1,
       name: 'Age I',
@@ -209,6 +212,9 @@ export const sevenWondersMetadata: Game = {
         { name: 'Builders Guild', rules: ['wonder-victory'], properties: {"color": ['Purple'], "resource": ['Victory Points'], "cost": ['Stone','Clay','Glassworks'], "depends on": ['Wonder','Neighbors','Self'],  } },
       ],
     },
+    // ************************************************************************************************************************************************
+    // Cities 
+    // ************************************************************************************************************************************************
     {
       id: 1,
       name: 'Cities Age I',
@@ -240,20 +246,20 @@ export const sevenWondersMetadata: Game = {
         }
       },
       cards: [
-        { name: 'Opium Stash', rules: ['gold', 'debt'], properties: {"color": ['Black'], "resource": ['Gold', "Debt"],  } },
-        { name: 'Smuggler\'s Cache', rules: ['discount-starting'], properties: {"color": ['Black'], "resource": ['Discount Starting Resource'],  } },
-        { name: 'West Clandestine Wharf', rules: ['discount'], properties: {"color": ['Black'], "resource": ['Discount'], "cost": ['Gold'],  } },
-        { name: 'East Clandestine Wharf', rules: ['discount'], properties: {"color": ['Black'], "resource": ['Discount'], "cost": ['Gold'],  } },
-        { name: 'Dive', rules: ['gold-neighbors'], properties: {"color": ['Black'], "resource": ['Gold'] } },
-        { name: 'Cells', rules: ['military-victory'], properties: {"color": ['Black'], "resource": ['Victory Points'], "depends on": ['Military Victory'], } },
-        { name: 'Customs', rules: ['gold-others', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'] } },
-        { name: 'Pigeonhole', rules: ['spy-science'], properties: {"color": ['Black'], "resource": ['Science'], "cost": ['Gold','Ore'], "depends on": ['Green Cards','Neighbors'],  } },
-        { name: 'Raider Camp', rules: ['military-token'], properties: {"color": ['Black'], "resource": ['Military Victory'],  } },
-        { name: 'Secret Warehouse', rules: ['resource-extra'], properties: {"color": ['Black'], "resource": ['Clay','Stone','Wood','Ore','Loom','Glassworks','Press'], "cost": ['Gold'],  } },
-        { name: 'City Gates', rules: ['victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Wood'],  } },
-        { name: 'Militia', rules: ['military'], properties: {"color": ['Black'], "resource": ['Military'], "cost": ['Gold'],  } },
-        { name: 'Hideout', rules: ['debt', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points', 'Debt'],  } },
-        { name: 'Residence', rules: ['victory-point', 'diplomacy'], properties: {"color": ['Black'], "resource": ['Victory Points', 'Diplomacy'], "cost": ['Clay',],  } },
+        { name: 'Opium Stash', expansionId: 1, rules: ['gold', 'debt'], properties: {"color": ['Black'], "resource": ['Gold', "Debt"],  } },
+        { name: 'Smuggler\'s Cache', expansionId: 1, rules: ['discount-starting'], properties: {"color": ['Black'], "resource": ['Discount Starting Resource'],  } },
+        { name: 'West Clandestine Wharf', expansionId: 1, rules: ['discount'], properties: {"color": ['Black'], "resource": ['Discount'], "cost": ['Gold'],  } },
+        { name: 'East Clandestine Wharf', expansionId: 1, rules: ['discount'], properties: {"color": ['Black'], "resource": ['Discount'], "cost": ['Gold'],  } },
+        { name: 'Dive', expansionId: 1, rules: ['gold-neighbors'], properties: {"color": ['Black'], "resource": ['Gold'] } },
+        { name: 'Cells', expansionId: 1, rules: ['military-victory'], properties: {"color": ['Black'], "resource": ['Victory Points'], "depends on": ['Military Victory'], } },
+        { name: 'Customs', expansionId: 1, rules: ['gold-others', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'] } },
+        { name: 'Pigeonhole', expansionId: 1, rules: ['spy-science'], properties: {"color": ['Black'], "resource": ['Science'], "cost": ['Gold','Ore'], "depends on": ['Green Cards','Neighbors'],  } },
+        { name: 'Raider Camp', expansionId: 1, rules: ['military-token'], properties: {"color": ['Black'], "resource": ['Military Victory'],  } },
+        { name: 'Secret Warehouse', expansionId: 1, rules: ['resource-extra'], properties: {"color": ['Black'], "resource": ['Clay','Stone','Wood','Ore','Loom','Glassworks','Press'], "cost": ['Gold'],  } },
+        { name: 'City Gates', expansionId: 1, rules: ['victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Wood'],  } },
+        { name: 'Militia', expansionId: 1, rules: ['military'], properties: {"color": ['Black'], "resource": ['Military'], "cost": ['Gold'],  } },
+        { name: 'Hideout', expansionId: 1, rules: ['debt', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points', 'Debt'],  } },
+        { name: 'Residence', expansionId: 1, rules: ['victory-point', 'diplomacy'], properties: {"color": ['Black'], "resource": ['Victory Points', 'Diplomacy'], "cost": ['Clay',],  } },
       ],
     },
     {
@@ -287,20 +293,20 @@ export const sevenWondersMetadata: Game = {
         }
       },
       cards: [
-        { name: 'Guardhouse', rules: ['military-victory'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Wood','Ore'], "depends on": ['Military Victory','Self'],  } },
-        { name: 'Trade Center', rules: ['victory-point', 'gold-others'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Stone','Clay','Press']  } },
-        { name: 'Tabularium', rules: ['victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Wood','Ore','Loom']  } },
-        { name: 'Black Market', rules: ['resource-free'], properties: {"color": ['Black'], "resource": ['Clay','Stone','Wood','Ore','Loom','Glassworks','Press'], "cost": ['Ore','Loom']  } },
-        { name: 'Band of Spies', rules: ['spy-science'], properties: {"color": ['Black'], "resource": ['Science'], "cost": ['Gold','Stone','Clay'], "depends on": ['Green Cards','Neighbors'],  } },
-        { name: 'Lair', rules: ['debt','victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Wood','Glass'], } },
-        { name: 'Raider Fort', rules: ['military-token'], properties: {"color": ['Black'], "resource": ['Military Victory'], "cost": ['Gold','Ore','Clay'], } },
-        { name: 'Mercenaries', rules: ['military'], properties: {"color": ['Black'], "resource": ['Military'], "cost": ['Gold','Press'], } },
-        { name: 'Architect Firm', rules: ['free-wonder', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Press'], } },
-        { name: 'Sepulcher', rules: ['military-debt', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Stone','Loom','Glass'], } },
-        { name: 'Forging Agency', rules: ['free-discard'], properties: {"color": ['Black'], "resource": ['Free Card'], "cost": ['Gold'], } },
-        { name: 'Opium Den', rules: ['gold','debt'], properties: {"color": ['Black'], "resource": ['Gold'], "cost": ['Press'], } },
-        { name: 'Consulate', rules: ['victory-point', 'diplomacy'], properties: {"color": ['Black'], "resource": ['Victory Points', 'Diplomacy'], "cost": ['Clay','Press'], } },
-        { name: 'Gambling Den', rules: ['gold-neighbors'], properties: {"color": ['Black'], "resource": ['Gold'], "cost": ['Gold'], } },
+        { name: 'Guardhouse', expansionId: 1, rules: ['military-victory'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Wood','Ore'], "depends on": ['Military Victory','Self'],  } },
+        { name: 'Trade Center', expansionId: 1, rules: ['victory-point', 'gold-others'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Stone','Clay','Press']  } },
+        { name: 'Tabularium', expansionId: 1, rules: ['victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Wood','Ore','Loom']  } },
+        { name: 'Black Market', expansionId: 1, rules: ['resource-free'], properties: {"color": ['Black'], "resource": ['Clay','Stone','Wood','Ore','Loom','Glassworks','Press'], "cost": ['Ore','Loom']  } },
+        { name: 'Band of Spies', expansionId: 1, rules: ['spy-science'], properties: {"color": ['Black'], "resource": ['Science'], "cost": ['Gold','Stone','Clay'], "depends on": ['Green Cards','Neighbors'],  } },
+        { name: 'Lair', expansionId: 1, rules: ['debt','victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Wood','Glass'], } },
+        { name: 'Raider Fort', expansionId: 1, rules: ['military-token'], properties: {"color": ['Black'], "resource": ['Military Victory'], "cost": ['Gold','Ore','Clay'], } },
+        { name: 'Mercenaries', expansionId: 1, rules: ['military'], properties: {"color": ['Black'], "resource": ['Military'], "cost": ['Gold','Press'], } },
+        { name: 'Architect Firm', expansionId: 1, rules: ['free-wonder', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Gold','Press'], } },
+        { name: 'Sepulcher', expansionId: 1, rules: ['military-debt', 'victory-point'], properties: {"color": ['Black'], "resource": ['Victory Points'], "cost": ['Stone','Loom','Glass'], } },
+        { name: 'Forging Agency', expansionId: 1, rules: ['free-discard'], properties: {"color": ['Black'], "resource": ['Free Card'], "cost": ['Gold'], } },
+        { name: 'Opium Den', expansionId: 1, rules: ['gold','debt'], properties: {"color": ['Black'], "resource": ['Gold'], "cost": ['Press'], } },
+        { name: 'Consulate', expansionId: 1, rules: ['victory-point', 'diplomacy'], properties: {"color": ['Black'], "resource": ['Victory Points', 'Diplomacy'], "cost": ['Clay','Press'], } },
+        { name: 'Gambling Den', expansionId: 1, rules: ['gold-neighbors'], properties: {"color": ['Black'], "resource": ['Gold'], "cost": ['Gold'], } },
       ],
     },
     {
@@ -350,6 +356,9 @@ export const sevenWondersMetadata: Game = {
         { name: 'Embassy', expansionId: 1, rules: ['diplomacy','victory-point'], properties: {"color": ['Black'], "resource": ['Diplomacy','Victory Points'], "cost": ['Stone','Press','Loom'],  } },
       ],
     },
+    // ************************************************************************************************************************************************
+    // Leaders
+    // ************************************************************************************************************************************************
     {
       id: 3,
       name: 'Leaders',
@@ -359,60 +368,187 @@ export const sevenWondersMetadata: Game = {
       pick: 4,
       cards: [
         { name: 'Aristotle', expansionId: 2, rules: ['science-sets'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Science','Self'],  } },
-        { name: 'Enheduanna', rules: ['science-most'], properties: {"resource": ['Science'], "gold": ['4'], "depends on": ['Science','Self'],  } },
-        { name: 'Nefertiti', rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['3'],  } },
-        { name: 'Cornelia', rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Yellow Cards','Neighbors'],  } },
-        { name: 'Hatshepsut', rules: ['cash-back'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Neighbors'],  } },
-        { name: 'Justinian', rules: ['color-sets'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Blue Cards','Red Cards','Green Cards','Self'],  } },
-        { name: 'Archimedes', rules: ['color-discount'], properties: {"resource": ['Discount'], "gold": ['4'], "depends on": ['Green Cards','Self'],  } },
-        { name: 'Zenobia', rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['2'],  } },
-        { name: 'Amytis', rules: ['amytis'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Wonder','Self'],  } },
-        { name: 'Nero', rules: ['nero'], properties: {"resource": ['Gold'], "gold": ['1'], "depends on": ['Military Victory','Self'],  } },
-        { name: 'Hiram', rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Purple Cards','Self'],  } },
-        { name: 'Pythagoras', rules: ['science'], properties: {"resource": ['Science'], "gold": ['5'],  } },
-        { name: 'Darius', rules: ['black-victory'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Black Cards','Self'],  } },
-        { name: 'Cleopatra', rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Green Cards','Neighbors'],  } },
-        { name: 'Theano', rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'],  } },
-        { name: 'Hypatia', rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Green Cards','Self'],  } },
-        { name: 'Tomyris', rules: ['tomyris'], properties: {"resource": ['Military Loss'], "gold": ['4'], "depends on": ['Military Loss','Self'],  } },
-        { name: 'Bilkis', rules: ['bilkis'], properties: {"resource": ['Stone','Wood','Glassworks','Press','Loom','Clay','Ore'], "gold": ['4'],  } },
-        { name: 'Praxiteles', rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Grey Cards','Self'],  } },
-        { name: 'Solomon', rules: ['free-discard'], properties: {"resource": ['Free Card'], "gold": ['3'],  } },
-        { name: 'Midas', rules: ['gold-victory'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Gold','Self'],  } },
-        { name: 'Vitruvius', rules: ['gold-chain'], properties: {"resource": ['Gold'], "gold": ['1'],  } },
-        { name: 'Croesus', rules: ['gold'], properties: {"resource": ['Gold'], "gold": ['1'],  } },
-        { name: 'Arsinoe', rules: ['gold','debt'], properties: {"resource": ['Gold','Debt'], "gold": ['A'],  } },
-        { name: 'Cynisca', rules: ['cynisca'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Military Loss','Self'],  } },
-        { name: 'Caligula', rules: ['caligula'], properties: {"resource": ['Free Card'], "gold": ['3'],  } },
-        { name: 'Phidias', rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Brown Cards','Self'],  } },
-        { name: 'Hammurabi', rules: ['color-discount'], properties: {"resource": ['Discount'], "gold": ['2'], "depends on": ['Blue Cards','Self'],  } },
-        { name: 'Ptolemy', rules: ['science'], properties: {"resource": ['Science'], "gold": ['5'],  } },
-        { name: 'Imhotep', rules: ['wonder-discount'], properties: {"resource": ['Discount'], "gold": ['3'], "depends on": ['Wonder','Self'],  } },
-        { name: 'Gorgo', rules: ['gorgo'], properties: {"resource": ['Victory Points'], "gold": ['5'], "depends on": ['Military Victory','Self'],  } },
-        { name: 'Alexander', rules: ['alexander'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Military Victory','Self'],  } },
-        { name: 'Nitocris', rules: ['nitocris'], properties: {"resource": ['Military Victory'], "gold": ['A'],  } },
-        { name: 'Phryne', rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Blue Cards','Neighbors'],  } },
-        { name: 'Pericles', rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['6'], "depends on": ['Red Cards','Self'],  } },
-        { name: 'Octavia', rules: ['octavia'], properties: {"resource": ['Gold','Debt'], "gold": ['1'], "depends on": ['Wonder','Self'],  } },
-        { name: 'Leonidas', rules: ['color-discount'], properties: {"resource": ['Discount'], "gold": ['2'], "depends on": ['Red Cards','Self'],  } },
-        { name: 'Diocletian', rules: ['diocletian'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Black Cards','Self'],  } },
-        { name: 'Aspasia', rules: ['victory-point','diplomacy'], properties: {"resource": ['Diplomacy','Victory Points'], "gold": ['3'],  } },
-        { name: 'Makeda', rules: ['more-gold'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Gold','Neighbors'],  } },
-        { name: 'Agrippina', rules: ['only-leader'], properties: {"resource": ['Victory Points'], "gold": ['1'], "depends on": ['Leaders','Self'],  } },
-        { name: 'Aganice', rules: ['aganice'], properties: {"resource": ['Science'], "gold": ['A'], "depends on": ['Science','Self'],  } },
-        { name: 'Berenice', rules: ['berenice'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Gold','Self'],  } },
-        { name: 'Telesilla', rules: ['telesilla'], properties: {"resource": ['Military Loss'], "gold": ['3'],  } },
-        { name: 'Xenophon', rules: ['xenophon'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Yellow Cards','Self'],  } },
-        { name: 'Plato', rules: ['color-sets'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Brown Cards','Grey Cards','Blue Cards','Yellow Cards','Red Cards','Green Cards','Purple Cards','Self'],  } },
-        { name: 'Ceasar', rules: ['military'], properties: {"resource": ['Military'], "gold": ['5'],  } },
-        { name: 'Maecenas', rules: ['free-leader'], properties: {"resource": ['Free Card'], "gold": ['1'], "depends on": ['Leaders'],  } },
-        { name: 'Varro', rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Yellow Cards','Self'],  } },
-        { name: 'Hannibal', rules: ['military'], properties: {"resource": ['Military'], "gold": ['2'],  } },
-        { name: 'Eurypyle', rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Red Cards','Neighbors'],  } },
-        { name: 'Euclid', rules: ['science'], properties: {"resource": ['Science'], "gold": ['5'],  } },
-        { name: 'Nebuchadnezzar', rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Blue Cards','Self'],  } },
-        { name: 'Sappho', rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['1'],  } },
-        { name: 'Ramses', rules: ['free-purple'], properties: {"resource": ['Free Card'], "gold": ['5'], "depends on": ['Purple Cards'],  } },
+        { name: 'Enheduanna', expansionId: 2, rules: ['science-most'], properties: {"resource": ['Science'], "gold": ['4'], "depends on": ['Science','Self'], "expert": ['Yes'],  } },
+        { name: 'Nefertiti', expansionId: 2, rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['3'],  } },
+        { name: 'Cornelia', expansionId: 2, rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Yellow Cards','Neighbors'], "expert": ['Yes'],  } },
+        { name: 'Hatshepsut', expansionId: 2, rules: ['cash-back'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Neighbors'], "expert": ['Yes'],  } },   
+        { name: 'Justinian', expansionId: 2, rules: ['color-sets'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Blue Cards','Red Cards','Green Cards','Self'],  } },
+        { name: 'Archimedes', expansionId: 2, rules: ['color-discount'], properties: {"resource": ['Discount'], "gold": ['4'], "depends on": ['Green Cards','Self'],  } },    
+        { name: 'Zenobia', expansionId: 2, rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['2'],  } },
+        { name: 'Amytis', expansionId: 2, rules: ['amytis'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Wonder','Self'],  } },
+        { name: 'Nero', expansionId: 2, rules: ['nero'], properties: {"resource": ['Gold'], "gold": ['1'], "depends on": ['Military Victory','Self'],  } },
+        { name: 'Hiram', expansionId: 2, rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Purple Cards','Self'],  } },
+        { name: 'Pythagoras', expansionId: 2, rules: ['science'], properties: {"resource": ['Science'], "gold": ['5'],  } },
+        { name: 'Darius', expansionId: 2, rules: ['black-victory'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Black Cards','Self'], "cities": ['Yes'],  } },
+        { name: 'Cleopatra', expansionId: 2, rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Green Cards','Neighbors'],  } },
+        { name: 'Theano', expansionId: 2, rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'], "expert": ['Yes'],  } },
+        { name: 'Hypatia', expansionId: 2, rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Green Cards','Self'],  } },
+        { name: 'Tomyris', expansionId: 2, rules: ['tomyris'], properties: {"resource": ['Military Loss'], "gold": ['4'], "depends on": ['Military Loss','Self'], "expert": ['Yes'],  } },
+        { name: 'Bilkis', expansionId: 2, rules: ['bilkis'], properties: {"resource": ['Stone','Wood','Glassworks','Press','Loom','Clay','Ore'], "gold": ['4'],  } },
+        { name: 'Praxiteles', expansionId: 2, rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Grey Cards','Self'],  } },
+        { name: 'Solomon', expansionId: 2, rules: ['free-discard'], properties: {"resource": ['Free Card'], "gold": ['3'],  } },
+        { name: 'Midas', expansionId: 2, rules: ['gold-victory'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Gold','Self'],  } },
+        { name: 'Vitruvius', expansionId: 2, rules: ['gold-chain'], properties: {"resource": ['Gold'], "gold": ['1'],  } },
+        { name: 'Croesus', expansionId: 2, rules: ['gold'], properties: {"resource": ['Gold'], "gold": ['1'],  } },
+        { name: 'Arsinoe', expansionId: 2, rules: ['gold','debt'], properties: {"resource": ['Gold','Debt'], "gold": ['A'], "cities": ['Yes'],  } },
+        { name: 'Cynisca', expansionId: 2, rules: ['cynisca'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Military Loss','Self'], "expert": ['Yes'],  } },
+        { name: 'Caligula', expansionId: 2, rules: ['caligula'], properties: {"resource": ['Free Card'], "gold": ['3'], "cities": ['Yes'],  } },
+        { name: 'Phidias', expansionId: 2, rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Brown Cards','Self'],  } },
+        { name: 'Hammurabi', expansionId: 2, rules: ['color-discount'], properties: {"resource": ['Discount'], "gold": ['2'], "depends on": ['Blue Cards','Self'],  } },      
+        { name: 'Ptolemy', expansionId: 2, rules: ['science'], properties: {"resource": ['Science'], "gold": ['5'],  } },
+        { name: 'Imhotep', expansionId: 2, rules: ['wonder-discount'], properties: {"resource": ['Discount'], "gold": ['3'], "depends on": ['Wonder','Self'],  } },
+        { name: 'Gorgo', expansionId: 2, rules: ['gorgo'], properties: {"resource": ['Victory Points'], "gold": ['5'], "depends on": ['Military Victory','Self'], "expert": ['Yes'],  } },
+        { name: 'Alexander', expansionId: 2, rules: ['alexander'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Military Victory','Self'],  } },
+        { name: 'Nitocris', expansionId: 2, rules: ['nitocris'], properties: {"resource": ['Military Victory'], "gold": ['A'], "expert": ['Yes'],  } },
+        { name: 'Phryne', expansionId: 2, rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Blue Cards','Neighbors'], "expert": ['Yes'],  } },
+        { name: 'Pericles', expansionId: 2, rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['6'], "depends on": ['Red Cards','Self'],  } },
+        { name: 'Octavia', expansionId: 2, rules: ['octavia'], properties: {"resource": ['Gold','Debt'], "gold": ['1'], "depends on": ['Wonder','Self'], "cities": ['Yes'],  } },
+        { name: 'Leonidas', expansionId: 2, rules: ['color-discount'], properties: {"resource": ['Discount'], "gold": ['2'], "depends on": ['Red Cards','Self'],  } },        
+        { name: 'Diocletian', expansionId: 2, rules: ['diocletian'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Black Cards','Self'], "cities": ['Yes'],  } },
+        { name: 'Aspasia', expansionId: 2, rules: ['victory-point','diplomacy'], properties: {"resource": ['Diplomacy','Victory Points'], "gold": ['3'], "cities": ['Yes'],  } },
+        { name: 'Makeda', expansionId: 2, rules: ['more-gold'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Gold','Neighbors'], "expert": ['Yes'],  } },
+        { name: 'Agrippina', expansionId: 2, rules: ['only-leader'], properties: {"resource": ['Victory Points'], "gold": ['1'], "depends on": ['Leaders','Self'], "expert": ['Yes'],  } },
+        { name: 'Aganice', expansionId: 2, rules: ['aganice'], properties: {"resource": ['Science'], "gold": ['A'], "depends on": ['Science','Self'], "expert": ['Yes'],  } },
+        { name: 'Berenice', expansionId: 2, rules: ['berenice'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Gold','Self'], "expert": ['Yes'],  } },    
+        { name: 'Telesilla', expansionId: 2, rules: ['telesilla'], properties: {"resource": ['Military Loss'], "gold": ['3'], "expert": ['Yes'],  } },
+        { name: 'Xenophon', expansionId: 2, rules: ['xenophon'], properties: {"resource": ['Gold'], "gold": ['2'], "depends on": ['Yellow Cards','Self'],  } },
+        { name: 'Plato', expansionId: 2, rules: ['color-sets'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Brown Cards','Grey Cards','Blue Cards','Yellow Cards','Red Cards','Green Cards','Purple Cards','Self'],  } },
+        { name: 'Ceasar', expansionId: 2, rules: ['military'], properties: {"resource": ['Military'], "gold": ['5'],  } },
+        { name: 'Maecenas', expansionId: 2, rules: ['free-leader'], properties: {"resource": ['Free Card'], "gold": ['1'], "depends on": ['Leaders'],  } },
+        { name: 'Varro', expansionId: 2, rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['3'], "depends on": ['Yellow Cards','Self'],  } },
+        { name: 'Hannibal', expansionId: 2, rules: ['military'], properties: {"resource": ['Military'], "gold": ['2'],  } },
+        { name: 'Eurypyle', expansionId: 2, rules: ['more-cards'], properties: {"resource": ['Victory Points'], "gold": ['A'], "depends on": ['Red Cards','Neighbors'],  } }, 
+        { name: 'Euclid', expansionId: 2, rules: ['science'], properties: {"resource": ['Science'], "gold": ['5'],  } },
+        { name: 'Nebuchadnezzar', expansionId: 2, rules: ['color-victory-self'], properties: {"resource": ['Victory Points'], "gold": ['4'], "depends on": ['Blue Cards','Self'],  } },
+        { name: 'Sappho', expansionId: 2, rules: ['victory-point'], properties: {"resource": ['Victory Points'], "gold": ['1'],  } },
+        { name: 'Ramses', expansionId: 2, rules: ['free-purple'], properties: {"resource": ['Free Card'], "gold": ['5'], "depends on": ['Purple Cards'],  } },
+      ],
+    },
+
+    // ************************************************************************************************************************************************
+    // Armada
+    // ************************************************************************************************************************************************
+    {
+      id: 1,
+      name: 'Armada Age I',
+      expansionId: 3,
+      pickMin: 1,
+      pickMax: 9,
+      pick: 9,
+      totalCardsAdjust: (playerCount: number) => {
+        return playerCount - 8;
+      },
+      totalValidCards: (playerCount: number, validCards: Card[]) => {
+        const totalCount = CardsCount(validCards);
+        const armada = CardsCount(
+          validCards.filter((x) => x.expansionId === 3)
+        );
+        if (armada === 0) {
+          return [totalCount, totalCount];
+        } else if (armada > playerCount) {
+          return [totalCount + playerCount - 8, totalCount + playerCount - 8];
+        } else {
+          return [Math.max(0, totalCount + playerCount - 8), totalCount];
+        }
+      },
+      cardProbabilityFunc: (playerCount: number, card: Card) => {
+        if(card.expansionId === 3) {
+          return nChooseK(7, playerCount) / nChooseK(8, playerCount);
+        } else {
+          return 0;
+        }
+      },
+      cards: [
+        { name: 'Eastern Emporium', expansionId: 3, rules: ['discount-once'], properties: {"color": ['Yellow'], "resource": ['Discount'], "cost": ['Loom'],  } },
+        { name: 'Costal Defenses', expansionId: 3, rules: ['naval'], properties: {"color": ['Red'], "resource": ['Naval Power'], "cost": ['Glassworks'],  } },
+        { name: 'Construction Zone', expansionId: 3, rules: ['fleet-move'], properties: {"color": ['Blue'], "resource": ['Fleet'],  } },
+        { name: 'Pirate Hideout', expansionId: 3, rules: ['gold','commercial-debt'], properties: {"color": ['Yellow'], "resource": ['Gold','Tax'],  } },
+        { name: 'Cabinet of Explorers', expansionId: 3, rules: ['science-most'], properties: {"color": ['Green'], "resource": ['Science'], "cost": ['Clay'],  } },
+        { name: 'Helmsman\'s Rest', expansionId: 3, rules: ['island-card'], properties: {"color": ['Green'], "resource": ['Island Card'], "cost": ['Stone'],  } },
+        { name: 'Dry Hold', expansionId: 3, rules: ['fleet-move'], properties: {"color": ['Blue'], "resource": ['Fleet'],  } },
+        { name: 'Pontoon', expansionId: 3, rules: ['military','boarding'], properties: {"color": ['Red'], "resource": ['Military','Boarding'], "cost": ['Press'],  } },
+      ],
+    },
+    {
+      id: 2,
+      name: 'Armada Age II',
+      expansionId: 3,
+      pickMin: 1,
+      pickMax: 9,
+      pick: 9,
+      totalCardsAdjust: (playerCount: number) => {
+        return playerCount - 8;
+      },
+      totalValidCards: (playerCount: number, validCards: Card[]) => {
+        const totalCount = CardsCount(validCards);
+        const armada = CardsCount(
+          validCards.filter((x) => x.expansionId === 3)
+        );
+        if (armada === 0) {
+          return [totalCount, totalCount];
+        } else if (armada > playerCount) {
+          return [totalCount + playerCount - 8, totalCount + playerCount - 8];
+        } else {
+          return [Math.max(0, totalCount + playerCount - 8), totalCount];
+        }
+      },
+      cardProbabilityFunc: (playerCount: number, card: Card) => {
+        if(card.expansionId === 3) {
+          return nChooseK(7, playerCount) / nChooseK(8, playerCount);
+        } else {
+          return 0;
+        }
+      },
+      cards: [
+        { name: 'Pirate\'s Den', expansionId: 3, rules: ['gold','commercial-debt'], properties: {"color": ['Yellow'], "resource": ['Gold','Tax'],  } },
+        { name: 'Wester Emporium', expansionId: 3, rules: ['discount-twice'], properties: {"color": ['Yellow'], "resource": ['Discount'], "cost": ['Ore','Press'],  } },
+        { name: 'Ballista', expansionId: 3, rules: ['military','boarding'], properties: {"color": ['Red'], "resource": ['Military','Boading'], "cost": ['Clay','Glassworks','Loom'],  } },
+        { name: 'Cartagraphers Office', expansionId: 3, rules: ['island-card'], properties: {"color": ['Green'], "resource": ['Island Card'], "cost": ['Wood','Clay'],  } },
+        { name: 'Boathouse', expansionId: 3, rules: ['fleet-move','victory-point'], properties: {"color": ['Blue'], "resource": ['Fleet','Victory Points'], "cost": ['Wood','Loom'],  } },
+        { name: 'Ship Repair', expansionId: 3, rules: ['fleet-move','victory-point'], properties: {"color": ['Blue'], "resource": ['Fleet','Victory Points'], "cost": ['Ore','Glassworks'],  } },
+        { name: 'Navigation Firm', expansionId: 3, rules: ['science-most'], properties: {"color": ['Green'], "resource": ['Science'], "cost": ['Stone','Ore','Glassworks'],  } },
+        { name: 'Fortified Port', expansionId: 3, rules: ['naval'], properties: {"color": ['Red'], "resource": ['Naval Power'], "cost": ['Clay','Press'],  } },
+      ],
+    },
+    {
+      id: 3,
+      name: 'Armada Age III',
+      expansionId: 3,
+      pickMin: 1,
+      pickMax: 9,
+      pick: 9,
+      totalCardsAdjust: (playerCount: number) => {
+        return playerCount - 8;
+      },
+      totalValidCards: (playerCount: number, validCards: Card[]) => {
+        const totalCount = CardsCount(validCards);
+        const armada = CardsCount(
+          validCards.filter((x) => x.expansionId === 3)
+        );
+        if (armada === 0) {
+          return [totalCount, totalCount];
+        } else if (armada > playerCount) {
+          return [totalCount + playerCount - 8, totalCount + playerCount - 8];
+        } else {
+          return [Math.max(0, totalCount + playerCount - 8), totalCount];
+        }
+      },
+      cardProbabilityFunc: (playerCount: number, card: Card) => {
+        if(card.expansionId === 3) {
+          return nChooseK(7, playerCount) / nChooseK(8, playerCount);
+        } else {
+          return 0;
+        }
+      },
+      cards: [
+        { name: 'Port Customs', expansionId: 3, rules: ['commercial-victory'], properties: {"color": ['Yellow'], "resource": ['Victory Points'], "cost": ['Ore','Stone','Clay'],  } },
+        { name: 'Circle of Captains', expansionId: 3, rules: ['science-most'], properties: {"color": ['Green'], "resource": ['Science'], "cost": ['Clay','Stone','Ore','Loom'],  } },
+        { name: 'Pirate Crew', expansionId: 3, rules: ['victory-point','commercial-debt'], properties: {"color": ['Yellow'], "resource": ['Victory Points'], "cost": ['Wood','Glassworks'],  } },
+        { name: 'Nautical Archives', expansionId: 3, rules: ['island-card'], properties: {"color": ['Green'], "resource": ['Island Card'], "cost": ['Ore','Wood','Press'],  } },
+        { name: 'Harbor Master\'s Office', expansionId: 3, rules: ['fleet-move','victory-point'], properties: {"color": ['Blue'], "resource": ['Fleet','Victory Points'], "cost": ['Wood','Stone','Ore','Loom'],  } },
+        { name: 'Coastal Fortifications', expansionId: 3, rules: ['naval'], properties: {"color": ['Red'], "resource": ['Naval Power'], "cost": ['Stone','Clay','Glassworks'],  } },
+        { name: 'Pier', expansionId: 3, rules: ['military','boarding'], properties: {"color": ['Red'], "resource": ['Military','Boarding'], "cost": ['Wood','Press','Loom'],  } },
+        { name: 'Naval Headquarters', expansionId: 3, rules: ['fleet-move','victory-point'], properties: {"color": ['Blue'], "resource": ['Fleet','Victory Points'], "cost": ['Stone','Wood','Clay','Press'],  } },
       ],
     },
   ],
@@ -489,5 +625,14 @@ export const sevenWondersMetadata: Game = {
     "telesilla": "As soon as this symbol enters play, immediately discard <b>all</b> your Military Defeat tokens. <b>All other players</b> discard 1 of their Military Victory tokens (their choice).",
     "xenophon": "Once this symbol enters play, each time you construct a Yellow card, immediately gain 2 Coins (from the reserve).",
     "free-leader": "Once this symbol enters play, recruit all your next <b>Leaders</b> for free.",
+
+    "discount-once": "When this symbol enters play, <b>once per turn</b>, you can buy 1 resource from the designated player for 1 Coin.",
+    "discount-twice": "When this symbol enters play, <b>twice per turn</b>, you can buy 1 resource from the designated player for 1 Coin.",
+    "naval": "When this symbol enters play, increase your naval strength by the indicated value.",
+    "fleet-move": "As soon as this symbol enters play, advance one of your Fleets (of your choice) by one space on your Shipyard, without paying the construction cost. <br/><b><u>Clarification:</u></b> When you construct a card with this symbol, you can undertake a Naval Construction following the normal rules, and then apply the effect to benefit from a free Naval Construction. Therefore, it is possible to undertake multiple Naval Constructions on the same turn.",
+    "commercial-debt": "As soon as this symbol enters play, all players <b>except you</b> lose as many Coins as their respective commercial level.",
+    "island-card": "As soon as this symbol enters play, draw the first Island card of the indicated level (1, 2, or 3) and place it face up under the right side of your Shipyard. You benefit from its effect from now on.",
+    "boarding": "When this symbol enters play, immediately take a Boarding token (from the reserve) and give it to the designated player.",
+    "commercial-victory": "At the end of the game, gain victory points equal to double your commercial level.",
   }
 };
