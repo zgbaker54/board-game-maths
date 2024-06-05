@@ -7,6 +7,7 @@ export type Game = {
   decks: Deck[];
   expansions: Expansion[];
   diceSets: DiceSet[];
+  rules?: { [rule: string]: string };
   // image, url, ...
 };
 
@@ -58,9 +59,7 @@ export function CheckForErrors(game: Game) {
   });
 
   // Check for duplicate cards
-  game.decks.forEach(d => {
-    
-  })
+  game.decks.forEach((d) => {});
 
   // Check for duplicate deck ids in same expansion
 }

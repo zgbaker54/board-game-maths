@@ -33,4 +33,5 @@ export type Card = {
   minPlayers?: number;
   expansionId?: number;
   properties: { [key: string]: string[] };
+  rules?: string[];
 };
