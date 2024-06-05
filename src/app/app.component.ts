@@ -2,7 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { gameList } from './metadata/metadata';
 import { DefaultComponent } from './games/default/default.component';
 
@@ -14,7 +14,7 @@ type GameItem = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, DropdownModule, DefaultComponent],
+  imports: [CommonModule, FormsModule, DropdownModule, DefaultComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

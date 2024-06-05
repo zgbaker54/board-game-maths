@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="scan-btn" *ngIf="state === 'none'">
+    <p-button (click)="state = 'capture'">Scan Card</p-button>
+  </div>
+
+  <div class="capture" *ngIf="state === 'capture'">
+    <webcam
+      [trigger]="invokeObservable"
+      [width]="width"
+      [allowCameraSwitch]="false"
+      [captureImageData]="true"
+      (imageCapture)="captureImg($event)"
+    ></webcam>
+    <p-button icon="pi pi-camera" [rounded]="true" (click)="getSnapshot()" />
+  </div>
+
+  <div class="scan">
+    <canvas
+      class="scan-canvas"
+      [ngClass]="{
+        'hide-canvas': state !== 'scan' && state !== 'display'
+      }"
+      [width]="width"
+      height="auto"
+      id="screenshot"
+      #screenshot
+    ></canvas>
+    <p-progressSpinner *ngIf="scans > 0" ariaLabel="loading" />
+
+    <div
+      class="display"
+      [ngStyle]="{ width: width + 'px' }"
+      *ngIf="state === 'display'"
+    >
+      <p-button [disabled]="scans > 0" (click)="state = 'capture'"
+        >Scan New Card</p-button
+      >
+      <h2>{{ foundCard?.name }}</h2>
+      <p *ngFor="let rule of rules">
+        <span [innerHTML]="rule"></span>
+      </p>
+    </div>
+  </div>
+</div>
