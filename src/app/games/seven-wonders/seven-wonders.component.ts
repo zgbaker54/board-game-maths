@@ -6,6 +6,7 @@ import { TableModule } from 'primeng/table';
 import { CardModule } from 'primeng/card';
 import { sevenWondersMetadata } from '../../metadata/seven-wonders.metadata';
 import { GameService } from '../../shared/services/game.service';
+import { CardCameraComponent } from '../../card-camera/card-camera.component';
 
 const tabletSvg = '/assets/images/games/7-wonders/tablet.svg';
 const compassSvg = '/assets/images/games/7-wonders/compass.svg';
@@ -20,6 +21,7 @@ type Science = { name: string; code: string; count: number };
     CommonModule,
     ButtonModule,
     SectionTitleComponent,
+    CardCameraComponent,
     TableModule,
     CardModule,
   ],

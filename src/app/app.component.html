@@ -10,13 +10,9 @@
       placeholder="Select a Game"
     >
     </p-dropdown>
-
-    <a (click)="cameraClicked()">Camera</a>
   </div>
 </div>
 
-<div class="content" *ngIf="nonGame === false">
+<div class="content">
   <app-default [changeTrigger]="gameChanged"></app-default>
 </div>
-
-<router-outlet *ngIf="nonGame"></router-outlet>

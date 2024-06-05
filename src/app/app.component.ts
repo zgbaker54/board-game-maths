@@ -2,7 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { gameList } from './metadata/metadata';
 import { DefaultComponent } from './games/default/default.component';
 
@@ -23,8 +23,6 @@ export class AppComponent implements AfterViewInit {
   selectedGame: GameItem = this.games[0];
   gameChanged = 0;
 
-  nonGame = false;
-
   constructor(private router: Router) {}
 
   ngAfterViewInit(): void {
@@ -38,11 +36,5 @@ export class AppComponent implements AfterViewInit {
   gameClicked(game: GameItem) {
     this.router.navigateByUrl(game.routerLink);
     this.gameChanged++;
-    this.nonGame = false;
-  }
-
-  cameraClicked() {
-    this.router.navigateByUrl('/camera');
-    this.nonGame = true;
   }
 }

@@ -5,6 +5,9 @@ import { ButtonModule } from 'primeng/button';
 import { Observable, Subject } from 'rxjs';
 import { createWorker } from 'tesseract.js';
 import { sevenWondersMetadata } from '../metadata/seven-wonders.metadata';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import levenshtein from 'js-levenshtein';
+import { Card } from '../shared/models/deck.model';
 
 declare var Marvin: any;
 declare var MarvinImage: any;
@@ -12,7 +15,7 @@ declare var MarvinImage: any;
 @Component({
   selector: 'app-card-camera',
   standalone: true,
-  imports: [CommonModule, WebcamModule, ButtonModule],
+  imports: [CommonModule, WebcamModule, ButtonModule, ProgressSpinnerModule],
   templateUrl: './card-camera.component.html',
   styleUrl: './card-camera.component.scss',
 })
@@ -21,18 +24,24 @@ export class CardCameraComponent {
   canvas: HTMLCanvasElement | null = null;
   ctx: CanvasRenderingContext2D | null = null;
 
-  cardData = sevenWondersMetadata;
+  state: 'capture' | 'scan' | 'display' | 'error' = 'capture';
 
-  foundCard = '';
+  metadata = sevenWondersMetadata;
+  cardNames: string[] = [];
 
-  text: string[] = [];
+  foundCard?: Card;
+  rules: string[] = [];
+
+  text = '';
+  bestMatch = '';
+  smallestDistance = Infinity;
 
   private trigger: Subject<any> = new Subject();
   public webcamImage!: WebcamImage;
   private nextWebcam: Subject<any> = new Subject();
   sysImage = '';
 
-  width = 300;
+  width = 500;
 
   @HostListener('window.resize', ['$event'])
   onResize() {
@@ -41,6 +50,17 @@ export class CardCameraComponent {
 
   constructor() {
     this.onResize();
+    this.parseCardNames();
+  }
+
+  parseCardNames() {
+    const cardNames = new Set<string>();
+    this.metadata.decks.forEach((deck) => {
+      deck.cards.forEach((card) => {
+        cardNames.add(card.name.toLowerCase());
+      });
+    });
+    this.cardNames = [...cardNames];
   }
 
   public getSnapshot(): void {
@@ -48,9 +68,10 @@ export class CardCameraComponent {
   }
 
   public captureImg(webcamImage: WebcamImage): void {
+    this.state = 'scan';
     this.webcamImage = webcamImage;
     this.sysImage = webcamImage!.imageAsDataUrl;
-    this.text = [];
+    this.smallestDistance = Infinity;
     this.drawMarvinJText();
   }
 
@@ -63,21 +84,37 @@ export class CardCameraComponent {
   }
 
   compareText(text: string) {
-    this.cardData.decks.forEach(deck => {
-      deck.cards.forEach(card => {
-        if(text.trim().toUpperCase() === card.name.toUpperCase()) {
-          this.foundCard = card.name;
+    text = text.trim().toLowerCase();
+    for (const name of this.cardNames) {
+      const distance = levenshtein(text, name);
+      if (distance < this.smallestDistance) {
+        this.smallestDistance = distance;
+        this.bestMatch = name;
+        this.text = text;
+        this.handleNewMatch();
+      }
+    }
+  }
+
+  handleNewMatch() {
+    this.metadata.decks.forEach((deck) => {
+      deck.cards.forEach((card) => {
+        if (card.name.toLowerCase() === this.bestMatch) {
+          this.foundCard = card;
         }
-      })
-    })
+      });
+    });
+
+    this.rules = [];
+    this.foundCard?.rules?.forEach((rule) => {
+      this.rules.push(this.metadata?.rules?.[rule] ?? '');
+    });
+    this.rules = this.rules.filter((x) => x);
   }
 
   async getText(blob: string) {
-    console.log('Getting Text: ', blob)
     const worker = await createWorker('eng');
     const ret = await worker.recognize(blob);
-    console.log('Result: ', ret.data.text);
-    this.text.push(ret.data.text);
     this.compareText(ret.data.text);
     await worker.terminate();
   }
@@ -86,27 +123,46 @@ export class CardCameraComponent {
     this.canvas = this.canvasRef.nativeElement;
     this.ctx = this.canvas?.getContext('2d') ?? null;
     if (this.ctx === null || this.canvas === null) {
+      this.state = 'error';
       return;
     }
 
     let image = new MarvinImage();
-    image.load(this.sysImage, () => {
-      var segments = Marvin.findTextRegions(image, 15, 8, 30, 150);
-      for(var i in segments) {
-        var seg = segments[i];
-        if(seg.height >= 5){ 
-          image.drawRect(seg.x1, seg.y1-5, seg.width, seg.height+10, 0xFFFF0000); 
-          // image.drawRect(seg.x1+1, seg.y1-4, seg.width-2, seg.height+8, 0xFFFF0000); 
+    image.load(this.sysImage, async () => {
+      var factor = image.getWidth() / this.width;
+      var cropped = new MarvinImage(this.width, image.getHeight() / factor);
+      Marvin.scale(image, cropped, this.width);
+      this.canvas!.width = cropped.getWidth();
+      this.canvas!.height = cropped.getHeight();
+      cropped.draw(this.canvas);
 
-          var cropped = new MarvinImage(1,1);
-          Marvin.crop(image, cropped, seg.x1+1, seg.y1-5, seg.width, seg.height+10);
+      var segments = Marvin.findTextRegions(image, 15, 8, 30, 150);
+      for (var i in segments) {
+        var seg = segments[i];
+        if (seg.height >= 5) {
+          // image.drawRect(
+          //   seg.x1,
+          //   seg.y1 - 5,
+          //   seg.width,
+          //   seg.height + 10,
+          //   0xffff0000
+          // );
+
+          var cropped = new MarvinImage(1, 1);
+          Marvin.crop(
+            image,
+            cropped,
+            seg.x1 + 1,
+            seg.y1 - 5,
+            seg.width,
+            seg.height + 10
+          );
           const data = cropped.toBlob();
-          void this.getText(data);
+          await this.getText(data);
         }
       }
-      this.canvas!.width = image.getWidth();
-      this.canvas!.height = image.getHeight();
-      image.draw(this.canvas);
+
+      this.state = 'display';
     });
   }
 }
@@ -240,9 +296,9 @@ export class CardCameraComponent {
 //       var segments = Marvin.findTextRegions(image, 15, 8, 30, 150);
 //       for(var i in segments) {
 //         var seg = segments[i];
-//         if(seg.height >= 5){ 
-//           image.drawRect(seg.x1, seg.y1-5, seg.width, seg.height+10, 0xFFFF0000); 
-//           // image.drawRect(seg.x1+1, seg.y1-4, seg.width-2, seg.height+8, 0xFFFF0000); 
+//         if(seg.height >= 5){
+//           image.drawRect(seg.x1, seg.y1-5, seg.width, seg.height+10, 0xFFFF0000);
+//           // image.drawRect(seg.x1+1, seg.y1-4, seg.width-2, seg.height+8, 0xFFFF0000);
 
 //           var cropped = new MarvinImage(1,1);
 //           Marvin.crop(image, cropped, seg.x1+1, seg.y1-5, seg.width, seg.height+10);
