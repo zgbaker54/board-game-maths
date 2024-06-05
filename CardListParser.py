@@ -20,8 +20,12 @@ def print_card(card):
     if card[3] != "":
         line += ', minPlayers: {0}'.format(card[3])
 
+    if card[4] != "":
+        data = card[4].replace(',', "','")
+        line += ", rules: ['{0}']".format(data)
+
     line += ', properties: {'
-    for i in range(4, len(card)):
+    for i in range(5, len(card)):
         if card[i] != "":
             data = card[i].replace(',', "','")
             line += "{0}: ['{1}'], ".format(propertyNames[i], data)

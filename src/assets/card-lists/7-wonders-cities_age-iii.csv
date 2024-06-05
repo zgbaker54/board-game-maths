@@ -1,0 +1,15 @@
+﻿name,expansion,count,minPlayers,rules,color,resource,cost,depends on
+Mint,1,,,"victory-point,gold-others",Black,Victory Points,"Wood,Clay,Glassworks,Loom",
+Slave Market,1,,,military-gold-victory,Black,"Gold,Victory Points","Wood,Ore","Military Victory,Self"
+Raider Garrison,1,,,military-token,Black,"Military Victory,Debt","Gold,Stone,Loom",
+Cenotaph,1,,,"victory-point,military-debt",Black,"Victory Points,Debt","Clay,Stone,Glassworks,Loom","Military Victory,Others"
+Capitol,1,,,victory-point,Black,Victory Points,"Gold,Stone,Clay,Glassworks,Press",
+Memorial,1,,,military-loss,Black,Gold,"Stone,Wood,Loom",Military Loss
+Secret Network,1,,,black-gold-victory,Black,"Gold,Victory Points","Stone,Press","Black Cards,Self"
+Prison,1,,,military-victory,Black,Victory Points,"Gold,Ore,Clay,Press","Military Victory,Self"
+Opium Distillery,1,,,"gold,debt",Black,"Gold,Debt","Wood,Glassworks",
+Brotherhood,1,,,"debt,victory-point",Black,"Debt,Victory Points","Wood,Ore,Loom",
+Chamber of Builders,1,,,"victory-point,wonder-debt",Black,"Debt,Victory Points","Wood,Clay,Glassworks,Press","Wonder,Self"
+Torture Chamber,1,,,spy-science,Black,Science,"Gold,Ore,Glassworks","Green Cards,Neighbors"
+Contingent,1,,,military,Black,Military,"Gold,Loom",
+Embassy,1,,,"diplomacy,victory-point",Black,"Diplomacy,Victory Points","Stone,Press,Loom",
