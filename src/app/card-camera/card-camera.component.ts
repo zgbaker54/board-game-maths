@@ -3,7 +3,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { WebcamModule, WebcamImage } from 'ngx-webcam';
 import { ButtonModule } from 'primeng/button';
 import { Observable, Subject } from 'rxjs';
-import { createWorker } from 'tesseract.js';
+import { createScheduler, createWorker } from 'tesseract.js';
 import { sevenWondersMetadata } from '../metadata/seven-wonders.metadata';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import levenshtein from 'js-levenshtein';
@@ -24,13 +24,22 @@ export class CardCameraComponent {
   canvas: HTMLCanvasElement | null = null;
   ctx: CanvasRenderingContext2D | null = null;
 
-  state: 'capture' | 'scan' | 'display' | 'error' = 'capture';
+  state: 'none' | 'capture' | 'scan' | 'display' = 'none';
+  scans = 0;
 
   metadata = sevenWondersMetadata;
   cardNames: string[] = [];
 
   foundCard?: Card;
   rules: string[] = [];
+  unknownCard: Card = {
+    name: 'Unknown',
+    properties: {},
+  };
+  scanningCard: Card = {
+    name: 'Scanning',
+    properties: {},
+  };
 
   text = '';
   bestMatch = '';
@@ -72,6 +81,9 @@ export class CardCameraComponent {
     this.webcamImage = webcamImage;
     this.sysImage = webcamImage!.imageAsDataUrl;
     this.smallestDistance = Infinity;
+    this.foundCard = this.scanningCard
+    this.rules = [];
+    this.scans = 0;
     this.drawMarvinJText();
   }
 
@@ -112,18 +124,50 @@ export class CardCameraComponent {
     this.rules = this.rules.filter((x) => x);
   }
 
-  async getText(blob: string) {
-    const worker = await createWorker('eng');
-    const ret = await worker.recognize(blob);
-    this.compareText(ret.data.text);
-    await worker.terminate();
+  async getText(blobs: string[]) {
+    // console.log('new text scan');
+    // const worker = await createWorker('eng');
+    // const ret = await worker.recognize(blob);
+    // this.compareText(ret.data.text);
+    // await worker.terminate();
+
+    this.scans++;
+
+    setTimeout(async () => {
+      if(this.scans > 0) {
+        console.log('Terminating OCR');
+        await scheduler.terminate();
+        this.foundCard = this.unknownCard;
+        this.scans--;
+        this.state = 'display';
+      }
+    }, 10000)
+
+    const scheduler = createScheduler();
+    const worker1 = await createWorker('eng');
+    const worker2 = await createWorker('eng');
+    (async () => {
+      this.scans++;
+      scheduler.addWorker(worker1);
+      scheduler.addWorker(worker2);
+      const results = await Promise.all(
+        blobs.map((blob) => scheduler.addJob('recognize', blob))
+      );
+      results.forEach((r) => {
+        console.log(r.data.text);
+        this.compareText(r.data.text);
+      });
+      await scheduler.terminate();
+      this.scans--;
+    })();
+    this.scans--;
+    console.log('scheduled');
   }
 
   drawMarvinJText() {
     this.canvas = this.canvasRef.nativeElement;
     this.ctx = this.canvas?.getContext('2d') ?? null;
     if (this.ctx === null || this.canvas === null) {
-      this.state = 'error';
       return;
     }
 
@@ -132,22 +176,16 @@ export class CardCameraComponent {
       var factor = image.getWidth() / this.width;
       var cropped = new MarvinImage(this.width, image.getHeight() / factor);
       Marvin.scale(image, cropped, this.width);
+      this.width = Math.min(300, window.innerWidth, cropped.getWidth());
       this.canvas!.width = cropped.getWidth();
       this.canvas!.height = cropped.getHeight();
       cropped.draw(this.canvas);
 
       var segments = Marvin.findTextRegions(image, 15, 8, 30, 150);
+      const blobs: string[] = [];
       for (var i in segments) {
         var seg = segments[i];
         if (seg.height >= 5) {
-          // image.drawRect(
-          //   seg.x1,
-          //   seg.y1 - 5,
-          //   seg.width,
-          //   seg.height + 10,
-          //   0xffff0000
-          // );
-
           var cropped = new MarvinImage(1, 1);
           Marvin.crop(
             image,
@@ -157,11 +195,11 @@ export class CardCameraComponent {
             seg.width,
             seg.height + 10
           );
-          const data = cropped.toBlob();
-          await this.getText(data);
+          blobs.push(cropped.toBlob());
         }
       }
-
+      console.log(blobs.length);
+      await this.getText(blobs);
       this.state = 'display';
     });
   }

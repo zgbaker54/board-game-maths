@@ -1,0 +1,60 @@
+.wrapper {
+    min-height: 500px;
+}
+
+.capture {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    p-button {
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 48px;
+    }
+}
+
+.scan-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.scan {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .scan-canvas {
+        opacity: 0.35;
+    }
+
+    .hide-canvas {
+        display: none;
+    }
+
+    p-progressspinner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100px;
+        height: 100%;
+        align-content: center;
+    }
+}
+
+.display {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    p-button {
+        margin: auto;
+    }
+}
