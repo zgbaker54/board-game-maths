@@ -88,7 +88,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
 
     // Get deck ids filtering out expansions
     const deckIds = Unique(
-      this.gameService.expansionFilter(this.game.decks).map((x) => x.id)
+      this.gameService.expansionFilter(this.game.decks).filter(x => x.visible === true ?? true).map((x) => x.id)
     );
 
     // Todo: make sure all decks with same ID have same properties and names

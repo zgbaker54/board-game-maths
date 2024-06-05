@@ -6,6 +6,7 @@ export type Deck = {
   pickMax?: number;
   pick?: number; // How many cards can be drawn at once
   cards: Card[];
+  visible?: boolean;
 
   /**
    * Get the number of total cards in the deck

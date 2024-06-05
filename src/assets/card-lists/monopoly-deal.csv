@@ -1,59 +1,59 @@
-﻿name,expansion,count,minPlayers,card,color,value,set size
-Baltic Avenue,,,,Property,Brown,1M,2
-Mediterranean Avenue,,,,Property,Brown,1M,2
-Vermont Avenue,,,,Property,Light Blue,1M,3
-Connecticut Avenue,,,,Property,Light Blue,1M,3
-Oriental Avenue,,,,Property,Light Blue,1M,3
-Virginia Avenue,,,,Property,Pink,2M,3
-States Avenue,,,,Property,Pink,2M,3
-St. Charles Place,,,,Property,Pink,2M,3
-New York Avenue,,,,Property,Orange,2M,3
-Tennessee Avenue,,,,Property,Orange,2M,3
-St. James Place,,,,Property,Orange,2M,3
-Kentucky Avenue,,,,Property,Red,3M,3
-Indiana Avenue,,,,Property,Red,3M,3
-Illinois Avenue,,,,Property,Red,3M,3
-Ventnor Avenue,,,,Property,Yellow,3M,3
-Atlantic Avenue,,,,Property,Yellow,3M,3
-Marvin Gardens,,,,Property,Yellow,3M,3
-North Caroline Avenue,,,,Property,Green,4M,3
-Pennsylvania Avenue,,,,Property,Green,4M,3
-Pacific Avenue,,,,Property,Green,4M,3
-Park Place,,,,Property,Dark Blue,4M,2
-Boardwalk,,,,Property,Dark Blue,4M,2
-Reading Railroad,,,,Property,Railroad,2M,4
-Short Line,,,,Property,Railroad,2M,4
-Pennsylvania Railroad,,,,Property,Railroad,2M,4
-B. & O. Railroad,,,,Property,Railroad,2M,4
-Water Works,,,,Property,Utility,2M,2
-Electric Company,,,,Property,Utility,2M,2
-Property: Wild,,,,Property,"Light Blue,Brown",1M,"3,2"
-Property: Wild,,,,Property,"Light Blue,Railroad",4M,"4,3"
-Property: Wild,,2,,Property,"Pink,Orange",2M,3
-Property: Wild,,2,,Property,"Red,Yellow",3M,3
-Property: Wild,,,,Property,"Dark Blue,Green",4M,"3,2"
-Property: Wild,,,,Property,"Green,Railroad",4M,"4,3"
-Property: Wild,,,,Property,"Railroad,Utility",2M,"4,2"
-Property: Wild,,2,,Property,"Brown,Light Blue,Pink,Orange,Red,Yellow,Green,Dark Blue,Railroad,Utility",,"4,3,2"
-Deal Breaker,,2,,Action,,5M,
-Forced Deal,,3,,Action,,3M,
-Sly Deal,,3,,Action,,3M,
-Just Say No!,,3,,Action,,4M,
-Debt Collector,,3,,Action,,3M,
-It's My Birthday,,3,,Action,,2M,
-Double The Rent,,2,,Action,,1M,
-House,,3,,Action,,3M,
-Hotel,,2,,Action,,4M,
-Pass Go,,10,,Action,,1M,
-Rent,,2,,Rent,"Light Blue,Brown",1M,
-Rent,,2,,Rent,"Pink,Orange",1M,
-Rent,,2,,Rent,"Red,Yellow",1M,
-Rent,,2,,Rent,"Dark Blue,Green",1M,
-Rent,,2,,Rent,"Railroad,Utility",1M,
-Rent: Wild,,3,,Rent,"Brown,Light Blue,Pink,Orange,Red,Yellow,Green,Dark Blue,Railroad,Utility",3M,
-1M,,6,,Money,,1M,
-2M,,5,,Money,,2M,
-3M,,3,,Money,,3M,
-4M,,3,,Money,,4M,
-5M,,2,,Money,,5M,
-10M,,,,Money,,10M,
+﻿name,expansion,count,minPlayers,rules,card,color,value,set size
+Baltic Avenue,,,,,Property,Brown,1M,2
+Mediterranean Avenue,,,,,Property,Brown,1M,2
+Vermont Avenue,,,,,Property,Light Blue,1M,3
+Connecticut Avenue,,,,,Property,Light Blue,1M,3
+Oriental Avenue,,,,,Property,Light Blue,1M,3
+Virginia Avenue,,,,,Property,Pink,2M,3
+States Avenue,,,,,Property,Pink,2M,3
+St. Charles Place,,,,,Property,Pink,2M,3
+New York Avenue,,,,,Property,Orange,2M,3
+Tennessee Avenue,,,,,Property,Orange,2M,3
+St. James Place,,,,,Property,Orange,2M,3
+Kentucky Avenue,,,,,Property,Red,3M,3
+Indiana Avenue,,,,,Property,Red,3M,3
+Illinois Avenue,,,,,Property,Red,3M,3
+Ventnor Avenue,,,,,Property,Yellow,3M,3
+Atlantic Avenue,,,,,Property,Yellow,3M,3
+Marvin Gardens,,,,,Property,Yellow,3M,3
+North Caroline Avenue,,,,,Property,Green,4M,3
+Pennsylvania Avenue,,,,,Property,Green,4M,3
+Pacific Avenue,,,,,Property,Green,4M,3
+Park Place,,,,,Property,Dark Blue,4M,2
+Boardwalk,,,,,Property,Dark Blue,4M,2
+Reading Railroad,,,,,Property,Railroad,2M,4
+Short Line,,,,,Property,Railroad,2M,4
+Pennsylvania Railroad,,,,,Property,Railroad,2M,4
+B. & O. Railroad,,,,,Property,Railroad,2M,4
+Water Works,,,,,Property,Utility,2M,2
+Electric Company,,,,,Property,Utility,2M,2
+Property: Wild,,,,,Property,"Light Blue,Brown",1M,"3,2"
+Property: Wild,,,,,Property,"Light Blue,Railroad",4M,"4,3"
+Property: Wild,,2,,,Property,"Pink,Orange",2M,3
+Property: Wild,,2,,,Property,"Red,Yellow",3M,3
+Property: Wild,,,,,Property,"Dark Blue,Green",4M,"3,2"
+Property: Wild,,,,,Property,"Green,Railroad",4M,"4,3"
+Property: Wild,,,,,Property,"Railroad,Utility",2M,"4,2"
+Property: Wild,,2,,,Property,"Brown,Light Blue,Pink,Orange,Red,Yellow,Green,Dark Blue,Railroad,Utility",,"4,3,2"
+Deal Breaker,,2,,,Action,,5M,
+Forced Deal,,3,,,Action,,3M,
+Sly Deal,,3,,,Action,,3M,
+Just Say No!,,3,,,Action,,4M,
+Debt Collector,,3,,,Action,,3M,
+It's My Birthday,,3,,,Action,,2M,
+Double The Rent,,2,,,Action,,1M,
+House,,3,,,Action,,3M,
+Hotel,,2,,,Action,,4M,
+Pass Go,,10,,,Action,,1M,
+Rent,,2,,,Rent,"Light Blue,Brown",1M,
+Rent,,2,,,Rent,"Pink,Orange",1M,
+Rent,,2,,,Rent,"Red,Yellow",1M,
+Rent,,2,,,Rent,"Dark Blue,Green",1M,
+Rent,,2,,,Rent,"Railroad,Utility",1M,
+Rent: Wild,,3,,,Rent,"Brown,Light Blue,Pink,Orange,Red,Yellow,Green,Dark Blue,Railroad,Utility",3M,
+1M,,6,,,Money,,1M,
+2M,,5,,,Money,,2M,
+3M,,3,,,Money,,3M,
+4M,,3,,,Money,,4M,
+5M,,2,,,Money,,5M,
+10M,,,,,Money,,10M,

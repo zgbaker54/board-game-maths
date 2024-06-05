@@ -8,6 +8,26 @@ export const sevenWondersMetadata: Game = {
   expansions: [{ id: 1, name: 'Cities' }, {id: 2, name: 'Leaders'}, {id: 3, name: 'Armada'}],
   diceSets: [],
   decks: [
+    {
+      id: 0,
+      name: 'Cities',
+      visible: false,
+      cards: [
+        { name: 'Olympia', rules: [''], properties: {}},
+        { name: 'Roma', rules: [''], properties: {}},
+        { name: 'Abu Simbel', rules: [''], properties: {}},
+        { name: 'Babylon', rules: [''], properties: {}},
+        { name: 'Byzantium', rules: [''], properties: {}},
+        { name: 'Ephesos', rules: [''], properties: {}},
+        { name: 'Rhodos', rules: [''], properties: {}},
+        { name: 'Halikarnassos', rules: [''], properties: {}},
+        { name: 'Gizah', rules: [''], properties: {}},
+        { name: 'Alexandria', rules: [''], properties: {}},
+        { name: 'Petra', rules: [''], properties: {}},
+        { name: 'Siracusa', rules: [''], properties: {}},
+      ],
+    },
+
     // ************************************************************************************************************************************************
     // Base Game 
     // ************************************************************************************************************************************************
