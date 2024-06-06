@@ -88,7 +88,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
 
     // Get deck ids filtering out expansions
     const deckIds = Unique(
-      this.gameService.expansionFilter(this.game.decks).filter(x => x.visible === true ?? true).map((x) => x.id)
+      this.gameService.expansionFilter(this.game.decks).filter(x => (x.visible ?? true) === true).map((x) => x.id)
     );
 
     // Todo: make sure all decks with same ID have same properties and names
@@ -101,7 +101,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
     this.game.decks.sort((a, b) => a.id - b.id);
 
     if (deckIds.includes(this.selectedDeckId) === false) {
-      this.selectedDeckId = this.game.decks[0].id;
+      this.selectedDeckId = deckIds[0];
     } else {
       // continue
     }
