@@ -1,9 +1,0 @@
-﻿name,expansion,count,minPlayers,rules,color,resource,cost
-Pirate's Den,3,,,"gold,commercial-debt",Yellow,"Gold,Tax",
-Wester Emporium,3,,,discount-twice,Yellow,Discount,"Ore,Press"
-Ballista,3,,,"military,boarding",Red,"Military,Boading","Clay,Glassworks,Loom"
-Cartagraphers Office,3,,,island-card,Green,Island Card,"Wood,Clay"
-Boathouse,3,,,"fleet-move,victory-point",Blue,"Fleet,Victory Points","Wood,Loom"
-Ship Repair,3,,,"fleet-move,victory-point",Blue,"Fleet,Victory Points","Ore,Glassworks"
-Navigation Firm,3,,,science-most,Green,Science,"Stone,Ore,Glassworks"
-Fortified Port,3,,,naval,Red,Naval Power,"Clay,Press"

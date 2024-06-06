@@ -1,9 +1,0 @@
-﻿name,expansion,count,minPlayers,rules,color,resource,cost
-Port Customs,3,,,commercial-victory,Yellow,Victory Points,"Ore,Stone,Clay"
-Circle of Captains,3,,,science-most,Green,Science,"Clay,Stone,Ore,Loom"
-Pirate Crew,3,,,"victory-point,commercial-debt",Yellow,Victory Points,"Wood,Glassworks"
-Nautical Archives,3,,,island-card,Green,Island Card,"Ore,Wood,Press"
-Harbor Master's Office,3,,,"fleet-move,victory-point",Blue,"Fleet,Victory Points","Wood,Stone,Ore,Loom"
-Coastal Fortifications,3,,,naval,Red,Naval Power,"Stone,Clay,Glassworks"
-Pier,3,,,"military,boarding",Red,"Military,Boarding","Wood,Press,Loom"
-Naval Headquarters,3,,,"fleet-move,victory-point",Blue,"Fleet,Victory Points","Stone,Wood,Clay,Press"

@@ -1,56 +1,56 @@
-﻿name,expansion,count,minPlayers,rules,resource,gold,depends on,expert,cities
-Aristotle,2,,,science-sets,Victory Points,3,"Science,Self",,
-Enheduanna,2,,,science-most,Science,4,"Science,Self",Yes,
-Nefertiti,2,,,victory-point,Victory Points,3,,,
-Cornelia,2,,,more-cards,Victory Points,A,"Yellow Cards,Neighbors",Yes,
-Hatshepsut,2,,,cash-back,Gold,2,Neighbors,Yes,
-Justinian,2,,,color-sets,Victory Points,3,"Blue Cards,Red Cards,Green Cards,Self",,
-Archimedes,2,,,color-discount,Discount,4,"Green Cards,Self",,
-Zenobia,2,,,victory-point,Victory Points,2,,,
-Amytis,2,,,amytis,Victory Points,4,"Wonder,Self",,
-Nero,2,,,nero,Gold,1,"Military Victory,Self",,
-Hiram,2,,,color-victory-self,Victory Points,3,"Purple Cards,Self",,
-Pythagoras,2,,,science,Science,5,,,
-Darius,2,,,black-victory,Victory Points,4,"Black Cards,Self",,Yes
-Cleopatra,2,,,victory-point,Victory Points,4,"Green Cards,Neighbors",,
-Theano,2,,,more-cards,Victory Points,A,,Yes,
-Hypatia,2,,,color-victory-self,Victory Points,4,"Green Cards,Self",,
-Tomyris,2,,,tomyris,Military Loss,4,"Military Loss,Self",Yes,
-Bilkis,2,,,bilkis,"Stone,Wood,Glassworks,Press,Loom,Clay,Ore",4,,,
-Praxiteles,2,,,color-victory-self,Victory Points,3,"Grey Cards,Self",,
-Solomon,2,,,free-discard,Free Card,3,,,
-Midas,2,,,gold-victory,Victory Points,3,"Gold,Self",,
-Vitruvius,2,,,gold-chain,Gold,1,,,
-Croesus,2,,,gold,Gold,1,,,
-Arsinoe,2,,,"gold,debt","Gold,Debt",A,,,Yes
-Cynisca,2,,,cynisca,Victory Points,A,"Military Loss,Self",Yes,
-Caligula,2,,,caligula,Free Card,3,,,Yes
-Phidias,2,,,color-victory-self,Victory Points,3,"Brown Cards,Self",,
-Hammurabi,2,,,color-discount,Discount,2,"Blue Cards,Self",,
-Ptolemy,2,,,science,Science,5,,,
-Imhotep,2,,,wonder-discount,Discount,3,"Wonder,Self",,
-Gorgo,2,,,gorgo,Victory Points,5,"Military Victory,Self",Yes,
-Alexander,2,,,alexander,Victory Points,3,"Military Victory,Self",,
-Nitocris,2,,,nitocris,Military Victory,A,,Yes,
-Phryne,2,,,more-cards,Victory Points,A,"Blue Cards,Neighbors",Yes,
-Pericles,2,,,color-victory-self,Victory Points,6,"Red Cards,Self",,
-Octavia,2,,,octavia,"Gold,Debt",1,"Wonder,Self",,Yes
-Leonidas,2,,,color-discount,Discount,2,"Red Cards,Self",,
-Diocletian,2,,,diocletian,Gold,2,"Black Cards,Self",,Yes
-Aspasia,2,,,"victory-point,diplomacy","Diplomacy,Victory Points",3,,,Yes
-Makeda,2,,,more-gold,Victory Points,A,"Gold,Neighbors",Yes,
-Agrippina,2,,,only-leader,Victory Points,1,"Leaders,Self",Yes,
-Aganice,2,,,aganice,Science,A,"Science,Self",Yes,
-Berenice,2,,,berenice,Gold,2,"Gold,Self",Yes,
-Telesilla,2,,,telesilla,Military Loss,3,,Yes,
-Xenophon,2,,,xenophon,Gold,2,"Yellow Cards,Self",,
-Plato,2,,,color-sets,Victory Points,4,"Brown Cards,Grey Cards,Blue Cards,Yellow Cards,Red Cards,Green Cards,Purple Cards,Self",,
-Ceasar,2,,,military,Military,5,,,
-Maecenas,2,,,free-leader,Free Card,1,Leaders,,
-Varro,2,,,color-victory-self,Victory Points,3,"Yellow Cards,Self",,
-Hannibal,2,,,military,Military,2,,,
-Eurypyle,2,,,more-cards,Victory Points,A,"Red Cards,Neighbors",,
-Euclid,2,,,science,Science,5,,,
-Nebuchadnezzar,2,,,color-victory-self,Victory Points,4,"Blue Cards,Self",,
-Sappho,2,,,victory-point,Victory Points,1,,,
-Ramses,2,,,free-purple,Free Card,5,Purple Cards,,
+﻿name,expansion,count,minPlayers,rules,resource,gold,depends on
+Aristotle,2,,,science-sets,Victory Points,3,"Science,Self"
+Enheduanna,,,,science-most,Science,4,"Science,Self"
+Nefertiti,,,,victory-point,Victory Points,3,
+Cornelia,,,,more-cards,Victory Points,A,"Yellow Cards,Neighbors"
+Hatshepsut,,,,cash-back,Gold,2,Neighbors
+Justinian,,,,color-sets,Victory Points,3,"Blue Cards,Red Cards,Green Cards,Self"
+Archimedes,,,,color-discount,Discount,4,"Green Cards,Self"
+Zenobia,,,,victory-point,Victory Points,2,
+Amytis,,,,amytis,Victory Points,4,"Wonder,Self"
+Nero,,,,nero,Gold,1,"Military Victory,Self"
+Hiram,,,,color-victory-self,Victory Points,3,"Purple Cards,Self"
+Pythagoras,,,,science,Science,5,
+Darius,,,,black-victory,Victory Points,4,"Black Cards,Self"
+Cleopatra,,,,victory-point,Victory Points,4,"Green Cards,Neighbors"
+Theano,,,,more-cards,Victory Points,A,
+Hypatia,,,,color-victory-self,Victory Points,4,"Green Cards,Self"
+Tomyris,,,,tomyris,Military Loss,4,"Military Loss,Self"
+Bilkis,,,,bilkis,"Stone,Wood,Glassworks,Press,Loom,Clay,Ore",4,
+Praxiteles,,,,color-victory-self,Victory Points,3,"Grey Cards,Self"
+Solomon,,,,free-discard,Free Card,3,
+Midas,,,,gold-victory,Victory Points,3,"Gold,Self"
+Vitruvius,,,,gold-chain,Gold,1,
+Croesus,,,,gold,Gold,1,
+Arsinoe,,,,"gold,debt","Gold,Debt",A,
+Cynisca,,,,cynisca,Victory Points,A,"Military Loss,Self"
+Caligula,,,,caligula,Free Card,3,
+Phidias,,,,color-victory-self,Victory Points,3,"Brown Cards,Self"
+Hammurabi,,,,color-discount,Discount,2,"Blue Cards,Self"
+Ptolemy,,,,science,Science,5,
+Imhotep,,,,wonder-discount,Discount,3,"Wonder,Self"
+Gorgo,,,,gorgo,Victory Points,5,"Military Victory,Self"
+Alexander,,,,alexander,Victory Points,3,"Military Victory,Self"
+Nitocris,,,,nitocris,Military Victory,A,
+Phryne,,,,more-cards,Victory Points,A,"Blue Cards,Neighbors"
+Pericles,,,,color-victory-self,Victory Points,6,"Red Cards,Self"
+Octavia,,,,octavia,"Gold,Debt",1,"Wonder,Self"
+Leonidas,,,,color-discount,Discount,2,"Red Cards,Self"
+Diocletian,,,,diocletian,Gold,2,"Black Cards,Self"
+Aspasia,,,,"victory-point,diplomacy","Diplomacy,Victory Points",3,
+Makeda,,,,more-gold,Victory Points,A,"Gold,Neighbors"
+Agrippina,,,,only-leader,Victory Points,1,"Leaders,Self"
+Aganice,,,,aganice,Science,A,"Science,Self"
+Berenice,,,,berenice,Gold,2,"Gold,Self"
+Telesilla,,,,telesilla,Military Loss,3,
+Xenophon,,,,xenophon,Gold,2,"Yellow Cards,Self"
+Plato,,,,color-sets,Victory Points,4,"Brown Cards,Grey Cards,Blue Cards,Yellow Cards,Red Cards,Green Cards,Purple Cards,Self"
+Ceasar,,,,military,Military,5,
+Maecenas,,,,free-leader,Free Card,1,Leaders
+Varro,,,,color-victory-self,Victory Points,3,"Yellow Cards,Self"
+Hannibal,,,,military,Military,2,
+Eurypyle,,,,more-cards,Victory Points,A,"Red Cards,Neighbors"
+Euclid,,,,science,Science,5,
+Nebuchadnezzar,,,,color-victory-self,Victory Points,4,"Blue Cards,Self"
+Sappho,,,,victory-point,Victory Points,1,
+Ramses,,,,free-purple,Free Card,5,Purple Cards

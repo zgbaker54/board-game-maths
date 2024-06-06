@@ -1,9 +1,0 @@
-﻿name,expansion,count,minPlayers,rules,color,resource,cost
-Eastern Emporium,3,,,discount-once,Yellow,Discount,Loom
-Costal Defenses,3,,,naval,Red,Naval Power,Glassworks
-Construction Zone,3,,,fleet-move,Blue,Fleet,
-Pirate Hideout,3,,,"gold,commercial-debt",Yellow,"Gold,Tax",
-Cabinet of Explorers,3,,,science-most,Green,Science,Clay
-Helmsman's Rest,3,,,island-card,Green,Island Card,Stone
-Dry Hold,3,,,fleet-move,Blue,Fleet,
-Pontoon,3,,,"military,boarding",Red,"Military,Boarding",Press
