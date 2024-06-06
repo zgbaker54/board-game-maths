@@ -5,6 +5,7 @@
 
   <div class="capture" *ngIf="state === 'capture'">
     <webcam
+      *ngIf="windowFocused"
       [trigger]="invokeObservable"
       [width]="width"
       [allowCameraSwitch]="false"

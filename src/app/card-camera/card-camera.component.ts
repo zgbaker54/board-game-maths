@@ -33,6 +33,7 @@ export class CardCameraComponent implements OnInit {
 
   @Input() metadata!: Game;
 
+  windowFocused = true;
   state: 'none' | 'capture' | 'scan' | 'display' = 'none';
   scans = 0;
 
@@ -65,6 +66,16 @@ export class CardCameraComponent implements OnInit {
     this.width = Math.min(300, window.innerWidth);
   }
 
+  @HostListener('window:focus', ['$event'])
+  onFocus(): void {
+    this.windowFocused = true;
+  }
+
+  @HostListener('window:blur', ['$event'])
+  onBlur(): void {
+    this.windowFocused = false;
+  }
+
   constructor() {}
 
   ngOnInit(): void {
@@ -91,7 +102,7 @@ export class CardCameraComponent implements OnInit {
     this.webcamImage = webcamImage;
     this.sysImage = webcamImage!.imageAsDataUrl;
     this.smallestDistance = Infinity;
-    this.foundCard = this.scanningCard
+    this.foundCard = this.scanningCard;
     this.rules = [];
     this.scans = 0;
     this.drawMarvinJText();
@@ -144,14 +155,14 @@ export class CardCameraComponent implements OnInit {
     this.scans++;
 
     setTimeout(async () => {
-      if(this.scans > 0) {
+      if (this.scans > 0) {
         console.log('Terminating OCR');
         await scheduler.terminate();
         this.foundCard = this.unknownCard;
         this.scans--;
         this.state = 'display';
       }
-    }, 10000)
+    }, 10000);
 
     const scheduler = createScheduler();
     const worker1 = await createWorker('eng');
