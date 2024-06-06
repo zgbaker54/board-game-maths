@@ -1,3 +1,3 @@
-﻿name,expansion,count,minPlayers,hero count,hero,modifier,effect,Slay
-Feral Dragon,,,,2,,,DRAW,9+
-Muscipula Rex,,,,3,,,DRAW,10+
+﻿name,expansion,count,minPlayers,rules,hero count,hero,modifier,effect,Slay
+Feral Dragon,,,,,2,,,DRAW,9+
+Muscipula Rex,,,,,3,,,DRAW,10+

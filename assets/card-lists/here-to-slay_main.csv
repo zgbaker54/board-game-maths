@@ -1,73 +1,73 @@
-﻿name,expansion,count,minPlayers,type,hero,modifier,effect,Roll
-Challenge,,14,,Challenge,,,,
-Modifier,,4,,Modifier,,+,MODIFIER,
-Modifier,,4,,Modifier,,-,MODIFIER,
-Modifier,,17,,Modifier,,"+,-",MODIFIER,
-Suspiciously Shiny Coin,,,,Cursed Item,,,DISCARD,
-Curse of the Snake's Eyes,,2,,Cursed Item,,-,MODIFIER,
-Sealing Key,,,,Cursed Item,,,,
-Particularly Rusty Coin,,2,,Item,,,DRAW,
-Really Big Ring,,2,,Item,,+,MODIFIER,
-Decoy Doll,,,,Item,,,"SACRIFICE,DESTROY",
-Ranger Mask,,,,Item,Ranger,,,
-Guardian Mask,,,,Item,Guardian,,,
-Wizard Mask,,,,Item,Wizard,,,
-Fighter Mask,,,,Item,Fighter,,,
-Bard Mask,,,,Item,Bard,,,
-Thief Mask,,,,Item,Thief,,,
-Winds of Change,,2,,Magic,,,DRAW,
-Destructive Spell,,2,,Magic,,,"DISCARD,DESTROY",
-Entangling Trap,,2,,Magic,,,"DISCARD,STEAL",
-Enchanted Spell,,2,,Magic,,+,MODIFIER,
-Critical Boost,,2,,Magic,,,"DRAW,DISCARD",
-Forceful Winds,,,,Magic,,,,
-Call to the Fallen,,,,Magic,,,,
-Forced Exchange,,,,Magic,,,STEAL,
-Fuzzy Cheeks,,,,Hero,Bard,,DRAW,8+
-Lucky Bucky,,,,Hero,Bard,,,7+
-Dodgy Dealer,,,,Hero,Bard,,,9+
-Tipsy Tootie,,,,Hero,Bard,,STEAL,6+
-Peanut,,,,Hero,Bard,,DRAW,7+
-Mellow Dee,,,,Hero,Bard,,DRAW,7+
-Greedy Cheeks,,,,Hero,Bard,,,8+
-Napping Nibbles,,,,Hero,Bard,,,2+
-Tough Teddy,,,,Hero,Fighter,,DISCARD,4+
-Qi Bear,,,,Hero,Fighter,,"DISCARD,DESTROY",10+
-Heavy Bear,,,,Hero,Fighter,,DISCARD,5+
-Fury Knuckle,,,,Hero,Fighter,,,5+
-Bad Axe,,,,Hero,Fighter,,DESTROY,8+
-Bear Claw,,,,Hero,Fighter,,,7+
-Pan Chucks,,,,Hero,Fighter,,"DRAW,DESTROY",8+
-Beary Wise,,,,Hero,Fighter,,DISCARD,7+
-Serious Grey,,,,Hero,Ranger,,DESTROY,9+
-Sharp Fox,,,,Hero,Ranger,,,5+
-Quick Draw,,,,Hero,Ranger,,DRAW,8+
-Wildshot,,,,Hero,Ranger,,"DRAW,DISCARD",8+
-Bullseye,,,,Hero,Ranger,,,7+
-Lookie Rookie,,,,Hero,Ranger,,,5+
-Hook,,,,Hero,Ranger,,DRAW,6+
-Wily Red,,,,Hero,Ranger,,DRAW,10+
-Smooth Mimimeow,,,,Hero,Thief,,,7+
-Meowzio,,,,Hero,Thief,,STEAL,10+
-Sly Pickings,,,,Hero,Thief,,,6+
-Plundering Puma,,,,Hero,Thief,,DRAW,6+
-Shurikitty,,,,Hero,Thief,,DESTROY,9+
-Slippery Paws,,,,Hero,Thief,,DISCARD,6+
-Silent Shadow,,,,Hero,Thief,,,8+
-Kit Napper,,,,Hero,Thief,,STEAL,9+
-Hopper,,,,Hero,Wizard,,SACRIFICE,7+
-Bun Bun,,,,Hero,Wizard,,,5+
-Spooky,,,,Hero,Wizard,,SACRIFICE,10+
-Buttons,,,,Hero,Wizard,,,6+
-Wiggles,,,,Hero,Wizard,,STEAL,10+
-Fluffy,,,,Hero,Wizard,,DESTROY,10+
-Snowball,,,,Hero,Wizard,,DRAW,6+
-Whiskers,,,,Hero,Wizard,,"STEAL,DESTROY",11+
-Calming Voice,,,,Hero,Guardian,,,9+
-Mighty Blade,,,,Hero,Guardian,,,8+
-Vibrant Glow,,,,Hero,Guardian,+,MODIFIER,9+
-Wise Shield,,,,Hero,Guardian,+,MODIFIER,6+
-Iron Resolve,,,,Hero,Guardian,,,8+
-Guiding Light,,,,Hero,Guardian,,,7+
-Radiant Horn,,,,Hero,Guardian,,,6+
-Holy Curselifter,,,,Hero,Guardian,,,5+
+﻿name,expansion,count,minPlayers,rules,type,hero,modifier,effect,Roll
+Challenge,,14,,,Challenge,,,,
+Modifier,,4,,,Modifier,,+,MODIFIER,
+Modifier,,4,,,Modifier,,-,MODIFIER,
+Modifier,,17,,,Modifier,,"+,-",MODIFIER,
+Suspiciously Shiny Coin,,,,,Cursed Item,,,DISCARD,
+Curse of the Snake's Eyes,,2,,,Cursed Item,,-,MODIFIER,
+Sealing Key,,,,,Cursed Item,,,,
+Particularly Rusty Coin,,2,,,Item,,,DRAW,
+Really Big Ring,,2,,,Item,,+,MODIFIER,
+Decoy Doll,,,,,Item,,,"SACRIFICE,DESTROY",
+Ranger Mask,,,,,Item,Ranger,,,
+Guardian Mask,,,,,Item,Guardian,,,
+Wizard Mask,,,,,Item,Wizard,,,
+Fighter Mask,,,,,Item,Fighter,,,
+Bard Mask,,,,,Item,Bard,,,
+Thief Mask,,,,,Item,Thief,,,
+Winds of Change,,2,,,Magic,,,DRAW,
+Destructive Spell,,2,,,Magic,,,"DISCARD,DESTROY",
+Entangling Trap,,2,,,Magic,,,"DISCARD,STEAL",
+Enchanted Spell,,2,,,Magic,,+,MODIFIER,
+Critical Boost,,2,,,Magic,,,"DRAW,DISCARD",
+Forceful Winds,,,,,Magic,,,,
+Call to the Fallen,,,,,Magic,,,,
+Forced Exchange,,,,,Magic,,,STEAL,
+Fuzzy Cheeks,,,,,Hero,Bard,,DRAW,8+
+Lucky Bucky,,,,,Hero,Bard,,,7+
+Dodgy Dealer,,,,,Hero,Bard,,,9+
+Tipsy Tootie,,,,,Hero,Bard,,STEAL,6+
+Peanut,,,,,Hero,Bard,,DRAW,7+
+Mellow Dee,,,,,Hero,Bard,,DRAW,7+
+Greedy Cheeks,,,,,Hero,Bard,,,8+
+Napping Nibbles,,,,,Hero,Bard,,,2+
+Tough Teddy,,,,,Hero,Fighter,,DISCARD,4+
+Qi Bear,,,,,Hero,Fighter,,"DISCARD,DESTROY",10+
+Heavy Bear,,,,,Hero,Fighter,,DISCARD,5+
+Fury Knuckle,,,,,Hero,Fighter,,,5+
+Bad Axe,,,,,Hero,Fighter,,DESTROY,8+
+Bear Claw,,,,,Hero,Fighter,,,7+
+Pan Chucks,,,,,Hero,Fighter,,"DRAW,DESTROY",8+
+Beary Wise,,,,,Hero,Fighter,,DISCARD,7+
+Serious Grey,,,,,Hero,Ranger,,DESTROY,9+
+Sharp Fox,,,,,Hero,Ranger,,,5+
+Quick Draw,,,,,Hero,Ranger,,DRAW,8+
+Wildshot,,,,,Hero,Ranger,,"DRAW,DISCARD",8+
+Bullseye,,,,,Hero,Ranger,,,7+
+Lookie Rookie,,,,,Hero,Ranger,,,5+
+Hook,,,,,Hero,Ranger,,DRAW,6+
+Wily Red,,,,,Hero,Ranger,,DRAW,10+
+Smooth Mimimeow,,,,,Hero,Thief,,,7+
+Meowzio,,,,,Hero,Thief,,STEAL,10+
+Sly Pickings,,,,,Hero,Thief,,,6+
+Plundering Puma,,,,,Hero,Thief,,DRAW,6+
+Shurikitty,,,,,Hero,Thief,,DESTROY,9+
+Slippery Paws,,,,,Hero,Thief,,DISCARD,6+
+Silent Shadow,,,,,Hero,Thief,,,8+
+Kit Napper,,,,,Hero,Thief,,STEAL,9+
+Hopper,,,,,Hero,Wizard,,SACRIFICE,7+
+Bun Bun,,,,,Hero,Wizard,,,5+
+Spooky,,,,,Hero,Wizard,,SACRIFICE,10+
+Buttons,,,,,Hero,Wizard,,,6+
+Wiggles,,,,,Hero,Wizard,,STEAL,10+
+Fluffy,,,,,Hero,Wizard,,DESTROY,10+
+Snowball,,,,,Hero,Wizard,,DRAW,6+
+Whiskers,,,,,Hero,Wizard,,"STEAL,DESTROY",11+
+Calming Voice,,,,,Hero,Guardian,,,9+
+Mighty Blade,,,,,Hero,Guardian,,,8+
+Vibrant Glow,,,,,Hero,Guardian,+,MODIFIER,9+
+Wise Shield,,,,,Hero,Guardian,+,MODIFIER,6+
+Iron Resolve,,,,,Hero,Guardian,,,8+
+Guiding Light,,,,,Hero,Guardian,,,7+
+Radiant Horn,,,,,Hero,Guardian,,,6+
+Holy Curselifter,,,,,Hero,Guardian,,,5+

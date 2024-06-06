@@ -1,31 +1,31 @@
-name,expansion,count,minPlayers,type,cost,resource,level,attack,range,spell cost
-Red Orb,,,,Resource,,Red Orb,,,,
-Blue Orb,,,,Resource,,Blue Orb,,,,
-Red Gem,,3,,Resource,,Red Gem,,,,
-Blue Gem,,3,,Resource,,Blue Gem,,,,
-Infernal Assault,,,,Attack Spell,"Lvl 2 Spell,Shadow Fragment,Red Orb",,3,Enemy,"2,Current Tile",Red Gem
-Sudden Doom,,,,Attack Spell,"Lvl 2 Spell,Shadow Fragment,Blue Orb",,3,Hex Tile,"1,Current Tile",Blue Gem
-Magma Hand,,,,Attack Spell,"Lvl 1 Spell,Red Orb,Shadow Fragment,Gem",,2,Enemy,"2,Current Tile",Gem
-Unicorn Rush,,,,Attack Spell,"Lvl 1 Spell,Orb,Blue Gem",,2,Enemy,"1,Current Tile",Blue Gem
-Deadly Shroud,,,,Attack Spell,"Lvl 1 Spell,Shadow Fragment",,2,Hex Tile,1,Cursed Crystal
-Personal Space,,,,Attack Spell,"Lvl 1 Spell,Orb",,2,Enemy,Current Tile,
-Psychic Spikes,,,,Attack Spell,"Lvl 1 Spell,Red Orb,Shadow Fragment,Gem",,2,Hex Tile,1,Gem
-Phoenix Flash,,,,Attack Spell,"Lvl 1 Spell,Orb,Red Gem",,2,Enemy,"1,Current Tile",Red Gem
-Kinetic Wave,,,,Attack Spell,"Lvl 1 Spell,Blue Orb,Shadow Fragment,Gem",,2,Hex Tile,2,Blue Gem
-Orb Duplication,,,,Conversion Spell,"Lvl 1 Spell,Orb",Orb,2,,,Orb
-Gem Duplication,,,,Conversion Spell,"Lvl 1 Spell,Gem",Gem,2,,,Gem
-Fatal Fronds,,4,,Attack Spell,Orb,,1,Hex Tile,Current Tile,
-Feeding Frenzy,,3,,Attack Spell,"Blue Orb,Blue Gem",,1,Enemy,"1,Current Tile",Blue Gem
-Bubble Trouble,,3,,Attack Spell,"Blue Orb,Blue Gem",,1,Enemy,1,Blue Gem
-Heat Wave,,3,,Attack Spell,"Red Orb, Red Gem",,1,Enemy,1,Red Gem
-Spectral Slap,,3,,Attack Spell,"Blue Orb,Gem",,1,Hex Tile,1,"Red Gem,Blue Gem"
-Heavy Hand,,3,,Attack Spell,"Red Orb, Red Gem",,1,Enemy,"1,Current Tile",Red Gem
-Lightning Bug,,3,,Attack Spell,"Orb,Gem",,1,Enemy,1,Gem
-Sinister Screech,,3,,Attack Spell,"Shadow Fragment,Orb",,1,Enemy,1,Cursed Crystal
-Curse Void,,2,,Conversion Spell,"Shadow Fragment,Gem",Gem,1,,,Cursed Crystal
-Metamorphosis,,,,Conversion Spell,Orb,Orb,1,,,Orb
-Crystallization,,,,Conversion Spell,"Blue Orb,Red Gem",Orb,1,,,Gem
-Energy Bloom,,,,Conversion Spell,Gem,Gem,1,,,Gem
-Sapphire Synthesis,,,,Conversion Spell,"Orb,Blue Gem","Blue Gem,Blue Orb",1,,,"Blue Gem,Blue Orb"
-Ruby Synthesis,,,,Conversion Spell,"Orb,Red Gem","Red Gem,Red Orb",1,,,"Red Gem,Red Orb"
-Luminous Glow,,,,Conversion Spell,"Red Orb,Blue Gem",Gem,1,,,Orb
+name,expansion,count,minPlayers,rules,type,cost,resource,level,attack,range,spell cost
+Red Orb,,,,,Resource,,Red Orb,,,,
+Blue Orb,,,,,Resource,,Blue Orb,,,,
+Red Gem,,3,,,Resource,,Red Gem,,,,
+Blue Gem,,3,,,Resource,,Blue Gem,,,,
+Infernal Assault,,,,,Attack Spell,"Lvl 2 Spell,Shadow Fragment,Red Orb",,3,Enemy,"2,Current Tile",Red Gem
+Sudden Doom,,,,,Attack Spell,"Lvl 2 Spell,Shadow Fragment,Blue Orb",,3,Hex Tile,"1,Current Tile",Blue Gem
+Magma Hand,,,,,Attack Spell,"Lvl 1 Spell,Red Orb,Shadow Fragment,Gem",,2,Enemy,"2,Current Tile",Gem
+Unicorn Rush,,,,,Attack Spell,"Lvl 1 Spell,Orb,Blue Gem",,2,Enemy,"1,Current Tile",Blue Gem
+Deadly Shroud,,,,,Attack Spell,"Lvl 1 Spell,Shadow Fragment",,2,Hex Tile,1,Cursed Crystal
+Personal Space,,,,,Attack Spell,"Lvl 1 Spell,Orb",,2,Enemy,Current Tile,
+Psychic Spikes,,,,,Attack Spell,"Lvl 1 Spell,Red Orb,Shadow Fragment,Gem",,2,Hex Tile,1,Gem
+Phoenix Flash,,,,,Attack Spell,"Lvl 1 Spell,Orb,Red Gem",,2,Enemy,"1,Current Tile",Red Gem
+Kinetic Wave,,,,,Attack Spell,"Lvl 1 Spell,Blue Orb,Shadow Fragment,Gem",,2,Hex Tile,2,Blue Gem
+Orb Duplication,,,,,Conversion Spell,"Lvl 1 Spell,Orb",Orb,2,,,Orb
+Gem Duplication,,,,,Conversion Spell,"Lvl 1 Spell,Gem",Gem,2,,,Gem
+Fatal Fronds,,4,,,Attack Spell,Orb,,1,Hex Tile,Current Tile,
+Feeding Frenzy,,3,,,Attack Spell,"Blue Orb,Blue Gem",,1,Enemy,"1,Current Tile",Blue Gem
+Bubble Trouble,,3,,,Attack Spell,"Blue Orb,Blue Gem",,1,Enemy,1,Blue Gem
+Heat Wave,,3,,,Attack Spell,"Red Orb, Red Gem",,1,Enemy,1,Red Gem
+Spectral Slap,,3,,,Attack Spell,"Blue Orb,Gem",,1,Hex Tile,1,"Red Gem,Blue Gem"
+Heavy Hand,,3,,,Attack Spell,"Red Orb, Red Gem",,1,Enemy,"1,Current Tile",Red Gem
+Lightning Bug,,3,,,Attack Spell,"Orb,Gem",,1,Enemy,1,Gem
+Sinister Screech,,3,,,Attack Spell,"Shadow Fragment,Orb",,1,Enemy,1,Cursed Crystal
+Curse Void,,2,,,Conversion Spell,"Shadow Fragment,Gem",Gem,1,,,Cursed Crystal
+Metamorphosis,,,,,Conversion Spell,Orb,Orb,1,,,Orb
+Crystallization,,,,,Conversion Spell,"Blue Orb,Red Gem",Orb,1,,,Gem
+Energy Bloom,,,,,Conversion Spell,Gem,Gem,1,,,Gem
+Sapphire Synthesis,,,,,Conversion Spell,"Orb,Blue Gem","Blue Gem,Blue Orb",1,,,"Blue Gem,Blue Orb"
+Ruby Synthesis,,,,,Conversion Spell,"Orb,Red Gem","Red Gem,Red Orb",1,,,"Red Gem,Red Orb"
+Luminous Glow,,,,,Conversion Spell,"Red Orb,Blue Gem",Gem,1,,,Orb

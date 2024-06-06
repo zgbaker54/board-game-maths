@@ -1,16 +1,16 @@
-﻿name,expansion,count,minPlayers,hero count,hero,modifier,effect,Slay
-Malamammoth,,,,2,Ranger,,DRAW,8+
-Dracos,,,,1,,,DRAW,5-
-Warworn Owlbear,,,,2,Thief,,,8+
-Bloodwing,,,,2,,,"CHALLENGE,DISCARD",9+
-Crowned Serpent,,,,2,,,DRAW,10+
-Dark Dragon King,,,,2,Bard,+,MODIFIER,8+
-Corrupted Sabretooth,,,,3,,,"DESTROY,STEAL",9+
-Abyss Queen,,,,2,,+,MODIFIER,8+
-Artic Aries,,,,1,,,DRAW,10+
-Terratuga,,,,1,,,,11+
-Anuran Cauldron,,,,3,,+,MODIFIER,7+
-Rex Major,,,,2,Guardian,,DRAW,8+
-Orthus,,,,2,Wizard,,DRAW,8+
-Titan Wyvern,,,,2,Fighter,+,MODIFIER,8+
-Mega Slime,,,,4,,,,8+
+﻿name,expansion,count,minPlayers,rules,hero count,hero,modifier,effect,Slay
+Malamammoth,,,,,2,Ranger,,DRAW,8+
+Dracos,,,,,1,,,DRAW,5-
+Warworn Owlbear,,,,,2,Thief,,,8+
+Bloodwing,,,,,2,,,"CHALLENGE,DISCARD",9+
+Crowned Serpent,,,,,2,,,DRAW,10+
+Dark Dragon King,,,,,2,Bard,+,MODIFIER,8+
+Corrupted Sabretooth,,,,,3,,,"DESTROY,STEAL",9+
+Abyss Queen,,,,,2,,+,MODIFIER,8+
+Artic Aries,,,,,1,,,DRAW,10+
+Terratuga,,,,,1,,,,11+
+Anuran Cauldron,,,,,3,,+,MODIFIER,7+
+Rex Major,,,,,2,Guardian,,DRAW,8+
+Orthus,,,,,2,Wizard,,DRAW,8+
+Titan Wyvern,,,,,2,Fighter,+,MODIFIER,8+
+Mega Slime,,,,,4,,,,8+

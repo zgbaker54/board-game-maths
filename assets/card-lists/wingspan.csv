@@ -1,447 +1,447 @@
-name,expansion,count,minPlayers,color,nest,environment,eggs,food,victory points,wingspan,predator
-"Abbott's Booby","2","","","White","Platform","Wetland","1","Fish","5","190",""
-"Acorn Woodpecker","","","","Brown","Cavity","Forest","4","Seed","5","46",""
-"American Avocet","","","","Pink","Ground","Wetland","2","Invertebrate,Seed","6","79",""
-"American Bittern","","","","Brown","Platform","Wetland","2","Invertebrate,Fish,Rodent","7","107",""
-"American Coot","","","","Brown","Platform","Wetland","5","Seed,Wild","3","61",""
-"American Crow","","","","Brown","Platform","Forest,Grassland,Wetland","2","Wild","4","99",""
-"American Goldfinch","","","","White","Bowl","Grassland","3","Seed","3","23",""
-"American Kestrel","","","","Brown","Cavity","Grassland","3","Invertebrate,Rodent","5","56","Yes"
-"American Oystercatcher","","","","White","Ground","Wetland","2","Invertebrate","5","81",""
-"American Redstart","4","","","Brown","Bowl","Forest","2","Invertebrate","4","20",""
-"American Robin","","","","Brown","Bowl","Forest,Grassland","4","Invertebrate","1","43",""
-"American White Pelican","","","","Brown","Ground","Wetland","1","Fish","5","274",""
-"American Woodcock","","","","None","Ground","Forest,Grassland","2","Invertebrate,Seed","9","46",""
-"Anhinga","","","","Brown","Platform","Wetland","2","Fish","6","114","Yes"
-"Anna's Hummingbird","","","","Brown","Bowl","Forest,Grassland,Wetland","2","Wild","4","13",""
-"Ash-Throated Flycatcher","","","","White","Cavity","Grassland","4","Invertebrate","4","30",""
-"Asian Emerald Dove","3","","","White","Platform","Forest,Grassland","2","Seed","6","44",""
-"Asian Koel","3","","","Pink","None","Forest,Grassland,Wetland","0","Invertebrate","4","62",""
-"Atlantic Puffin","","","","White","Wild","Wetland","1","Fish","8","53",""
-"Audouin's Gull","1","","","Brown","Ground","Wetland","2","Fish,Wild","1","132",""
-"Australasian Pipit","2","","","Yellow","Ground","Grassland","4","Invertebrate,Seed","3","31",""
-"Australasian Shoveler","2","","","Brown","Ground","Wetland","4","Invertebrate,Seed","4","75",""
-"Australian Ibis","2","","","Brown","Platform","Grassland,Wetland","2","Invertebrate,Fish,Wild","5","118",""
-"Australian Magpie","2","","","Yellow","Platform","Grassland","2","Invertebrate,Rodent","4","75",""
-"Australian Owlet-Nightjar","2","","","Pink","Cavity","Forest,Grassland,Wetland","2","Invertebrate,Rodent","2","28",""
-"Australian Raven","2","","","Yellow","Platform","Forest,Grassland,Wetland","3","Invertebrate,Rodent,Wild","7","100",""
-"Australian Reed Warbler","2","","","White","Bowl","Wetland","3","Invertebrate","2","21",""
-"Australian Shelduck","2","","","Brown","Cavity","Wetland","4","Invertebrate,Seed","3","113",""
-"Australian Zebra Finch","2","","","Brown","Wild","Grassland","3","Seed","1","22",""
-"Azure Tit","3","","","Brown","Cavity","Forest","4","Invertebrate,Seed","2","22",""
-"Baird's Sparrow","","","","Brown","Ground","Grassland","2","Invertebrate,Seed","3","23",""
-"Bald Eagle","","","","White","Platform","Wetland","1","Fish,Rodent","9","203",""
-"Baltimore Oriole","","","","Brown","Wild","Forest","2","Invertebrate","9","30",""
-"Barn Owl","","","","Brown","Cavity","Forest,Grassland,Wetland","4","Rodent","5","107","Yes"
-"Barn Swallow","","","","Brown","Wild","Grassland,Wetland","3","Invertebrate","1","38",""
-"Barred Owl","","","","Brown","Cavity","Forest","2","Rodent","3","107","Yes"
-"Barrow's Goldeneye","","","","Pink","Cavity","Wetland","4","Invertebrate,Seed,Fish","5","71",""
-"Baya Weaver","3","","","Brown","Wild","Grassland,Wetland","3","Invertebrate,Seed","3","27",""
-"Bearded Reedling","3","","","Teal","Bowl","Wetland","6","Invertebrate,Seed","2","17",""
-"Bell's Vireo","","","","White","Wild","Forest,Grassland","2","Invertebrate","4","18",""
-"Belted Kingfisher","","","","Pink","Wild","Wetland","4","Fish,Wild","4","53",""
-"Bewick's Wren","","","","Brown","Cavity","Forest,Grassland,Wetland","3","Invertebrate,Seed","4","18",""
-"Black Drongo","3","","","Brown","Bowl","Grassland","3","Invertebrate,Wild","3","27",""
-"Black Noddy","2","","","Brown","Platform","Wetland","1","Fish","9","69",""
-"Black Redstart","1","","","Teal","Wild","Grassland","4","Invertebrate,Seed","0","24",""
-"Black Skimmer","","","","Brown","Ground","Wetland","2","Fish","6","112","Yes"
-"Black Stork","3","","","Teal","Platform","Forest,Wetland","2","Fish,Rodent","3","155",""
-"Black Swan","2","","","Yellow","Ground","Wetland","3","Seed,Wild","6","180",""
-"Black Tern","","","","Brown","Wild","Wetland","2","Invertebrate,Fish","4","61",""
-"Black Vulture","","","","Pink","Cavity","Forest","1","","2","150",""
-"Black Woodpecker","1","","","Brown","Cavity","Forest","2","Invertebrate","4","70",""
-"Black-Bellied Whistling Duck","","","","Brown","Cavity","Wetland","5","Seed","2","76",""
-"Black-Billed Magpie","","","","Pink","Wild","Grassland","3","Wild","3","64",""
-"Black-Chinned Hummingbird","4","","","Brown","Bowl","Forest,Grassland,Wetland","2","Wild","4","8",""
-"Black-Crowned Night-Heron","","","","Brown","Platform","Wetland","2","Invertebrate,Fish,Rodent","9","112",""
-"Black-Headed Gull","1","","","Brown","Ground","Wetland","2","Invertebrate,Wild","3","102",""
-"Black-Naped Oriole","3","","","Teal","Bowl","Forest,Grassland","2","Invertebrate","5","50",""
-"Black-Necked Stilt","","","","White","Ground","Wetland","2","Invertebrate","4","74",""
-"Black-Shouldered Kite","2","","","Brown","Platform","Grassland","3","Rodent","2","87","Yes"
-"Black-Tailed Godwit","1","","","White","Ground","Wetland","2","Invertebrate,Seed","6","76",""
-"Black-Throated Diver","1","","","Brown","Ground","Wetland","1","Fish","5","120",""
-"Blue Grosbeak","","","","Brown","Bowl","Forest,Grassland,Wetland","3","Invertebrate,Seed","4","28",""
-"Blue Jay","","","","Brown","Bowl","Forest","2","Seed,Wild","3","41",""
-"Blue Rock-Thrush","3","","","Brown","Cavity","Forest,Grassland,Wetland","4","Invertebrate,Seed","0","35",""
-"Blue-Gray Gnatcatcher","","","","Brown","Bowl","Forest","3","Invertebrate","1","15",""
-"Blue-Winged Warbler","","","","None","Bowl","Forest,Grassland","2","Invertebrate","8","20",""
-"Bluethroat","1","","","Brown","Ground","Grassland,Wetland","5","Invertebrate,Seed","7","22",""
-"Blyth's Hornbill","2","","","White","Cavity","Forest","2","","7","150",""
-"Bobolink","","","","White","Ground","Grassland","3","Invertebrate,Seed","4","30",""
-"Bonelli's Eagle","1","","","White","Platform","Forest,Grassland,Wetland","1","Rodent","8","160","Yes"
-"Brahminy Kite","3","","","Brown","Platform","Wetland","2","Invertebrate,Fish,Rodent","6","125","Yes"
-"Brambling","3","","","Teal","Bowl","Forest","4","Invertebrate,Seed","2","26",""
-"Brant","4","","","White","Ground","Wetland","2","Seed,Wild","3","114",""
-"Brewer's Blackbird","","","","Brown","Bowl","Grassland","3","Seed,Wild","3","41",""
-"Broad-Winged Hawk","4","","","Brown","Platform","Forest","2","Rodent","4","85","Yes"
-"Brolga","2","","","Brown","Ground","Wetland","2","Invertebrate,Seed,Wild","6","215",""
-"Bronzed Cowbird","","","","Pink","None","Grassland","0","Invertebrate,Seed","5","36",""
-"Brown Falcon","2","","","Brown","Platform","Forest,Grassland,Wetland","2","Invertebrate,Rodent","5","102","Yes"
-"Brown Pelican","","","","White","Platform","Wetland","2","Fish","4","201",""
-"Brown Shrike","3","","","Brown","Bowl","Grassland","3","Invertebrate,Rodent","6","24",""
-"Brown-Headed Cowbird","","","","Pink","None","Grassland","0","Seed","3","30",""
-"Budgerigar","2","","","Brown","Cavity","Forest,Grassland,Wetland","3","Seed","0","30",""
-"Bullfinch","1","","","Brown","Bowl","Forest","4","Seed","3","24",""
-"Burrowing Owl","","","","Brown","Wild","Grassland","4","Invertebrate,Rodent","5","53","Yes"
-"Bushtit","","","","Brown","Wild","Forest,Grassland,Wetland","5","Invertebrate,Seed","2","15",""
-"California Condor","","","","White","Ground","Forest,Grassland,Wetland","1","","1","277",""
-"California Quail","","","","Brown","Ground","Forest,Grassland","6","Invertebrate,Seed","3","36",""
-"Canada Goose","","","","Brown","Ground","Grassland,Wetland","3","Seed","3","132",""
-"Canvasback","4","","","Brown","Wild","Wetland","4","Seed,Wild","4","82",""
-"Carolina Chickadee","","","","Brown","Cavity","Forest","3","Invertebrate,Seed","2","20",""
-"Carolina Wren","","","","White","Cavity","Forest","5","Invertebrate","1","20",""
-"Carrion Crow","1","","","Teal","Platform","Grassland,Wetland","2","Invertebrate,Wild","3","92",""
-"Cassin's Finch","","","","White","Bowl","Forest","3","Seed","4","30",""
-"Cassin's Sparrow","","","","Brown","Ground","Grassland","2","Invertebrate,Seed","3","20",""
-"Cedar Waxwing","","","","Brown","Bowl","Forest,Grassland","3","","3","25",""
-"Cerulean Warbler","","","","White","Bowl","Forest","2","Invertebrate,Seed","4","20",""
-"Cetti's Warbler","1","","","Teal","Bowl","Wetland","3","Invertebrate,Seed","4","17",""
-"Chestnut-Collared Longspur","","","","White","Ground","Grassland","4","Invertebrate,Seed","5","25",""
-"Chihuahuan Raven","","","","Brown","Platform","Grassland","3","Rodent,Wild","4","112",""
-"Chimney Swift","","","","Brown","Wild","Forest,Grassland,Wetland","2","Invertebrate","3","36",""
-"Chipping Sparrow","","","","Brown","Bowl","Forest,Grassland","3","Invertebrate,Seed","1","23",""
-"Clark's Grebe","","","","Brown","Wild","Wetland","2","Fish","5","61",""
-"Clark's Nutcracker","","","","Brown","Platform","Forest","2","Seed,Wild","5","61",""
-"Coal Tit","1","","","Brown","Cavity","Forest","6","Invertebrate,Seed","2","16",""
-"Cockatiel","2","","","Brown","Cavity","Forest,Grassland,Wetland","5","Seed","2","32",""
-"Common Blackbird","1","","","White","Bowl","Forest","5","Invertebrate","4","36",""
-"Common Buzzard","1","","","White","Platform","Forest,Grassland,Wetland","2","Rodent","4","123","Yes"
-"Common Chaffinch","1","","","Brown","Bowl","Forest,Grassland","2","Invertebrate,Seed","4","23",""
-"Common Chiffchaff","1","","","Brown","Ground","Forest,Wetland","3","Invertebrate,Seed","3","20",""
-"Common Cuckoo","1","","","Pink","None","Forest,Grassland","0","Invertebrate","4","57",""
-"Common Goldeneye","1","","","Teal","Cavity","Forest,Wetland","4","Invertebrate,Fish","2","73",""
-"Common Grackle","","","","Brown","Bowl","Forest,Grassland,Wetland","3","Seed,Wild","3","43",""
-"Common Green Magpie","3","","","Brown","Bowl","Forest","3","Invertebrate,Rodent","5","62",""
-"Common Iora","3","","","Brown","Bowl","Forest,Grassland","2","Invertebrate","1","21",""
-"Common Kingfisher","1","","","Brown","Wild","Wetland","5","Invertebrate,Fish","4","26",""
-"Common Little Bittern","1","","","Brown","Platform","Wetland","3","Invertebrate,Fish","2","49",""
-"Common Loon","","","","Brown","Ground","Wetland","1","Fish,Wild","6","117",""
-"Common Merganser","","","","Brown","Cavity","Wetland","4","Fish,Wild","5","86","Yes"
-"Common Moorhen","1","","","Brown","Wild","Wetland","6","Invertebrate,Seed,Fish","3","53",""
-"Common Myna","3","","","Brown","Cavity","Grassland","4","Invertebrate,Seed","1","35",""
-"Common Nighthawk","","","","Brown","Ground","Forest,Grassland,Wetland","2","Invertebrate","3","56",""
-"Common Nightingale","1","","","Brown","Bowl","Forest,Grassland,Wetland","4","Invertebrate,Seed","3","23",""
-"Common Raven","","","","Brown","Platform","Forest,Grassland,Wetland","2","Rodent,Wild","5","135",""
-"Common Sandpiper","3","","","Brown","Ground","Wetland","2","Invertebrate,Fish","2","40",""
-"Common Starling","1","","","Teal","Cavity","Grassland,Wetland","4","Invertebrate,Seed","3","38",""
-"Common Swift","1","","","Teal","Cavity","Grassland","2","Invertebrate","5","46",""
-"Common Tailorbird","3","","","Yellow","Wild","Forest,Grassland","2","Invertebrate,Wild","2","13",""
-"Common Teal","3","","","Teal","Ground","Wetland","4","Invertebrate,Seed","0","61",""
-"Common Yellowthroat","","","","Brown","Bowl","Wetland","4","Invertebrate","1","18",""
-"Cooper's Hawk","","","","Brown","Platform","Forest","2","Rodent","3","79","Yes"
-"Coppersmith Barbet","3","","","Brown","Cavity","Forest","3","Invertebrate","4","23",""
-"Corsican Nuthatch","1","","","White","Cavity","Forest","2","Seed","4","21",""
-"Count Raggi's Bird-of-Paradise","2","","","Brown","Bowl","Forest","2","Invertebrate","7","22",""
-"Crested Ibis","3","","","White","Platform","Wetland","2","Invertebrate,Fish","7","140",""
-"Crested Lark","3","","","Brown","Ground","Grassland","4","Invertebrate,Seed","5","34",""
-"Crested Pigeon","2","","","Yellow","Platform","Grassland","4","Seed","3","45",""
-"Crimson Chat","2","","","Brown","Bowl","Grassland","2","Invertebrate,Seed","4","19",""
-"Dark-Eyed Junco","","","","Brown","Ground","Forest,Grassland","3","Invertebrate,Seed","3","23",""
-"Desert Finch","3","","","White","Bowl","Grassland","4","Seed","6","26",""
-"Desert Wheatear","3","","","Brown","Ground","Grassland","2","Invertebrate,Seed","2","27",""
-"Dickcissel","","","","Brown","Ground","Grassland","3","Invertebrate,Seed","4","25",""
-"Double-Crested Cormorant","","","","Brown","Platform","Wetland","3","Fish,Wild","3","132",""
-"Downy Woodpecker","","","","White","Cavity","Forest","2","Invertebrate,Seed","3","30",""
-"Dunnock","1","","","Teal","Bowl","Forest","4","Invertebrate,Seed","1","20",""
-"Eastern Bluebird","","","","White","Cavity","Grassland","5","Invertebrate","4","33",""
-"Eastern Imperial Eagle","1","","","White","Platform","Grassland","2","Rodent","7","200","Yes"
-"Eastern Kingbird","","","","Pink","Bowl","Forest,Grassland,Wetland","2","Invertebrate","2","38",""
-"Eastern Phoebe","","","","Brown","Wild","Forest,Grassland,Wetland","4","Invertebrate","3","28",""
-"Eastern Rosella","2","","","Brown","Cavity","Forest,Grassland","3","Seed,Nectar","4","48",""
-"Eastern Screech Owl","","","","Brown","Cavity","Forest","2","Invertebrate,Rodent","4","51","Yes"
-"Eastern Whipbird","2","","","Brown","Bowl","Forest","2","Invertebrate,Seed","5","30",""
-"Eleonora's Falcon","1","","","Brown","Ground","Wetland","2","Invertebrate,Rodent","6","95","Yes"
-"Emu","2","","","Brown","Ground","Forest,Grassland,Wetland","6","Invertebrate,Seed","4","*",""
-"Eurasian Collared-Dove","1","","","Teal","Platform","Grassland","2","Seed","5","52",""
-"Eurasian Coot","3","","","Brown","Ground","Wetland","4","Seed","4","75",""
-"Eurasian Eagle-Owl","3","","","Brown","Platform","Forest,Grassland","2","Rodent","4","174","Yes"
-"Eurasian Golden Oriole","1","","","Pink","Wild","Forest,Grassland","2","Invertebrate,Wild","4","46",""
-"Eurasian Green Woodpecker","1","","","Teal","Cavity","Forest,Grassland","3","Invertebrate","4","48",""
-"Eurasian Hobby","1","","","White","Platform","Forest,Grassland,Wetland","2","Invertebrate,Rodent","4","75","Yes"
-"Eurasian Hoopoe","3","","","White","Cavity","Grassland","5","Invertebrate,Rodent","7","46",""
-"Eurasian Jay","1","","","Brown","Bowl","Forest","3","Invertebrate,Seed,Wild","4","56",""
-"Eurasian Kestrel","3","","","Brown","Cavity","Forest,Grassland,Wetland","3","Rodent","3","68","Yes"
-"Eurasian Magpie","1","","","Teal","Platform","Grassland","3","Invertebrate,Wild","1","56",""
-"Eurasian Marsh-Harrier","3","","","Brown","Platform","Wetland","3","Rodent","2","130","Yes"
-"Eurasian Nutcracker","1","","","Brown","Bowl","Forest","2","Seed","5","55",""
-"Eurasian Nuthatch","1","","","Brown","Cavity","Forest","3","Invertebrate,Seed","3","25",""
-"Eurasian Sparrowhawk","1","","","White","Platform","Forest","2","Rodent","4","65","Yes"
-"Eurasian Tree Sparrow","1","","","Pink","Cavity","Forest,Grassland","4","Invertebrate,Seed","3","21",""
-"Eurasian Treecreeper","3","","","Teal","Bowl","Forest","3","Invertebrate,Seed","0","20",""
-"European Bee-Eater","1","","","Brown","Cavity","Grassland","3","Invertebrate","3","38",""
-"European Goldfinch","1","","","Pink","Bowl","Forest,Grassland","4","Seed","6","23",""
-"European Honey Buzzard","1","","","Teal","Platform","Forest","1","Invertebrate,Wild","4","134",""
-"European Robin","1","","","Brown","Bowl","Forest","4","Invertebrate,Seed","4","22",""
-"European Roller","1","","","White","Cavity","Grassland","2","Invertebrate,Rodent","3","70",""
-"European Turtle Dove","1","","","White","Platform","Forest,Grassland,Wetland","1","Seed","4","51",""
-"Ferruginous Hawk","","","","Brown","Platform","Grassland","2","Rodent","6","142","Yes"
-"Fire-Fronted Serin","3","","","Teal","Bowl","Forest,Grassland","4","Seed","1","21",""
-"Fish Crow","","","","Brown","Platform","Forest,Grassland,Wetland","2","Fish,Wild","6","91",""
-"Forest Owlet","3","","","Brown","Cavity","Forest","2","Invertebrate,Rodent","4","56","Yes"
-"Forster's Tern","","","","Brown","Wild","Wetland","2","Invertebrate,Fish","4","79",""
-"Franklin's Gull","","","","Brown","Wild","Grassland,Wetland","2","Fish,Wild","3","91",""
-"Galah","2","","","Brown","Cavity","Forest,Grassland","2","Seed","5","75",""
-"Goldcrest","1","","","Brown","Bowl","Forest","6","Invertebrate","1","15",""
-"Golden Eagle","","","","Brown","Platform","Grassland,Wetland","1","Rodent","8","201","Yes"
-"Golden Pheasant","3","","","White","Ground","Forest,Grassland","4","Wild","5","70",""
-"Golden-Headed Cisticola","2","","","White","Wild","Grassland","3","Invertebrate","1","15",""
-"Gould's Finch","2","","","Yellow","Cavity","Forest,Grassland,Wetland","3","Seed","3","14",""
-"Graceful Prinia","3","","","Brown","Wild","Grassland,Wetland","2","Invertebrate","5","13",""
-"Grandala","3","","","Brown","Bowl","Grassland","2","Invertebrate","5","36",""
-"Grasshopper Sparrow","","","","Brown","Ground","Grassland","2","Invertebrate,Seed","2","20",""
-"Gray Catbird","","","","Brown","Bowl","Forest,Grassland,Wetland","3","Invertebrate","5","28",""
-"Gray Wagtail","3","","","Teal","Bowl","Forest,Grassland,Wetland","4","Invertebrate","3","26",""
-"Great Blue Heron","","","","White","Platform","Wetland","2","Invertebrate,Fish","5","183",""
-"Great Cormorant","3","","","Brown","Platform","Wetland","2","Fish","6","145","Yes"
-"Great Crested Flycatcher","","","","Brown","Cavity","Forest","3","Invertebrate","5","33",""
-"Great Crested Grebe","1","","","Brown","Wild","Wetland","2","Fish","3","65",""
-"Great Egret","","","","White","Platform","Wetland","3","Fish,Rodent","7","130",""
-"Great Hornbill","3","","","Brown","Cavity","Forest","2","Invertebrate","9","160",""
-"Great Horned Owl","","","","Brown","Platform","Forest","2","Rodent","8","112","Yes"
-"Great Indian Bustard","3","","","White","Ground","Grassland","1","Seed,Wild","6","230",""
-"Great Spotted Woodpecker","3","","","Brown","Cavity","Forest","3","Invertebrate,Seed","6","41",""
-"Great Tit","1","","","Brown","Cavity","Forest","6","Invertebrate,Seed","4","24",""
-"Greater Adjutant","3","","","Yellow","Platform","Wetland","2","Fish,Wild","4","261",""
-"Greater Flamingo","1","","","Brown","Ground","Wetland","1","Invertebrate,Seed","3","152",""
-"Greater Prairie Chicken","","","","White","Ground","Grassland","4","Invertebrate,Seed","5","71",""
-"Greater Roadrunner","","","","Brown","Platform","Grassland","2","Invertebrate,Rodent,Wild","7","56","Yes"
-"Green Bee-Eater","3","","","Brown","Wild","Forest,Grassland","3","Invertebrate","4","29",""
-"Green Heron","","","","Brown","Platform","Wetland","3","Invertebrate,Fish","4","66",""
-"Green Pheasant","3","","","Brown","Ground","Grassland,Wetland","5","Invertebrate,Seed","7","80",""
-"Green Pygmy-Goose","2","","","Brown","Cavity","Wetland","4","Seed","4","54",""
-"Grey Butcherbird","2","","","Brown","Bowl","Forest,Grassland,Wetland","2","Invertebrate,Rodent,Wild","5","40","Yes"
-"Grey Heron","1","","","White","Platform","Wetland","2","Fish","3","185",""
-"Grey Shrikethrush","2","","","Brown","Bowl","Forest","3","Invertebrate,Rodent","2","26","Yes"
-"Grey Teal","2","","","Brown","Ground","Wetland","5","Invertebrate,Seed","2","64",""
-"Grey Warbler","2","","","White","Wild","Forest","3","Invertebrate,Seed","1","16",""
-"Grey-Headed Mannikin","2","","","Yellow","Wild","Grassland","3","Seed","2","15",""
-"Greylag Goose","1","","","Teal","Ground","Wetland","2","Seed","7","164",""
-"Griffon Vulture","1","","","Teal","Platform","Grassland","1","","1","252",""
-"Hawfinch","1","","","Brown","Bowl","Forest","2","Seed","4","30",""
-"Hermit Thrush","","","","Brown","Wild","Forest","2","Invertebrate","7","30",""
-"Himalayan Monal","3","","","Brown","Ground","Forest,Grassland","2","Invertebrate,Seed","5","33",""
-"Hooded Crow","1","","","Teal","Platform","Grassland,Wetland","2","Invertebrate,Wild","3","99",""
-"Hooded Merganser","","","","Brown","Cavity","Wetland","4","Invertebrate,Fish","5","61",""
-"Hooded Warbler","","","","None","Bowl","Forest","3","Invertebrate","7","18",""
-"Horned Lark","","","","Pink","Ground","Grassland","4","Invertebrate,Seed","5","30",""
-"Horsfield's Bronze-Cuckoo","2","","","Pink","None","Forest,Grassland,Wetland","0","Invertebrate","2","29",""
-"Horsfield's Bushlark","2","","","Brown","Ground","Grassland","2","Invertebrate,Seed","2","12",""
-"House Crow","3","","","Teal","Platform","Forest,Grassland,Wetland","3","Wild","3","81",""
-"House Finch","","","","Brown","Bowl","Forest,Grassland,Wetland","6","Seed","3","25",""
-"House Sparrow","1","","","Teal","Cavity","Grassland","5","Seed","6","22",""
-"House Wren","","","","White","Cavity","Forest,Grassland","5","Invertebrate","1","15",""
-"Ibisbill","3","","","White","Ground","Wetland","2","Invertebrate,Fish","8","74",""
-"Inca Dove","","","","White","Platform","Grassland","4","Seed","2","28",""
-"Indian Peafowl","3","","","White","Ground","Forest,Grassland,Wetland","3","Invertebrate,Seed,Wild","7","145",""
-"Indian Vulture","3","","","Yellow","Platform","Grassland","1","","0","227",""
-"Indigo Bunting","","","","Brown","Bowl","Forest,Grassland","3","Invertebrate,Seed","5","20",""
-"Juniper Titmouse","","","","Brown","Cavity","Forest","3","Invertebrate,Seed","4","23",""
-"Kea","2","","","White","Ground","Forest,Grassland","2","Nectar","5","90",""
-"Kelp Gull","2","","","Brown","Ground","Wetland","2","Fish,Wild","6","135",""
-"Kererū","2","","","Brown","Platform","Forest","2","Nectar","3","75",""
-"Killdeer","","","","Brown","Ground","Grassland,Wetland","3","Invertebrate,Seed","1","46",""
-"King Rail","","","","White","Platform","Wetland","6","Invertebrate,Fish,Wild","4","51",""
-"Korimako","2","","","Brown","Bowl","Forest","3","Invertebrate,Nectar","4","22",""
-"Kākāpō","2","","","Yellow","Ground","Forest","2","Seed","4","*",""
-"Large-Billed Crow","3","","","Brown","Platform","Forest,Grassland,Wetland","2","Seed,Wild","6","115",""
-"Laughing Kookaburra","2","","","Brown","Cavity","Forest,Grassland,Wetland","3","Invertebrate,Fish,Rodent","1","60","Yes"
-"Lazuli Bunting","","","","Brown","Bowl","Grassland","4","Invertebrate,Seed","4","23",""
-"Lesser Frigatebird","2","","","Brown","Platform","Wetland","1","Invertebrate,Fish","9","175",""
-"Lesser Whitethroat","1","","","Teal","Bowl","Forest,Grassland","2","Invertebrate","0","18",""
-"Lewin's Honeyeater","2","","","Brown","Bowl","Forest","2","Nectar","5","29",""
-"Lincoln's Sparrow","","","","Brown","Ground","Forest,Grassland,Wetland","2","Invertebrate,Seed","3","20",""
-"Little Bustard","1","","","White","Ground","Grassland","2","Invertebrate,Seed","4","110",""
-"Little Egret","3","","","Brown","Platform","Wetland","3","Invertebrate,Fish,Rodent","2","95",""
-"Little Grebe","3","","","Brown","Wild","Wetland","5","Invertebrate,Fish","4","42",""
-"Little Owl","1","","","Brown","Cavity","Forest,Grassland","2","Invertebrate,Rodent","4","56",""
-"Little Penguin","2","","","Brown","Wild","Wetland","2","Fish","7","*","Yes"
-"Little Pied Cormorant","2","","","Yellow","Platform","Wetland","2","Invertebrate,Fish","4","88",""
-"Little Ringed Plover","3","","","Brown","Ground","Wetland","4","Invertebrate","4","45",""
-"Loggerhead Shrike","","","","Pink","Bowl","Grassland,Wetland","4","Invertebrate,Rodent","3","30",""
-"Long-Tailed Tit","1","","","White","Wild","Forest","4","Invertebrate,Seed","0","18",""
-"Magpie-Lark","2","","","Yellow","Bowl","Grassland","3","Invertebrate,Seed","5","57",""
-"Major Mitchell's Cockatoo","2","","","Brown","Cavity","Forest,Grassland","2","Seed","6","81",""
-"Mallard","","","","Brown","Ground","Wetland","4","Invertebrate,Seed","0","89",""
-"Malleefowl","2","","","Yellow","Ground","Forest,Grassland","6","Seed,Wild","2","33",""
-"Mandarin Duck","3","","","Teal","Cavity","Grassland,Wetland","5","Invertebrate,Seed","3","71",""
-"Maned Duck","2","","","Brown","Cavity","Wetland","4","Wild","2","79",""
-"Many-Colored Fruit Dove","2","","","Brown","Platform","Forest","2","","2","30",""
-"Masked Lapwing","2","","","White","Ground","Grassland,Wetland","3","Invertebrate,Seed","1","80",""
-"Mississippi Kite","","","","Brown","Platform","Forest,Grassland","1","Invertebrate,Rodent","4","79","Yes"
-"Mistletoebird","2","","","Brown","Wild","Forest","4","Nectar","3","18",""
-"Moltoni's Warbler","1","","","Teal","Bowl","Grassland","2","Invertebrate","3","17",""
-"Montagu's Harrier","1","","","White","Ground","Grassland","2","Rodent","4","113","Yes"
-"Mountain Bluebird","","","","White","Cavity","Grassland","5","Invertebrate","4","36",""
-"Mountain Chickadee","","","","Brown","Cavity","Forest","3","Invertebrate,Seed","2","23",""
-"Mourning Dove","","","","Brown","Platform","Forest,Grassland,Wetland","5","Seed","0","46",""
-"Musk Duck","2","","","Brown","Ground","Wetland","2","Invertebrate,Seed,Fish","2","87",""
-"Mute Swan","1","","","Brown","Ground","Wetland","3","Invertebrate,Seed,Wild","4","220",""
-"New Holland Honeyeater","2","","","Brown","Bowl","Grassland","3","Nectar","0","20",""
-"Noisy Miner","2","","","Brown","Bowl","Forest,Grassland","6","Invertebrate,Nectar,Wild","3","41",""
-"North Island Brown Kiwi","2","","","White","Wild","Forest,Grassland","1","Invertebrate,Seed","6","*",""
-"Northern Bobwhite","","","","Brown","Ground","Grassland","6","Seed","5","33",""
-"Northern Cardinal","","","","Brown","Bowl","Forest","5","Seed","3","30",""
-"Northern Flicker","","","","White","Cavity","Forest,Grassland","4","Invertebrate,Seed","2","51",""
-"Northern Gannet","1","","","Brown","Ground","Wetland","1","Fish","5","173","Yes"
-"Northern Goshawk","1","","","White","Platform","Forest","2","Rodent","5","106","Yes"
-"Northern Harrier","","","","Brown","Platform","Grassland,Wetland","2","Rodent","3","109","Yes"
-"Northern Mockingbird","","","","Brown","Bowl","Forest,Grassland,Wetland","4","Invertebrate","2","36",""
-"Northern Shoveler","","","","Brown","Ground","Wetland","4","Invertebrate,Seed","7","76",""
-"Olive-Backed Sunbird","3","","","Brown","Wild","Forest,Grassland","2","Wild","3","16",""
-"Orange-Footed Scrubfowl","2","","","Yellow","Ground","Forest","5","Seed","1","43",""
-"Oriental Bay-Owl","3","","","Teal","Cavity","Forest","2","Invertebrate,Rodent","5","71","Yes"
-"Oriental Magpie-Robin","3","","","Teal","Cavity","Forest,Grassland","4","Invertebrate,Seed","0","33",""
-"Osprey","","","","Brown","Platform","Wetland","2","Fish","5","160",""
-"Pacific Black Duck","2","","","Yellow","Cavity","Wetland","6","Seed,Wild","2","88",""
-"Painted Bunting","","","","White","Bowl","Grassland","4","Invertebrate,Seed","5","23",""
-"Painted Whitestart","4","","","Brown","Ground","Forest","3","Invertebrate","1","22",""
-"Parrot Crossbill","1","","","Brown","Bowl","Forest","2","Seed","6","30",""
-"Peaceful Dove","2","","","Brown","Platform","Forest,Grassland","4","Seed","3","25",""
-"Peregrine Falcon","","","","Brown","Platform","Grassland,Wetland","2","Rodent","5","104","Yes"
-"Pesquet's Parrot","2","","","Brown","Cavity","Forest","2","Nectar","3","30",""
-"Pheasant Coucal","2","","","Pink","Ground","Grassland","4","Invertebrate,Rodent","1","50",""
-"Philippine Eagle","3","","","Teal","Platform","Forest","1","Rodent","6","193","Yes"
-"Pied-Billed Grebe","","","","Brown","Platform","Wetland","4","Invertebrate,Fish","0","41",""
-"Pileated Woodpecker","","","","Brown","Cavity","Forest","2","Invertebrate","4","74",""
-"Pine Siskin","","","","Brown","Bowl","Forest","2","Seed","3","23",""
-"Pink-Eared Duck","2","","","Brown","Cavity","Wetland","3","Seed,Wild","4","64",""
-"Plains-Wanderer","2","","","White","Ground","Grassland","3","Invertebrate,Seed","4","32",""
-"Plumbeous Redstart","3","","","Brown","Bowl","Wetland","2","Invertebrate","4","21",""
-"Princess Stephanie's Astrapia","2","","","Brown","Platform","Forest","1","Invertebrate","6","45",""
-"Prothonotary Warbler","","","","None","Cavity","Forest,Wetland","4","Invertebrate,Seed","8","23",""
-"Purple Gallinule","","","","Brown","Platform","Wetland","4","Seed,Wild","7","56",""
-"Purple Heron","3","","","Brown","Platform","Wetland","2","Invertebrate,Fish,Rodent","2","135","Yes"
-"Purple Martin","","","","Brown","Cavity","Grassland,Wetland","3","Invertebrate","2","46",""
-"Pygmy Nuthatch","","","","Brown","Cavity","Forest","4","Invertebrate,Seed","2","20",""
-"Pūkeko","2","","","Brown","Ground","Wetland","3","Seed,Wild","4","78",""
-"Rainbow Lorikeet","2","","","Brown","Cavity","Forest","2","Nectar","1","46",""
-"Red Avadavat","3","","","Brown","Wild","Grassland,Wetland","3","Seed","2","13",""
-"Red Crossbill","","","","Brown","Bowl","Forest","2","Seed","6","28",""
-"Red Junglefowl","3","","","Brown","Ground","Forest,Grassland,Wetland","6","Invertebrate,Seed","2","75",""
-"Red Kite","1","","","White","Platform","Forest,Grassland,Wetland","2","Rodent,Wild","4","157","Yes"
-"Red Knot","1","","","White","Ground","Wetland","2","Invertebrate","7","50",""
-"Red Wattlebird","2","","","White","Bowl","Forest","2","Nectar","3","49",""
-"Red-Backed Fairywren","2","","","Yellow","Wild","Grassland","3","Invertebrate,Seed","4","15",""
-"Red-Backed Shrike","1","","","Brown","Bowl","Grassland","2","Invertebrate,Rodent,Wild","5","33",""
-"Red-Bellied Woodpecker","","","","Brown","Cavity","Forest","3","Invertebrate,Seed","1","41",""
-"Red-Breasted Merganser","4","","","Brown","Ground","Wetland","4","Invertebrate,Fish","3","78",""
-"Red-Breasted Nuthatch","","","","Brown","Cavity","Forest","3","Invertebrate,Seed","2","23",""
-"Red-Capped Robin","2","","","Brown","Bowl","Forest","4","Invertebrate","2","17",""
-"Red-Cockaded Woodpecker","","","","White","Cavity","Forest","2","Invertebrate","4","36",""
-"Red-Crowned Crane","3","","","White","Ground","Wetland","2","Invertebrate,Seed,Wild","5","235",""
-"Red-Eyed Vireo","","","","White","Wild","Forest","2","Invertebrate","3","25",""
-"Red-Headed Woodpecker","","","","Brown","Cavity","Forest,Grassland,Wetland","3","Invertebrate,Seed,Wild","4","43",""
-"Red-Legged Partridge","1","","","Brown","Ground","Grassland","6","Seed","1","48",""
-"Red-Necked Avocet","2","","","Brown","Ground","Wetland","2","Invertebrate,Seed","4","75",""
-"Red-Shouldered Hawk","","","","Brown","Platform","Forest","2","Rodent","3","102","Yes"
-"Red-Tailed Hawk","","","","Brown","Platform","Forest,Grassland,Wetland","2","Rodent","5","124","Yes"
-"Red-Vented Bulbul","3","","","Brown","Bowl","Grassland","3","Invertebrate","6","28",""
-"Red-Wattled Lapwing","3","","","Brown","Ground","Grassland,Wetland","3","Invertebrate","4","81",""
-"Red-Winged Blackbird","","","","Brown","Bowl","Grassland,Wetland","3","Seed","2","33",""
-"Red-Winged Parrot","2","","","Brown","Cavity","Forest,Grassland,Wetland","2","Seed,Nectar","6","49",""
-"Regent Bowerbird","2","","","Brown","Bowl","Forest,Grassland","2","Invertebrate,Seed","3","36",""
-"Rhinoceros Auklet","3","","","Brown","Ground","Wetland","1","Fish","5","62","Yes"
-"Ring-Billed Gull","","","","Brown","Ground","Wetland","2","Wild","4","122",""
-"Rock Pigeon","3","","","Brown","Platform","Grassland","4","Invertebrate,Seed","0","64",""
-"Rook","3","","","Brown","Platform","Grassland","3","Wild","1","90",""
-"Rose-Breasted Grosbeak","","","","Brown","Bowl","Forest","3","Invertebrate,Seed","6","33",""
-"Rose-Ringed Parakeet","3","","","White","Cavity","Forest,Grassland","2","Invertebrate,Seed","2","45",""
-"Roseate Spoonbill","","","","White","Platform","Wetland","2","Invertebrate,Seed,Fish","6","127",""
-"Rosy Starling","3","","","Brown","Cavity","Forest,Grassland,Wetland","3","Invertebrate,Seed","4","35",""
-"Royal Spoonbill","2","","","Brown","Platform","Wetland","2","Invertebrate,Fish","4","120",""
-"Ruby-Crowned Kinglet","","","","White","Bowl","Forest","3","Invertebrate,Seed","2","20",""
-"Ruby-Throated Hummingbird","","","","Brown","Bowl","Forest,Grassland,Wetland","2","Wild","4","10",""
-"Ruddy Duck","","","","Brown","Platform","Wetland","5","Invertebrate,Seed","0","48",""
-"Ruddy Shelduck","3","","","Teal","Cavity","Wetland","5","Seed,Wild","3","123",""
-"Ruff","1","","","Teal","Ground","Grassland,Wetland","2","Invertebrate,Wild","2","56",""
-"Rufous Night-Heron","2","","","Brown","Platform","Wetland","2","Invertebrate,Fish","5","106","Yes"
-"Rufous Owl","2","","","Brown","Cavity","Forest","2","Rodent","7","115","Yes"
-"Rufous-Banded Honeyeater","2","","","Brown","Bowl","Forest,Wetland","4","Invertebrate,Nectar","0","22",""
-"Sacred Kingfisher","2","","","Pink","Cavity","Forest,Grassland,Wetland","4","Invertebrate,Fish,Rodent","0","30","Yes"
-"Sandhill Crane","","","","Brown","Ground","Grassland,Wetland","1","Seed,Wild","5","196",""
-"Sarus Crane","3","","","Brown","Ground","Wetland","2","Wild","7","250",""
-"Satyr Tragopan","3","","","Brown","Platform","Forest","2","Seed","5","26",""
-"Savannah Sparrow","","","","White","Ground","Grassland","3","Invertebrate,Seed","2","18",""
-"Savi's Warbler","1","","","Brown","Bowl","Wetland","4","Invertebrate","1","20",""
-"Say's Phoebe","","","","White","Bowl","Grassland","3","Invertebrate","5","33",""
-"Scaled Quail","4","","","Brown","Ground","Grassland","6","Seed","0","36",""
-"Scaly-Breasted Munia","3","","","Brown","Wild","Grassland,Wetland","3","Seed","2","22",""
-"Scissor-Tailed Flycatcher","","","","Brown","Bowl","Grassland","2","Invertebrate","8","38",""
-"Short-Toed Treecreeper","1","","","Brown","Cavity","Forest","5","Invertebrate,Seed","2","20",""
-"Silvereye","2","","","Brown","Bowl","Forest,Grassland,Wetland","4","Invertebrate,Nectar","4","17",""
-"Small Minivet","3","","","White","Bowl","Forest","2","Invertebrate","3","28",""
-"Smew","3","","","White","Cavity","Forest,Wetland","4","Invertebrate,Seed,Fish","4","62",""
-"Snow Bunting","1","","","Pink","Cavity","Grassland,Wetland","2","Invertebrate,Seed","5","35",""
-"Snowy Egret","","","","Brown","Platform","Wetland","2","Invertebrate,Fish","4","104","Yes"
-"Snowy Owl","1","","","White","Ground","Grassland,Wetland","3","Rodent","4","138",""
-"Song Sparrow","","","","Brown","Bowl","Forest,Grassland,Wetland","5","Invertebrate,Seed","0","20",""
-"South Island Robin","2","","","Brown","Bowl","Forest,Grassland","5","Invertebrate","1","24",""
-"Southern Cassowary","2","","","White","Ground","Forest","4","Wild","4","*",""
-"Spangled Drongo","2","","","Pink","Bowl","Forest","2","Invertebrate,Nectar,Wild","1","27",""
-"Splendid Fairywren","2","","","Yellow","Wild","Forest,Grassland","5","Invertebrate","1","15",""
-"Spoon-Billed Sandpiper","3","","","White","Ground","Wetland","2","Invertebrate,Seed","5","35",""
-"Spotless Crake","2","","","Yellow","Ground","Wetland","3","Invertebrate,Seed","1","28",""
-"Spotted Dove","3","","","Brown","Platform","Forest,Grassland,Wetland","3","Seed","0","45",""
-"Spotted Owl","","","","White","Cavity","Forest","1","Rodent","5","102",""
-"Spotted Sandpiper","","","","Brown","Ground","Wetland","2","Invertebrate","5","38",""
-"Spotted Towhee","","","","Brown","Ground","Forest,Grassland","4","Invertebrate,Seed","0","28",""
-"Sprague's Pipit","","","","White","Ground","Grassland","3","Invertebrate,Seed","3","25",""
-"Squacco Heron","1","","","Brown","Platform","Wetland","2","Invertebrate,Fish","3","86",""
-"Sri Lanka Blue-Magpie","3","","","Teal","Bowl","Forest","2","Invertebrate,Rodent","9","74",""
-"Sri Lanka Frogmouth","3","","","Brown","Bowl","Forest","1","Invertebrate","4","36","Yes"
-"Steller's Jay","","","","Brown","Bowl","Forest","2","Seed,Wild","5","48",""
-"Stork-Billed Kingfisher","3","","","Brown","Cavity","Wetland","2","Fish","6","56","Yes"
-"Stubble Quail","2","","","White","Ground","Grassland","6","Invertebrate,Seed","4","29",""
-"Sulphur-Crested Cockatoo","2","","","Brown","Cavity","Forest","2","Seed","6","103",""
-"Superb Lyrebird","2","","","Brown","Wild","Forest","1","Invertebrate,Wild","5","73",""
-"Swainson's Hawk","","","","Brown","Platform","Grassland","2","Invertebrate,Rodent","5","130","Yes"
-"Tawny Frogmouth","2","","","Brown","Platform","Forest,Grassland,Wetland","2","Invertebrate,Rodent","5","82","Yes"
-"Thekla's Lark","1","","","Brown","Ground","Grassland","3","Invertebrate,Seed","4","34",""
-"Tree Swallow","","","","Brown","Cavity","Wetland","4","Invertebrate","3","38",""
-"Trumpeter Finch","3","","","White","Ground","Grassland","4","Seed","3","24",""
-"Trumpeter Swan","","","","None","Ground","Wetland","2","Seed,Wild","9","203",""
-"Tufted Titmouse","","","","White","Cavity","Forest","3","Invertebrate,Seed","2","25",""
-"Turkey Vulture","","","","Pink","Cavity","Forest,Grassland,Wetland","1","","1","170",""
-"Twite","3","","","Teal","Bowl","Grassland","4","Seed","2","23",""
-"Tūī","2","","","Brown","Bowl","Forest","2","Invertebrate,Nectar","5","42",""
-"Vaux's Swift","4","","","Brown","Cavity","Forest","3","Invertebrate","2","31",""
-"Verditer Flycatcher","3","","","Brown","Cavity","Forest","2","Invertebrate","5","26",""
-"Violet Cuckoo","3","","","Pink","None","Forest","0","Invertebrate","5","27",""
-"Violet-Green Swallow","","","","Brown","Cavity","Forest,Grassland,Wetland","3","Invertebrate","3","36",""
-"Wedge-Tailed Eagle","2","","","Brown","Platform","Forest,Grassland,Wetland","2","Rodent","7","207","Yes"
-"Welcome Swallow","2","","","White","Wild","Grassland,Wetland","5","Invertebrate","1","28",""
-"Western Meadowlark","","","","Brown","Ground","Grassland","4","Invertebrate,Seed","2","38",""
-"Western Tanager","","","","Brown","Bowl","Forest","2","Invertebrate","6","30",""
-"White Stork","1","","","Brown","Platform","Grassland,Wetland","2","Invertebrate,Fish,Wild","8","160",""
-"White Wagtail","1","","","Teal","Bowl","Grassland,Wetland","5","Invertebrate","2","28",""
-"White-Backed Woodpecker","1","","","Brown","Cavity","Forest","2","Invertebrate","2","39",""
-"White-Bellied Sea-Eagle","2","","","Brown","Platform","Forest,Wetland","2","Fish,Rodent","7","200","Yes"
-"White-Breasted Nuthatch","","","","Brown","Cavity","Forest","3","Invertebrate,Seed","2","28",""
-"White-Breasted Woodswallow","2","","","White","Bowl","Grassland","2","Invertebrate","3","32",""
-"White-Browed Tit-Warbler","3","","","Brown","Wild","Forest","3","Invertebrate,Seed","2","12",""
-"White-Crested Laughingthrush","3","","","Brown","Bowl","Forest","4","Invertebrate,Seed","6","35",""
-"White-Crowned Sparrow","","","","Brown","Ground","Forest,Grassland,Wetland","5","Invertebrate,Seed","2","25",""
-"White-Faced Heron","2","","","Brown","Platform","Wetland","4","Invertebrate,Fish,Rodent","6","106","Yes"
-"White-Faced Ibis","","","","Brown","Platform","Wetland","2","Invertebrate,Fish","8","91","Yes"
-"White-Headed Duck","3","","","White","Ground","Wetland","3","Seed,Wild","4","66",""
-"White-Throated Dipper","1","","","Brown","Cavity","Wetland","4","Invertebrate,Fish","3","28",""
-"White-Throated Kingfisher","3","","","Brown","Cavity","Forest,Grassland,Wetland","3","Fish,Wild","3","42","Yes"
-"White-Throated Swift","4","","","Brown","Cavity","Grassland","2","Invertebrate","2","38",""
-"Whooping Crane","","","","White","Ground","Wetland","1","Wild","6","221",""
-"Wild Turkey","","","","None","Ground","Forest,Grassland","5","Seed","8","135",""
-"Willet","","","","Brown","Ground","Wetland","2","Invertebrate,Fish","4","66","Yes"
-"Willie-Wagtail","2","","","Brown","Bowl","Forest,Grassland,Wetland","5","Invertebrate,Wild","2","30",""
-"Willow Tit","3","","","Brown","Cavity","Forest","3","Invertebrate,Seed","2","20",""
-"Wilson's Snipe","","","","Brown","Ground","Wetland","2","Invertebrate","5","41",""
-"Wilson's Storm Petrel","1","","","Brown","Wild","Wetland","1","Invertebrate,Fish","6","38",""
-"Wood Duck","","","","Brown","Cavity","Forest,Wetland","4","Seed","4","76",""
-"Wood Stork","","","","White","Platform","Wetland","2","Fish,Rodent,Wild","6","155",""
-"Wrybill","2","","","White","Ground","Wetland","2","Invertebrate,Fish","4","49",""
-"Yellow Bittern","3","","","Brown","Platform","Wetland","4","Invertebrate,Fish","0","49",""
-"Yellow-Bellied Sapsucker","","","","Brown","Cavity","Forest","3","Invertebrate","3","41",""
-"Yellow-Billed Cuckoo","","","","Pink","Platform","Forest","2","Invertebrate,Wild","5","46",""
-"Yellow-Breasted Chat","","","","Brown","Bowl","Forest,Grassland,Wetland","3","Invertebrate","5","25",""
-"Yellow-Headed Blackbird","","","","Brown","Bowl","Wetland","3","Invertebrate,Seed","4","38",""
-"Yellow-Rumped Warbler","","","","Brown","Bowl","Forest","4","Invertebrate,Seed","1","23",""
-"Yellowhammer","1","","","Teal","Ground","Forest,Grassland","3","Seed","2","26",""
-"Zebra Dove","3","","","Brown","Platform","Grassland","4","Seed","4","25",""
+name,expansion,count,minPlayers,rules,color,nest,environment,eggs,food,victory points,wingspan,predator
+Abbott's Booby,2,,,,White,Platform,Wetland,1,Fish,5,190,
+Acorn Woodpecker,,,,,Brown,Cavity,Forest,4,Seed,5,46,
+American Avocet,,,,,Pink,Ground,Wetland,2,"Invertebrate,Seed",6,79,
+American Bittern,,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish,Rodent",7,107,
+American Coot,,,,,Brown,Platform,Wetland,5,"Seed,Wild",3,61,
+American Crow,,,,,Brown,Platform,"Forest,Grassland,Wetland",2,Wild,4,99,
+American Goldfinch,,,,,White,Bowl,Grassland,3,Seed,3,23,
+American Kestrel,,,,,Brown,Cavity,Grassland,3,"Invertebrate,Rodent",5,56,Yes
+American Oystercatcher,,,,,White,Ground,Wetland,2,Invertebrate,5,81,
+American Redstart,4,,,,Brown,Bowl,Forest,2,Invertebrate,4,20,
+American Robin,,,,,Brown,Bowl,"Forest,Grassland",4,Invertebrate,1,43,
+American White Pelican,,,,,Brown,Ground,Wetland,1,Fish,5,274,
+American Woodcock,,,,,None,Ground,"Forest,Grassland",2,"Invertebrate,Seed",9,46,
+Anhinga,,,,,Brown,Platform,Wetland,2,Fish,6,114,Yes
+Anna's Hummingbird,,,,,Brown,Bowl,"Forest,Grassland,Wetland",2,Wild,4,13,
+Ash-Throated Flycatcher,,,,,White,Cavity,Grassland,4,Invertebrate,4,30,
+Asian Emerald Dove,3,,,,White,Platform,"Forest,Grassland",2,Seed,6,44,
+Asian Koel,3,,,,Pink,None,"Forest,Grassland,Wetland",0,Invertebrate,4,62,
+Atlantic Puffin,,,,,White,Wild,Wetland,1,Fish,8,53,
+Audouin's Gull,1,,,,Brown,Ground,Wetland,2,"Fish,Wild",1,132,
+Australasian Pipit,2,,,,Yellow,Ground,Grassland,4,"Invertebrate,Seed",3,31,
+Australasian Shoveler,2,,,,Brown,Ground,Wetland,4,"Invertebrate,Seed",4,75,
+Australian Ibis,2,,,,Brown,Platform,"Grassland,Wetland",2,"Invertebrate,Fish,Wild",5,118,
+Australian Magpie,2,,,,Yellow,Platform,Grassland,2,"Invertebrate,Rodent",4,75,
+Australian Owlet-Nightjar,2,,,,Pink,Cavity,"Forest,Grassland,Wetland",2,"Invertebrate,Rodent",2,28,
+Australian Raven,2,,,,Yellow,Platform,"Forest,Grassland,Wetland",3,"Invertebrate,Rodent,Wild",7,100,
+Australian Reed Warbler,2,,,,White,Bowl,Wetland,3,Invertebrate,2,21,
+Australian Shelduck,2,,,,Brown,Cavity,Wetland,4,"Invertebrate,Seed",3,113,
+Australian Zebra Finch,2,,,,Brown,Wild,Grassland,3,Seed,1,22,
+Azure Tit,3,,,,Brown,Cavity,Forest,4,"Invertebrate,Seed",2,22,
+Baird's Sparrow,,,,,Brown,Ground,Grassland,2,"Invertebrate,Seed",3,23,
+Bald Eagle,,,,,White,Platform,Wetland,1,"Fish,Rodent",9,203,
+Baltimore Oriole,,,,,Brown,Wild,Forest,2,Invertebrate,9,30,
+Barn Owl,,,,,Brown,Cavity,"Forest,Grassland,Wetland",4,Rodent,5,107,Yes
+Barn Swallow,,,,,Brown,Wild,"Grassland,Wetland",3,Invertebrate,1,38,
+Barred Owl,,,,,Brown,Cavity,Forest,2,Rodent,3,107,Yes
+Barrow's Goldeneye,,,,,Pink,Cavity,Wetland,4,"Invertebrate,Seed,Fish",5,71,
+Baya Weaver,3,,,,Brown,Wild,"Grassland,Wetland",3,"Invertebrate,Seed",3,27,
+Bearded Reedling,3,,,,Teal,Bowl,Wetland,6,"Invertebrate,Seed",2,17,
+Bell's Vireo,,,,,White,Wild,"Forest,Grassland",2,Invertebrate,4,18,
+Belted Kingfisher,,,,,Pink,Wild,Wetland,4,"Fish,Wild",4,53,
+Bewick's Wren,,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,"Invertebrate,Seed",4,18,
+Black Drongo,3,,,,Brown,Bowl,Grassland,3,"Invertebrate,Wild",3,27,
+Black Noddy,2,,,,Brown,Platform,Wetland,1,Fish,9,69,
+Black Redstart,1,,,,Teal,Wild,Grassland,4,"Invertebrate,Seed",0,24,
+Black Skimmer,,,,,Brown,Ground,Wetland,2,Fish,6,112,Yes
+Black Stork,3,,,,Teal,Platform,"Forest,Wetland",2,"Fish,Rodent",3,155,
+Black Swan,2,,,,Yellow,Ground,Wetland,3,"Seed,Wild",6,180,
+Black Tern,,,,,Brown,Wild,Wetland,2,"Invertebrate,Fish",4,61,
+Black Vulture,,,,,Pink,Cavity,Forest,1,,2,150,
+Black Woodpecker,1,,,,Brown,Cavity,Forest,2,Invertebrate,4,70,
+Black-Bellied Whistling Duck,,,,,Brown,Cavity,Wetland,5,Seed,2,76,
+Black-Billed Magpie,,,,,Pink,Wild,Grassland,3,Wild,3,64,
+Black-Chinned Hummingbird,4,,,,Brown,Bowl,"Forest,Grassland,Wetland",2,Wild,4,8,
+Black-Crowned Night-Heron,,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish,Rodent",9,112,
+Black-Headed Gull,1,,,,Brown,Ground,Wetland,2,"Invertebrate,Wild",3,102,
+Black-Naped Oriole,3,,,,Teal,Bowl,"Forest,Grassland",2,Invertebrate,5,50,
+Black-Necked Stilt,,,,,White,Ground,Wetland,2,Invertebrate,4,74,
+Black-Shouldered Kite,2,,,,Brown,Platform,Grassland,3,Rodent,2,87,Yes
+Black-Tailed Godwit,1,,,,White,Ground,Wetland,2,"Invertebrate,Seed",6,76,
+Black-Throated Diver,1,,,,Brown,Ground,Wetland,1,Fish,5,120,
+Blue Grosbeak,,,,,Brown,Bowl,"Forest,Grassland,Wetland",3,"Invertebrate,Seed",4,28,
+Blue Jay,,,,,Brown,Bowl,Forest,2,"Seed,Wild",3,41,
+Blue Rock-Thrush,3,,,,Brown,Cavity,"Forest,Grassland,Wetland",4,"Invertebrate,Seed",0,35,
+Blue-Gray Gnatcatcher,,,,,Brown,Bowl,Forest,3,Invertebrate,1,15,
+Blue-Winged Warbler,,,,,None,Bowl,"Forest,Grassland",2,Invertebrate,8,20,
+Bluethroat,1,,,,Brown,Ground,"Grassland,Wetland",5,"Invertebrate,Seed",7,22,
+Blyth's Hornbill,2,,,,White,Cavity,Forest,2,,7,150,
+Bobolink,,,,,White,Ground,Grassland,3,"Invertebrate,Seed",4,30,
+Bonelli's Eagle,1,,,,White,Platform,"Forest,Grassland,Wetland",1,Rodent,8,160,Yes
+Brahminy Kite,3,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish,Rodent",6,125,Yes
+Brambling,3,,,,Teal,Bowl,Forest,4,"Invertebrate,Seed",2,26,
+Brant,4,,,,White,Ground,Wetland,2,"Seed,Wild",3,114,
+Brewer's Blackbird,,,,,Brown,Bowl,Grassland,3,"Seed,Wild",3,41,
+Broad-Winged Hawk,4,,,,Brown,Platform,Forest,2,Rodent,4,85,Yes
+Brolga,2,,,,Brown,Ground,Wetland,2,"Invertebrate,Seed,Wild",6,215,
+Bronzed Cowbird,,,,,Pink,None,Grassland,0,"Invertebrate,Seed",5,36,
+Brown Falcon,2,,,,Brown,Platform,"Forest,Grassland,Wetland",2,"Invertebrate,Rodent",5,102,Yes
+Brown Pelican,,,,,White,Platform,Wetland,2,Fish,4,201,
+Brown Shrike,3,,,,Brown,Bowl,Grassland,3,"Invertebrate,Rodent",6,24,
+Brown-Headed Cowbird,,,,,Pink,None,Grassland,0,Seed,3,30,
+Budgerigar,2,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,Seed,0,30,
+Bullfinch,1,,,,Brown,Bowl,Forest,4,Seed,3,24,
+Burrowing Owl,,,,,Brown,Wild,Grassland,4,"Invertebrate,Rodent",5,53,Yes
+Bushtit,,,,,Brown,Wild,"Forest,Grassland,Wetland",5,"Invertebrate,Seed",2,15,
+California Condor,,,,,White,Ground,"Forest,Grassland,Wetland",1,,1,277,
+California Quail,,,,,Brown,Ground,"Forest,Grassland",6,"Invertebrate,Seed",3,36,
+Canada Goose,,,,,Brown,Ground,"Grassland,Wetland",3,Seed,3,132,
+Canvasback,4,,,,Brown,Wild,Wetland,4,"Seed,Wild",4,82,
+Carolina Chickadee,,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",2,20,
+Carolina Wren,,,,,White,Cavity,Forest,5,Invertebrate,1,20,
+Carrion Crow,1,,,,Teal,Platform,"Grassland,Wetland",2,"Invertebrate,Wild",3,92,
+Cassin's Finch,,,,,White,Bowl,Forest,3,Seed,4,30,
+Cassin's Sparrow,,,,,Brown,Ground,Grassland,2,"Invertebrate,Seed",3,20,
+Cedar Waxwing,,,,,Brown,Bowl,"Forest,Grassland",3,,3,25,
+Cerulean Warbler,,,,,White,Bowl,Forest,2,"Invertebrate,Seed",4,20,
+Cetti's Warbler,1,,,,Teal,Bowl,Wetland,3,"Invertebrate,Seed",4,17,
+Chestnut-Collared Longspur,,,,,White,Ground,Grassland,4,"Invertebrate,Seed",5,25,
+Chihuahuan Raven,,,,,Brown,Platform,Grassland,3,"Rodent,Wild",4,112,
+Chimney Swift,,,,,Brown,Wild,"Forest,Grassland,Wetland",2,Invertebrate,3,36,
+Chipping Sparrow,,,,,Brown,Bowl,"Forest,Grassland",3,"Invertebrate,Seed",1,23,
+Clark's Grebe,,,,,Brown,Wild,Wetland,2,Fish,5,61,
+Clark's Nutcracker,,,,,Brown,Platform,Forest,2,"Seed,Wild",5,61,
+Coal Tit,1,,,,Brown,Cavity,Forest,6,"Invertebrate,Seed",2,16,
+Cockatiel,2,,,,Brown,Cavity,"Forest,Grassland,Wetland",5,Seed,2,32,
+Common Blackbird,1,,,,White,Bowl,Forest,5,Invertebrate,4,36,
+Common Buzzard,1,,,,White,Platform,"Forest,Grassland,Wetland",2,Rodent,4,123,Yes
+Common Chaffinch,1,,,,Brown,Bowl,"Forest,Grassland",2,"Invertebrate,Seed",4,23,
+Common Chiffchaff,1,,,,Brown,Ground,"Forest,Wetland",3,"Invertebrate,Seed",3,20,
+Common Cuckoo,1,,,,Pink,None,"Forest,Grassland",0,Invertebrate,4,57,
+Common Goldeneye,1,,,,Teal,Cavity,"Forest,Wetland",4,"Invertebrate,Fish",2,73,
+Common Grackle,,,,,Brown,Bowl,"Forest,Grassland,Wetland",3,"Seed,Wild",3,43,
+Common Green Magpie,3,,,,Brown,Bowl,Forest,3,"Invertebrate,Rodent",5,62,
+Common Iora,3,,,,Brown,Bowl,"Forest,Grassland",2,Invertebrate,1,21,
+Common Kingfisher,1,,,,Brown,Wild,Wetland,5,"Invertebrate,Fish",4,26,
+Common Little Bittern,1,,,,Brown,Platform,Wetland,3,"Invertebrate,Fish",2,49,
+Common Loon,,,,,Brown,Ground,Wetland,1,"Fish,Wild",6,117,
+Common Merganser,,,,,Brown,Cavity,Wetland,4,"Fish,Wild",5,86,Yes
+Common Moorhen,1,,,,Brown,Wild,Wetland,6,"Invertebrate,Seed,Fish",3,53,
+Common Myna,3,,,,Brown,Cavity,Grassland,4,"Invertebrate,Seed",1,35,
+Common Nighthawk,,,,,Brown,Ground,"Forest,Grassland,Wetland",2,Invertebrate,3,56,
+Common Nightingale,1,,,,Brown,Bowl,"Forest,Grassland,Wetland",4,"Invertebrate,Seed",3,23,
+Common Raven,,,,,Brown,Platform,"Forest,Grassland,Wetland",2,"Rodent,Wild",5,135,
+Common Sandpiper,3,,,,Brown,Ground,Wetland,2,"Invertebrate,Fish",2,40,
+Common Starling,1,,,,Teal,Cavity,"Grassland,Wetland",4,"Invertebrate,Seed",3,38,
+Common Swift,1,,,,Teal,Cavity,Grassland,2,Invertebrate,5,46,
+Common Tailorbird,3,,,,Yellow,Wild,"Forest,Grassland",2,"Invertebrate,Wild",2,13,
+Common Teal,3,,,,Teal,Ground,Wetland,4,"Invertebrate,Seed",0,61,
+Common Yellowthroat,,,,,Brown,Bowl,Wetland,4,Invertebrate,1,18,
+Cooper's Hawk,,,,,Brown,Platform,Forest,2,Rodent,3,79,Yes
+Coppersmith Barbet,3,,,,Brown,Cavity,Forest,3,Invertebrate,4,23,
+Corsican Nuthatch,1,,,,White,Cavity,Forest,2,Seed,4,21,
+Count Raggi's Bird-of-Paradise,2,,,,Brown,Bowl,Forest,2,Invertebrate,7,22,
+Crested Ibis,3,,,,White,Platform,Wetland,2,"Invertebrate,Fish",7,140,
+Crested Lark,3,,,,Brown,Ground,Grassland,4,"Invertebrate,Seed",5,34,
+Crested Pigeon,2,,,,Yellow,Platform,Grassland,4,Seed,3,45,
+Crimson Chat,2,,,,Brown,Bowl,Grassland,2,"Invertebrate,Seed",4,19,
+Dark-Eyed Junco,,,,,Brown,Ground,"Forest,Grassland",3,"Invertebrate,Seed",3,23,
+Desert Finch,3,,,,White,Bowl,Grassland,4,Seed,6,26,
+Desert Wheatear,3,,,,Brown,Ground,Grassland,2,"Invertebrate,Seed",2,27,
+Dickcissel,,,,,Brown,Ground,Grassland,3,"Invertebrate,Seed",4,25,
+Double-Crested Cormorant,,,,,Brown,Platform,Wetland,3,"Fish,Wild",3,132,
+Downy Woodpecker,,,,,White,Cavity,Forest,2,"Invertebrate,Seed",3,30,
+Dunnock,1,,,,Teal,Bowl,Forest,4,"Invertebrate,Seed",1,20,
+Eastern Bluebird,,,,,White,Cavity,Grassland,5,Invertebrate,4,33,
+Eastern Imperial Eagle,1,,,,White,Platform,Grassland,2,Rodent,7,200,Yes
+Eastern Kingbird,,,,,Pink,Bowl,"Forest,Grassland,Wetland",2,Invertebrate,2,38,
+Eastern Phoebe,,,,,Brown,Wild,"Forest,Grassland,Wetland",4,Invertebrate,3,28,
+Eastern Rosella,2,,,,Brown,Cavity,"Forest,Grassland",3,"Seed,Nectar",4,48,
+Eastern Screech Owl,,,,,Brown,Cavity,Forest,2,"Invertebrate,Rodent",4,51,Yes
+Eastern Whipbird,2,,,,Brown,Bowl,Forest,2,"Invertebrate,Seed",5,30,
+Eleonora's Falcon,1,,,,Brown,Ground,Wetland,2,"Invertebrate,Rodent",6,95,Yes
+Emu,2,,,,Brown,Ground,"Forest,Grassland,Wetland",6,"Invertebrate,Seed",4,*,
+Eurasian Collared-Dove,1,,,,Teal,Platform,Grassland,2,Seed,5,52,
+Eurasian Coot,3,,,,Brown,Ground,Wetland,4,Seed,4,75,
+Eurasian Eagle-Owl,3,,,,Brown,Platform,"Forest,Grassland",2,Rodent,4,174,Yes
+Eurasian Golden Oriole,1,,,,Pink,Wild,"Forest,Grassland",2,"Invertebrate,Wild",4,46,
+Eurasian Green Woodpecker,1,,,,Teal,Cavity,"Forest,Grassland",3,Invertebrate,4,48,
+Eurasian Hobby,1,,,,White,Platform,"Forest,Grassland,Wetland",2,"Invertebrate,Rodent",4,75,Yes
+Eurasian Hoopoe,3,,,,White,Cavity,Grassland,5,"Invertebrate,Rodent",7,46,
+Eurasian Jay,1,,,,Brown,Bowl,Forest,3,"Invertebrate,Seed,Wild",4,56,
+Eurasian Kestrel,3,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,Rodent,3,68,Yes
+Eurasian Magpie,1,,,,Teal,Platform,Grassland,3,"Invertebrate,Wild",1,56,
+Eurasian Marsh-Harrier,3,,,,Brown,Platform,Wetland,3,Rodent,2,130,Yes
+Eurasian Nutcracker,1,,,,Brown,Bowl,Forest,2,Seed,5,55,
+Eurasian Nuthatch,1,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",3,25,
+Eurasian Sparrowhawk,1,,,,White,Platform,Forest,2,Rodent,4,65,Yes
+Eurasian Tree Sparrow,1,,,,Pink,Cavity,"Forest,Grassland",4,"Invertebrate,Seed",3,21,
+Eurasian Treecreeper,3,,,,Teal,Bowl,Forest,3,"Invertebrate,Seed",0,20,
+European Bee-Eater,1,,,,Brown,Cavity,Grassland,3,Invertebrate,3,38,
+European Goldfinch,1,,,,Pink,Bowl,"Forest,Grassland",4,Seed,6,23,
+European Honey Buzzard,1,,,,Teal,Platform,Forest,1,"Invertebrate,Wild",4,134,
+European Robin,1,,,,Brown,Bowl,Forest,4,"Invertebrate,Seed",4,22,
+European Roller,1,,,,White,Cavity,Grassland,2,"Invertebrate,Rodent",3,70,
+European Turtle Dove,1,,,,White,Platform,"Forest,Grassland,Wetland",1,Seed,4,51,
+Ferruginous Hawk,,,,,Brown,Platform,Grassland,2,Rodent,6,142,Yes
+Fire-Fronted Serin,3,,,,Teal,Bowl,"Forest,Grassland",4,Seed,1,21,
+Fish Crow,,,,,Brown,Platform,"Forest,Grassland,Wetland",2,"Fish,Wild",6,91,
+Forest Owlet,3,,,,Brown,Cavity,Forest,2,"Invertebrate,Rodent",4,56,Yes
+Forster's Tern,,,,,Brown,Wild,Wetland,2,"Invertebrate,Fish",4,79,
+Franklin's Gull,,,,,Brown,Wild,"Grassland,Wetland",2,"Fish,Wild",3,91,
+Galah,2,,,,Brown,Cavity,"Forest,Grassland",2,Seed,5,75,
+Goldcrest,1,,,,Brown,Bowl,Forest,6,Invertebrate,1,15,
+Golden Eagle,,,,,Brown,Platform,"Grassland,Wetland",1,Rodent,8,201,Yes
+Golden Pheasant,3,,,,White,Ground,"Forest,Grassland",4,Wild,5,70,
+Golden-Headed Cisticola,2,,,,White,Wild,Grassland,3,Invertebrate,1,15,
+Gould's Finch,2,,,,Yellow,Cavity,"Forest,Grassland,Wetland",3,Seed,3,14,
+Graceful Prinia,3,,,,Brown,Wild,"Grassland,Wetland",2,Invertebrate,5,13,
+Grandala,3,,,,Brown,Bowl,Grassland,2,Invertebrate,5,36,
+Grasshopper Sparrow,,,,,Brown,Ground,Grassland,2,"Invertebrate,Seed",2,20,
+Gray Catbird,,,,,Brown,Bowl,"Forest,Grassland,Wetland",3,Invertebrate,5,28,
+Gray Wagtail,3,,,,Teal,Bowl,"Forest,Grassland,Wetland",4,Invertebrate,3,26,
+Great Blue Heron,,,,,White,Platform,Wetland,2,"Invertebrate,Fish",5,183,
+Great Cormorant,3,,,,Brown,Platform,Wetland,2,Fish,6,145,Yes
+Great Crested Flycatcher,,,,,Brown,Cavity,Forest,3,Invertebrate,5,33,
+Great Crested Grebe,1,,,,Brown,Wild,Wetland,2,Fish,3,65,
+Great Egret,,,,,White,Platform,Wetland,3,"Fish,Rodent",7,130,
+Great Hornbill,3,,,,Brown,Cavity,Forest,2,Invertebrate,9,160,
+Great Horned Owl,,,,,Brown,Platform,Forest,2,Rodent,8,112,Yes
+Great Indian Bustard,3,,,,White,Ground,Grassland,1,"Seed,Wild",6,230,
+Great Spotted Woodpecker,3,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",6,41,
+Great Tit,1,,,,Brown,Cavity,Forest,6,"Invertebrate,Seed",4,24,
+Greater Adjutant,3,,,,Yellow,Platform,Wetland,2,"Fish,Wild",4,261,
+Greater Flamingo,1,,,,Brown,Ground,Wetland,1,"Invertebrate,Seed",3,152,
+Greater Prairie Chicken,,,,,White,Ground,Grassland,4,"Invertebrate,Seed",5,71,
+Greater Roadrunner,,,,,Brown,Platform,Grassland,2,"Invertebrate,Rodent,Wild",7,56,Yes
+Green Bee-Eater,3,,,,Brown,Wild,"Forest,Grassland",3,Invertebrate,4,29,
+Green Heron,,,,,Brown,Platform,Wetland,3,"Invertebrate,Fish",4,66,
+Green Pheasant,3,,,,Brown,Ground,"Grassland,Wetland",5,"Invertebrate,Seed",7,80,
+Green Pygmy-Goose,2,,,,Brown,Cavity,Wetland,4,Seed,4,54,
+Grey Butcherbird,2,,,,Brown,Bowl,"Forest,Grassland,Wetland",2,"Invertebrate,Rodent,Wild",5,40,Yes
+Grey Heron,1,,,,White,Platform,Wetland,2,Fish,3,185,
+Grey Shrikethrush,2,,,,Brown,Bowl,Forest,3,"Invertebrate,Rodent",2,26,Yes
+Grey Teal,2,,,,Brown,Ground,Wetland,5,"Invertebrate,Seed",2,64,
+Grey Warbler,2,,,,White,Wild,Forest,3,"Invertebrate,Seed",1,16,
+Grey-Headed Mannikin,2,,,,Yellow,Wild,Grassland,3,Seed,2,15,
+Greylag Goose,1,,,,Teal,Ground,Wetland,2,Seed,7,164,
+Griffon Vulture,1,,,,Teal,Platform,Grassland,1,,1,252,
+Hawfinch,1,,,,Brown,Bowl,Forest,2,Seed,4,30,
+Hermit Thrush,,,,,Brown,Wild,Forest,2,Invertebrate,7,30,
+Himalayan Monal,3,,,,Brown,Ground,"Forest,Grassland",2,"Invertebrate,Seed",5,33,
+Hooded Crow,1,,,,Teal,Platform,"Grassland,Wetland",2,"Invertebrate,Wild",3,99,
+Hooded Merganser,,,,,Brown,Cavity,Wetland,4,"Invertebrate,Fish",5,61,
+Hooded Warbler,,,,,None,Bowl,Forest,3,Invertebrate,7,18,
+Horned Lark,,,,,Pink,Ground,Grassland,4,"Invertebrate,Seed",5,30,
+Horsfield's Bronze-Cuckoo,2,,,,Pink,None,"Forest,Grassland,Wetland",0,Invertebrate,2,29,
+Horsfield's Bushlark,2,,,,Brown,Ground,Grassland,2,"Invertebrate,Seed",2,12,
+House Crow,3,,,,Teal,Platform,"Forest,Grassland,Wetland",3,Wild,3,81,
+House Finch,,,,,Brown,Bowl,"Forest,Grassland,Wetland",6,Seed,3,25,
+House Sparrow,1,,,,Teal,Cavity,Grassland,5,Seed,6,22,
+House Wren,,,,,White,Cavity,"Forest,Grassland",5,Invertebrate,1,15,
+Ibisbill,3,,,,White,Ground,Wetland,2,"Invertebrate,Fish",8,74,
+Inca Dove,,,,,White,Platform,Grassland,4,Seed,2,28,
+Indian Peafowl,3,,,,White,Ground,"Forest,Grassland,Wetland",3,"Invertebrate,Seed,Wild",7,145,
+Indian Vulture,3,,,,Yellow,Platform,Grassland,1,,0,227,
+Indigo Bunting,,,,,Brown,Bowl,"Forest,Grassland",3,"Invertebrate,Seed",5,20,
+Juniper Titmouse,,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",4,23,
+Kea,2,,,,White,Ground,"Forest,Grassland",2,Nectar,5,90,
+Kelp Gull,2,,,,Brown,Ground,Wetland,2,"Fish,Wild",6,135,
+Kererū,2,,,,Brown,Platform,Forest,2,Nectar,3,75,
+Killdeer,,,,,Brown,Ground,"Grassland,Wetland",3,"Invertebrate,Seed",1,46,
+King Rail,,,,,White,Platform,Wetland,6,"Invertebrate,Fish,Wild",4,51,
+Korimako,2,,,,Brown,Bowl,Forest,3,"Invertebrate,Nectar",4,22,
+Kākāpō,2,,,,Yellow,Ground,Forest,2,Seed,4,*,
+Large-Billed Crow,3,,,,Brown,Platform,"Forest,Grassland,Wetland",2,"Seed,Wild",6,115,
+Laughing Kookaburra,2,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,"Invertebrate,Fish,Rodent",1,60,Yes
+Lazuli Bunting,,,,,Brown,Bowl,Grassland,4,"Invertebrate,Seed",4,23,
+Lesser Frigatebird,2,,,,Brown,Platform,Wetland,1,"Invertebrate,Fish",9,175,
+Lesser Whitethroat,1,,,,Teal,Bowl,"Forest,Grassland",2,Invertebrate,0,18,
+Lewin's Honeyeater,2,,,,Brown,Bowl,Forest,2,Nectar,5,29,
+Lincoln's Sparrow,,,,,Brown,Ground,"Forest,Grassland,Wetland",2,"Invertebrate,Seed",3,20,
+Little Bustard,1,,,,White,Ground,Grassland,2,"Invertebrate,Seed",4,110,
+Little Egret,3,,,,Brown,Platform,Wetland,3,"Invertebrate,Fish,Rodent",2,95,
+Little Grebe,3,,,,Brown,Wild,Wetland,5,"Invertebrate,Fish",4,42,
+Little Owl,1,,,,Brown,Cavity,"Forest,Grassland",2,"Invertebrate,Rodent",4,56,
+Little Penguin,2,,,,Brown,Wild,Wetland,2,Fish,7,*,Yes
+Little Pied Cormorant,2,,,,Yellow,Platform,Wetland,2,"Invertebrate,Fish",4,88,
+Little Ringed Plover,3,,,,Brown,Ground,Wetland,4,Invertebrate,4,45,
+Loggerhead Shrike,,,,,Pink,Bowl,"Grassland,Wetland",4,"Invertebrate,Rodent",3,30,
+Long-Tailed Tit,1,,,,White,Wild,Forest,4,"Invertebrate,Seed",0,18,
+Magpie-Lark,2,,,,Yellow,Bowl,Grassland,3,"Invertebrate,Seed",5,57,
+Major Mitchell's Cockatoo,2,,,,Brown,Cavity,"Forest,Grassland",2,Seed,6,81,
+Mallard,,,,,Brown,Ground,Wetland,4,"Invertebrate,Seed",0,89,
+Malleefowl,2,,,,Yellow,Ground,"Forest,Grassland",6,"Seed,Wild",2,33,
+Mandarin Duck,3,,,,Teal,Cavity,"Grassland,Wetland",5,"Invertebrate,Seed",3,71,
+Maned Duck,2,,,,Brown,Cavity,Wetland,4,Wild,2,79,
+Many-Colored Fruit Dove,2,,,,Brown,Platform,Forest,2,,2,30,
+Masked Lapwing,2,,,,White,Ground,"Grassland,Wetland",3,"Invertebrate,Seed",1,80,
+Mississippi Kite,,,,,Brown,Platform,"Forest,Grassland",1,"Invertebrate,Rodent",4,79,Yes
+Mistletoebird,2,,,,Brown,Wild,Forest,4,Nectar,3,18,
+Moltoni's Warbler,1,,,,Teal,Bowl,Grassland,2,Invertebrate,3,17,
+Montagu's Harrier,1,,,,White,Ground,Grassland,2,Rodent,4,113,Yes
+Mountain Bluebird,,,,,White,Cavity,Grassland,5,Invertebrate,4,36,
+Mountain Chickadee,,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",2,23,
+Mourning Dove,,,,,Brown,Platform,"Forest,Grassland,Wetland",5,Seed,0,46,
+Musk Duck,2,,,,Brown,Ground,Wetland,2,"Invertebrate,Seed,Fish",2,87,
+Mute Swan,1,,,,Brown,Ground,Wetland,3,"Invertebrate,Seed,Wild",4,220,
+New Holland Honeyeater,2,,,,Brown,Bowl,Grassland,3,Nectar,0,20,
+Noisy Miner,2,,,,Brown,Bowl,"Forest,Grassland",6,"Invertebrate,Nectar,Wild",3,41,
+North Island Brown Kiwi,2,,,,White,Wild,"Forest,Grassland",1,"Invertebrate,Seed",6,*,
+Northern Bobwhite,,,,,Brown,Ground,Grassland,6,Seed,5,33,
+Northern Cardinal,,,,,Brown,Bowl,Forest,5,Seed,3,30,
+Northern Flicker,,,,,White,Cavity,"Forest,Grassland",4,"Invertebrate,Seed",2,51,
+Northern Gannet,1,,,,Brown,Ground,Wetland,1,Fish,5,173,Yes
+Northern Goshawk,1,,,,White,Platform,Forest,2,Rodent,5,106,Yes
+Northern Harrier,,,,,Brown,Platform,"Grassland,Wetland",2,Rodent,3,109,Yes
+Northern Mockingbird,,,,,Brown,Bowl,"Forest,Grassland,Wetland",4,Invertebrate,2,36,
+Northern Shoveler,,,,,Brown,Ground,Wetland,4,"Invertebrate,Seed",7,76,
+Olive-Backed Sunbird,3,,,,Brown,Wild,"Forest,Grassland",2,Wild,3,16,
+Orange-Footed Scrubfowl,2,,,,Yellow,Ground,Forest,5,Seed,1,43,
+Oriental Bay-Owl,3,,,,Teal,Cavity,Forest,2,"Invertebrate,Rodent",5,71,Yes
+Oriental Magpie-Robin,3,,,,Teal,Cavity,"Forest,Grassland",4,"Invertebrate,Seed",0,33,
+Osprey,,,,,Brown,Platform,Wetland,2,Fish,5,160,
+Pacific Black Duck,2,,,,Yellow,Cavity,Wetland,6,"Seed,Wild",2,88,
+Painted Bunting,,,,,White,Bowl,Grassland,4,"Invertebrate,Seed",5,23,
+Painted Whitestart,4,,,,Brown,Ground,Forest,3,Invertebrate,1,22,
+Parrot Crossbill,1,,,,Brown,Bowl,Forest,2,Seed,6,30,
+Peaceful Dove,2,,,,Brown,Platform,"Forest,Grassland",4,Seed,3,25,
+Peregrine Falcon,,,,,Brown,Platform,"Grassland,Wetland",2,Rodent,5,104,Yes
+Pesquet's Parrot,2,,,,Brown,Cavity,Forest,2,Nectar,3,30,
+Pheasant Coucal,2,,,,Pink,Ground,Grassland,4,"Invertebrate,Rodent",1,50,
+Philippine Eagle,3,,,,Teal,Platform,Forest,1,Rodent,6,193,Yes
+Pied-Billed Grebe,,,,,Brown,Platform,Wetland,4,"Invertebrate,Fish",0,41,
+Pileated Woodpecker,,,,,Brown,Cavity,Forest,2,Invertebrate,4,74,
+Pine Siskin,,,,,Brown,Bowl,Forest,2,Seed,3,23,
+Pink-Eared Duck,2,,,,Brown,Cavity,Wetland,3,"Seed,Wild",4,64,
+Plains-Wanderer,2,,,,White,Ground,Grassland,3,"Invertebrate,Seed",4,32,
+Plumbeous Redstart,3,,,,Brown,Bowl,Wetland,2,Invertebrate,4,21,
+Princess Stephanie's Astrapia,2,,,,Brown,Platform,Forest,1,Invertebrate,6,45,
+Prothonotary Warbler,,,,,None,Cavity,"Forest,Wetland",4,"Invertebrate,Seed",8,23,
+Purple Gallinule,,,,,Brown,Platform,Wetland,4,"Seed,Wild",7,56,
+Purple Heron,3,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish,Rodent",2,135,Yes
+Purple Martin,,,,,Brown,Cavity,"Grassland,Wetland",3,Invertebrate,2,46,
+Pygmy Nuthatch,,,,,Brown,Cavity,Forest,4,"Invertebrate,Seed",2,20,
+Pūkeko,2,,,,Brown,Ground,Wetland,3,"Seed,Wild",4,78,
+Rainbow Lorikeet,2,,,,Brown,Cavity,Forest,2,Nectar,1,46,
+Red Avadavat,3,,,,Brown,Wild,"Grassland,Wetland",3,Seed,2,13,
+Red Crossbill,,,,,Brown,Bowl,Forest,2,Seed,6,28,
+Red Junglefowl,3,,,,Brown,Ground,"Forest,Grassland,Wetland",6,"Invertebrate,Seed",2,75,
+Red Kite,1,,,,White,Platform,"Forest,Grassland,Wetland",2,"Rodent,Wild",4,157,Yes
+Red Knot,1,,,,White,Ground,Wetland,2,Invertebrate,7,50,
+Red Wattlebird,2,,,,White,Bowl,Forest,2,Nectar,3,49,
+Red-Backed Fairywren,2,,,,Yellow,Wild,Grassland,3,"Invertebrate,Seed",4,15,
+Red-Backed Shrike,1,,,,Brown,Bowl,Grassland,2,"Invertebrate,Rodent,Wild",5,33,
+Red-Bellied Woodpecker,,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",1,41,
+Red-Breasted Merganser,4,,,,Brown,Ground,Wetland,4,"Invertebrate,Fish",3,78,
+Red-Breasted Nuthatch,,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",2,23,
+Red-Capped Robin,2,,,,Brown,Bowl,Forest,4,Invertebrate,2,17,
+Red-Cockaded Woodpecker,,,,,White,Cavity,Forest,2,Invertebrate,4,36,
+Red-Crowned Crane,3,,,,White,Ground,Wetland,2,"Invertebrate,Seed,Wild",5,235,
+Red-Eyed Vireo,,,,,White,Wild,Forest,2,Invertebrate,3,25,
+Red-Headed Woodpecker,,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,"Invertebrate,Seed,Wild",4,43,
+Red-Legged Partridge,1,,,,Brown,Ground,Grassland,6,Seed,1,48,
+Red-Necked Avocet,2,,,,Brown,Ground,Wetland,2,"Invertebrate,Seed",4,75,
+Red-Shouldered Hawk,,,,,Brown,Platform,Forest,2,Rodent,3,102,Yes
+Red-Tailed Hawk,,,,,Brown,Platform,"Forest,Grassland,Wetland",2,Rodent,5,124,Yes
+Red-Vented Bulbul,3,,,,Brown,Bowl,Grassland,3,Invertebrate,6,28,
+Red-Wattled Lapwing,3,,,,Brown,Ground,"Grassland,Wetland",3,Invertebrate,4,81,
+Red-Winged Blackbird,,,,,Brown,Bowl,"Grassland,Wetland",3,Seed,2,33,
+Red-Winged Parrot,2,,,,Brown,Cavity,"Forest,Grassland,Wetland",2,"Seed,Nectar",6,49,
+Regent Bowerbird,2,,,,Brown,Bowl,"Forest,Grassland",2,"Invertebrate,Seed",3,36,
+Rhinoceros Auklet,3,,,,Brown,Ground,Wetland,1,Fish,5,62,Yes
+Ring-Billed Gull,,,,,Brown,Ground,Wetland,2,Wild,4,122,
+Rock Pigeon,3,,,,Brown,Platform,Grassland,4,"Invertebrate,Seed",0,64,
+Rook,3,,,,Brown,Platform,Grassland,3,Wild,1,90,
+Rose-Breasted Grosbeak,,,,,Brown,Bowl,Forest,3,"Invertebrate,Seed",6,33,
+Rose-Ringed Parakeet,3,,,,White,Cavity,"Forest,Grassland",2,"Invertebrate,Seed",2,45,
+Roseate Spoonbill,,,,,White,Platform,Wetland,2,"Invertebrate,Seed,Fish",6,127,
+Rosy Starling,3,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,"Invertebrate,Seed",4,35,
+Royal Spoonbill,2,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish",4,120,
+Ruby-Crowned Kinglet,,,,,White,Bowl,Forest,3,"Invertebrate,Seed",2,20,
+Ruby-Throated Hummingbird,,,,,Brown,Bowl,"Forest,Grassland,Wetland",2,Wild,4,10,
+Ruddy Duck,,,,,Brown,Platform,Wetland,5,"Invertebrate,Seed",0,48,
+Ruddy Shelduck,3,,,,Teal,Cavity,Wetland,5,"Seed,Wild",3,123,
+Ruff,1,,,,Teal,Ground,"Grassland,Wetland",2,"Invertebrate,Wild",2,56,
+Rufous Night-Heron,2,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish",5,106,Yes
+Rufous Owl,2,,,,Brown,Cavity,Forest,2,Rodent,7,115,Yes
+Rufous-Banded Honeyeater,2,,,,Brown,Bowl,"Forest,Wetland",4,"Invertebrate,Nectar",0,22,
+Sacred Kingfisher,2,,,,Pink,Cavity,"Forest,Grassland,Wetland",4,"Invertebrate,Fish,Rodent",0,30,Yes
+Sandhill Crane,,,,,Brown,Ground,"Grassland,Wetland",1,"Seed,Wild",5,196,
+Sarus Crane,3,,,,Brown,Ground,Wetland,2,Wild,7,250,
+Satyr Tragopan,3,,,,Brown,Platform,Forest,2,Seed,5,26,
+Savannah Sparrow,,,,,White,Ground,Grassland,3,"Invertebrate,Seed",2,18,
+Savi's Warbler,1,,,,Brown,Bowl,Wetland,4,Invertebrate,1,20,
+Say's Phoebe,,,,,White,Bowl,Grassland,3,Invertebrate,5,33,
+Scaled Quail,4,,,,Brown,Ground,Grassland,6,Seed,0,36,
+Scaly-Breasted Munia,3,,,,Brown,Wild,"Grassland,Wetland",3,Seed,2,22,
+Scissor-Tailed Flycatcher,,,,,Brown,Bowl,Grassland,2,Invertebrate,8,38,
+Short-Toed Treecreeper,1,,,,Brown,Cavity,Forest,5,"Invertebrate,Seed",2,20,
+Silvereye,2,,,,Brown,Bowl,"Forest,Grassland,Wetland",4,"Invertebrate,Nectar",4,17,
+Small Minivet,3,,,,White,Bowl,Forest,2,Invertebrate,3,28,
+Smew,3,,,,White,Cavity,"Forest,Wetland",4,"Invertebrate,Seed,Fish",4,62,
+Snow Bunting,1,,,,Pink,Cavity,"Grassland,Wetland",2,"Invertebrate,Seed",5,35,
+Snowy Egret,,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish",4,104,Yes
+Snowy Owl,1,,,,White,Ground,"Grassland,Wetland",3,Rodent,4,138,
+Song Sparrow,,,,,Brown,Bowl,"Forest,Grassland,Wetland",5,"Invertebrate,Seed",0,20,
+South Island Robin,2,,,,Brown,Bowl,"Forest,Grassland",5,Invertebrate,1,24,
+Southern Cassowary,2,,,,White,Ground,Forest,4,Wild,4,*,
+Spangled Drongo,2,,,,Pink,Bowl,Forest,2,"Invertebrate,Nectar,Wild",1,27,
+Splendid Fairywren,2,,,,Yellow,Wild,"Forest,Grassland",5,Invertebrate,1,15,
+Spoon-Billed Sandpiper,3,,,,White,Ground,Wetland,2,"Invertebrate,Seed",5,35,
+Spotless Crake,2,,,,Yellow,Ground,Wetland,3,"Invertebrate,Seed",1,28,
+Spotted Dove,3,,,,Brown,Platform,"Forest,Grassland,Wetland",3,Seed,0,45,
+Spotted Owl,,,,,White,Cavity,Forest,1,Rodent,5,102,
+Spotted Sandpiper,,,,,Brown,Ground,Wetland,2,Invertebrate,5,38,
+Spotted Towhee,,,,,Brown,Ground,"Forest,Grassland",4,"Invertebrate,Seed",0,28,
+Sprague's Pipit,,,,,White,Ground,Grassland,3,"Invertebrate,Seed",3,25,
+Squacco Heron,1,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish",3,86,
+Sri Lanka Blue-Magpie,3,,,,Teal,Bowl,Forest,2,"Invertebrate,Rodent",9,74,
+Sri Lanka Frogmouth,3,,,,Brown,Bowl,Forest,1,Invertebrate,4,36,Yes
+Steller's Jay,,,,,Brown,Bowl,Forest,2,"Seed,Wild",5,48,
+Stork-Billed Kingfisher,3,,,,Brown,Cavity,Wetland,2,Fish,6,56,Yes
+Stubble Quail,2,,,,White,Ground,Grassland,6,"Invertebrate,Seed",4,29,
+Sulphur-Crested Cockatoo,2,,,,Brown,Cavity,Forest,2,Seed,6,103,
+Superb Lyrebird,2,,,,Brown,Wild,Forest,1,"Invertebrate,Wild",5,73,
+Swainson's Hawk,,,,,Brown,Platform,Grassland,2,"Invertebrate,Rodent",5,130,Yes
+Tawny Frogmouth,2,,,,Brown,Platform,"Forest,Grassland,Wetland",2,"Invertebrate,Rodent",5,82,Yes
+Thekla's Lark,1,,,,Brown,Ground,Grassland,3,"Invertebrate,Seed",4,34,
+Tree Swallow,,,,,Brown,Cavity,Wetland,4,Invertebrate,3,38,
+Trumpeter Finch,3,,,,White,Ground,Grassland,4,Seed,3,24,
+Trumpeter Swan,,,,,None,Ground,Wetland,2,"Seed,Wild",9,203,
+Tufted Titmouse,,,,,White,Cavity,Forest,3,"Invertebrate,Seed",2,25,
+Turkey Vulture,,,,,Pink,Cavity,"Forest,Grassland,Wetland",1,,1,170,
+Twite,3,,,,Teal,Bowl,Grassland,4,Seed,2,23,
+Tūī,2,,,,Brown,Bowl,Forest,2,"Invertebrate,Nectar",5,42,
+Vaux's Swift,4,,,,Brown,Cavity,Forest,3,Invertebrate,2,31,
+Verditer Flycatcher,3,,,,Brown,Cavity,Forest,2,Invertebrate,5,26,
+Violet Cuckoo,3,,,,Pink,None,Forest,0,Invertebrate,5,27,
+Violet-Green Swallow,,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,Invertebrate,3,36,
+Wedge-Tailed Eagle,2,,,,Brown,Platform,"Forest,Grassland,Wetland",2,Rodent,7,207,Yes
+Welcome Swallow,2,,,,White,Wild,"Grassland,Wetland",5,Invertebrate,1,28,
+Western Meadowlark,,,,,Brown,Ground,Grassland,4,"Invertebrate,Seed",2,38,
+Western Tanager,,,,,Brown,Bowl,Forest,2,Invertebrate,6,30,
+White Stork,1,,,,Brown,Platform,"Grassland,Wetland",2,"Invertebrate,Fish,Wild",8,160,
+White Wagtail,1,,,,Teal,Bowl,"Grassland,Wetland",5,Invertebrate,2,28,
+White-Backed Woodpecker,1,,,,Brown,Cavity,Forest,2,Invertebrate,2,39,
+White-Bellied Sea-Eagle,2,,,,Brown,Platform,"Forest,Wetland",2,"Fish,Rodent",7,200,Yes
+White-Breasted Nuthatch,,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",2,28,
+White-Breasted Woodswallow,2,,,,White,Bowl,Grassland,2,Invertebrate,3,32,
+White-Browed Tit-Warbler,3,,,,Brown,Wild,Forest,3,"Invertebrate,Seed",2,12,
+White-Crested Laughingthrush,3,,,,Brown,Bowl,Forest,4,"Invertebrate,Seed",6,35,
+White-Crowned Sparrow,,,,,Brown,Ground,"Forest,Grassland,Wetland",5,"Invertebrate,Seed",2,25,
+White-Faced Heron,2,,,,Brown,Platform,Wetland,4,"Invertebrate,Fish,Rodent",6,106,Yes
+White-Faced Ibis,,,,,Brown,Platform,Wetland,2,"Invertebrate,Fish",8,91,Yes
+White-Headed Duck,3,,,,White,Ground,Wetland,3,"Seed,Wild",4,66,
+White-Throated Dipper,1,,,,Brown,Cavity,Wetland,4,"Invertebrate,Fish",3,28,
+White-Throated Kingfisher,3,,,,Brown,Cavity,"Forest,Grassland,Wetland",3,"Fish,Wild",3,42,Yes
+White-Throated Swift,4,,,,Brown,Cavity,Grassland,2,Invertebrate,2,38,
+Whooping Crane,,,,,White,Ground,Wetland,1,Wild,6,221,
+Wild Turkey,,,,,None,Ground,"Forest,Grassland",5,Seed,8,135,
+Willet,,,,,Brown,Ground,Wetland,2,"Invertebrate,Fish",4,66,Yes
+Willie-Wagtail,2,,,,Brown,Bowl,"Forest,Grassland,Wetland",5,"Invertebrate,Wild",2,30,
+Willow Tit,3,,,,Brown,Cavity,Forest,3,"Invertebrate,Seed",2,20,
+Wilson's Snipe,,,,,Brown,Ground,Wetland,2,Invertebrate,5,41,
+Wilson's Storm Petrel,1,,,,Brown,Wild,Wetland,1,"Invertebrate,Fish",6,38,
+Wood Duck,,,,,Brown,Cavity,"Forest,Wetland",4,Seed,4,76,
+Wood Stork,,,,,White,Platform,Wetland,2,"Fish,Rodent,Wild",6,155,
+Wrybill,2,,,,White,Ground,Wetland,2,"Invertebrate,Fish",4,49,
+Yellow Bittern,3,,,,Brown,Platform,Wetland,4,"Invertebrate,Fish",0,49,
+Yellow-Bellied Sapsucker,,,,,Brown,Cavity,Forest,3,Invertebrate,3,41,
+Yellow-Billed Cuckoo,,,,,Pink,Platform,Forest,2,"Invertebrate,Wild",5,46,
+Yellow-Breasted Chat,,,,,Brown,Bowl,"Forest,Grassland,Wetland",3,Invertebrate,5,25,
+Yellow-Headed Blackbird,,,,,Brown,Bowl,Wetland,3,"Invertebrate,Seed",4,38,
+Yellow-Rumped Warbler,,,,,Brown,Bowl,Forest,4,"Invertebrate,Seed",1,23,
+Yellowhammer,1,,,,Teal,Ground,"Forest,Grassland",3,Seed,2,26,
+Zebra Dove,3,,,,Brown,Platform,Grassland,4,Seed,4,25,
