@@ -1,13 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { WebcamModule, WebcamImage } from 'ngx-webcam';
 import { ButtonModule } from 'primeng/button';
 import { Observable, Subject } from 'rxjs';
 import { createWorker } from 'tesseract.js';
-import { sevenWondersMetadata } from '../metadata/seven-wonders.metadata';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import levenshtein from 'js-levenshtein';
 import { Card } from '../shared/models/deck.model';
+import { Game } from '../shared/models/game.model';
 
 declare var Marvin: any;
 declare var MarvinImage: any;
@@ -19,14 +26,15 @@ declare var MarvinImage: any;
   templateUrl: './card-camera.component.html',
   styleUrl: './card-camera.component.scss',
 })
-export class CardCameraComponent {
+export class CardCameraComponent implements OnInit {
   @ViewChild('screenshot', { static: false }) canvasRef!: ElementRef;
   canvas: HTMLCanvasElement | null = null;
   ctx: CanvasRenderingContext2D | null = null;
 
+  @Input() metadata!: Game;
+
   state: 'capture' | 'scan' | 'display' | 'error' = 'capture';
 
-  metadata = sevenWondersMetadata;
   cardNames: string[] = [];
 
   foundCard?: Card;
@@ -48,7 +56,9 @@ export class CardCameraComponent {
     this.width = Math.min(300, window.innerWidth);
   }
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.onResize();
     this.parseCardNames();
   }
