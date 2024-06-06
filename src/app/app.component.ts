@@ -2,9 +2,11 @@ import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { Router, RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { gameList } from './metadata/metadata';
 import { DefaultComponent } from './games/default/default.component';
+
+declare let gtag: Function;
 
 type GameItem = {
   label: string;
@@ -23,7 +25,15 @@ export class AppComponent implements AfterViewInit {
   selectedGame: GameItem = this.games[0];
   gameChanged = 0;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd) {
+        gtag('config', 'G-KMP5R7HPKG', {
+          'page_path': event.urlAfterRedirects
+        });
+      }
+    })
+  }
 
   ngAfterViewInit(): void {
     this.selectedGame =

@@ -12,6 +12,8 @@ import { Card } from '../shared/models/deck.model';
 declare var Marvin: any;
 declare var MarvinImage: any;
 
+declare let gtag: Function;
+
 @Component({
   selector: 'app-card-camera',
   standalone: true,
@@ -125,12 +127,6 @@ export class CardCameraComponent {
   }
 
   async getText(blobs: string[]) {
-    // console.log('new text scan');
-    // const worker = await createWorker('eng');
-    // const ret = await worker.recognize(blob);
-    // this.compareText(ret.data.text);
-    // await worker.terminate();
-
     this.scans++;
 
     setTimeout(async () => {
@@ -154,14 +150,19 @@ export class CardCameraComponent {
         blobs.map((blob) => scheduler.addJob('recognize', blob))
       );
       results.forEach((r) => {
-        console.log(r.data.text);
         this.compareText(r.data.text);
       });
       await scheduler.terminate();
       this.scans--;
+
+      gtag('event', 'scan_card', {
+        'ocr_text': this.text,
+        'card_name': this.bestMatch,
+        'distance': this.smallestDistance
+      });
+
     })();
     this.scans--;
-    console.log('scheduled');
   }
 
   drawMarvinJText() {
@@ -198,7 +199,6 @@ export class CardCameraComponent {
           blobs.push(cropped.toBlob());
         }
       }
-      console.log(blobs.length);
       await this.getText(blobs);
       this.state = 'display';
     });
