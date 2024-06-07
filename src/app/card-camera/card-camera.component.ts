@@ -14,6 +14,8 @@ declare var MarvinImage: any;
 
 declare let gtag: Function;
 
+const regex = /[^\w ']/gm;
+
 @Component({
   selector: 'app-card-camera',
   standalone: true,
@@ -83,7 +85,7 @@ export class CardCameraComponent {
     this.webcamImage = webcamImage;
     this.sysImage = webcamImage!.imageAsDataUrl;
     this.smallestDistance = Infinity;
-    this.foundCard = this.scanningCard
+    this.foundCard = this.scanningCard;
     this.rules = [];
     this.scans = 0;
     this.drawMarvinJText();
@@ -97,16 +99,28 @@ export class CardCameraComponent {
     return this.nextWebcam.asObservable();
   }
 
-  compareText(text: string) {
+  compareText(text: string, index: number) {
+    text = text.replace(regex, '');
+
+    let min = Infinity;
+    let match = '';
     text = text.trim().toLowerCase();
     for (const name of this.cardNames) {
       const distance = levenshtein(text, name);
-      if (distance < this.smallestDistance) {
-        this.smallestDistance = distance;
-        this.bestMatch = name;
-        this.text = text;
-        this.handleNewMatch();
+      if (distance < min || (distance === min && name.length > match.length)) {
+        min = distance;
+        match = name;
       }
+    }
+
+    if (
+      min < this.smallestDistance ||
+      (min === this.smallestDistance && match.length > this.bestMatch.length)
+    ) {
+      this.smallestDistance = min;
+      this.bestMatch = match;
+      this.text = text;
+      this.handleNewMatch();
     }
   }
 
@@ -130,14 +144,14 @@ export class CardCameraComponent {
     this.scans++;
 
     setTimeout(async () => {
-      if(this.scans > 0) {
+      if (this.scans > 0) {
         console.log('Terminating OCR');
         await scheduler.terminate();
         this.foundCard = this.unknownCard;
         this.scans--;
         this.state = 'display';
       }
-    }, 10000)
+    }, 10000);
 
     const scheduler = createScheduler();
     const worker1 = await createWorker('eng');
@@ -149,18 +163,17 @@ export class CardCameraComponent {
       const results = await Promise.all(
         blobs.map((blob) => scheduler.addJob('recognize', blob))
       );
-      results.forEach((r) => {
-        this.compareText(r.data.text);
+      results.forEach((r, index) => {
+        this.compareText(r.data.text, index);
       });
       await scheduler.terminate();
       this.scans--;
 
       gtag('event', 'scan_card', {
-        'ocr_text': this.text,
-        'card_name': this.bestMatch,
-        'distance': this.smallestDistance
+        ocr_text: this.text,
+        card_name: this.bestMatch,
+        distance: this.smallestDistance,
       });
-
     })();
     this.scans--;
   }
@@ -187,18 +200,19 @@ export class CardCameraComponent {
       for (var i in segments) {
         var seg = segments[i];
         if (seg.height >= 5) {
-          var cropped = new MarvinImage(1, 1);
+          var croppedWords = new MarvinImage(1, 1);
           Marvin.crop(
             image,
-            cropped,
-            seg.x1 + 1,
+            croppedWords,
+            seg.x1 - 5,
             seg.y1 - 5,
-            seg.width,
+            seg.width + 5,
             seg.height + 10
           );
-          blobs.push(cropped.toBlob());
+          blobs.push(croppedWords.toBlob());
         }
       }
+
       await this.getText(blobs);
       this.state = 'display';
     });
