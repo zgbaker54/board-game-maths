@@ -33,17 +33,28 @@ export class NemesisComponent implements OnInit {
   infectedOffset = 0;
   cleanOffset = 0;
 
+  totalInfectedCards = 0;
+  totalCleanCards = 0;
+
   ngOnInit(): void {
+    const cards = this.game.decks.find((x) => x.id === 4)?.cards ?? [];
+    this.totalInfectedCards = CardsCount(cards);
+    this.totalCleanCards = CardsCount(cards.filter((x) => x.name === 'Clean'));
+
     this.calculateInfected();
   }
 
   adjustInfected(adjustment: number) {
     this.infectedOffset += adjustment;
+    this.infectedOffset = Math.min(this.infectedOffset, this.totalInfectedCards-this.totalCleanCards);
+    this.infectedOffset = Math.max(this.infectedOffset, 0);
     this.calculateInfected();
   }
 
   adjustClean(adjustment: number) {
     this.cleanOffset += adjustment;
+    this.cleanOffset = Math.min(this.cleanOffset, this.totalCleanCards);
+    this.cleanOffset = Math.max(this.cleanOffset, 0);
     this.calculateInfected();
   }
 
@@ -52,27 +63,28 @@ export class NemesisComponent implements OnInit {
     const baseActionCards = 10;
     const endGamePick = 4;
 
-    const cards = this.game.decks.find(x => x.id === 3)?.cards ?? [];
-    const total = CardsCount(cards);
-    const clean = CardsCount(cards.filter(x => x.name === 'Clean'));
-
     for (let i = 1; i < 9; i++) {
       let NI = 1; // Not infected
       for (let j = 0; j < i; j++) {
-        NI *= (clean - this.cleanOffset - j) / (total - this.infectedOffset - j);
+        NI *=
+          (this.totalCleanCards - this.cleanOffset - j) /
+          (this.totalInfectedCards -
+            this.infectedOffset -
+            this.cleanOffset -
+            j);
       }
-      let I = 1-NI;
+      let I = 1 - NI;
 
       let living = 1;
       for (let j = 0; j < endGamePick; j++) {
-        living *= (baseActionCards-j)/(baseActionCards+i-j);
+        living *= (baseActionCards - j) / (baseActionCards + i - j);
       }
 
       this.infections.push({
         contaminations: i,
-        infected: (I*100).toFixed(2),
-        survivalChance: ((NI + (living * I)) * 100).toFixed(2),
-        survivalLarvaChance: (living*100).toFixed(2)
+        infected: (NI * 100).toFixed(2),
+        survivalChance: ((NI + living * I) * 100).toFixed(2),
+        survivalLarvaChance: (living * 100).toFixed(2),
       });
     }
   }
