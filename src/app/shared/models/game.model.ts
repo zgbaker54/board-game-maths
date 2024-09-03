@@ -8,6 +8,7 @@ export type Game = {
   expansions: Expansion[];
   diceSets: DiceSet[];
   rules?: { [rule: string]: string };
+  customFirst?: boolean;
   // image, url, ...
 };
 

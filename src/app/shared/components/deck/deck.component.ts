@@ -107,7 +107,6 @@ export class DeckComponent implements OnChanges, OnDestroy {
     }
 
     this.selectDeck();
-    this.fillDrawCounts();
     this.handleChanges();
   }
 
@@ -123,6 +122,7 @@ export class DeckComponent implements OnChanges, OnDestroy {
         ? true
         : this.variesByPlayerCount;
     });
+    this.fillDrawCounts();
   }
 
   getAllCards(filterByPlayerCount: boolean) {
